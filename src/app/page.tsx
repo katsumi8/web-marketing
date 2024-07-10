@@ -3,6 +3,7 @@ import Main from "@/components/Products";
 import Image from "next/image";
 import TaiyakiImg from "../../public/assets/taiyaki.jpg";
 import Products from "@/components/Products";
+import Contact from "@/components/Contact";
 
 export default function Home() {
   return (
@@ -30,6 +31,7 @@ export default function Home() {
       </div>
       <Products />
       <About />
+      <Contact />
     </div>
   );
 }
