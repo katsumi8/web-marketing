@@ -22,11 +22,11 @@ function Products() {
             <span className="text-xl">
               Taiyaki mit Anko (süße rote Bohnenpaste)
             </span>
-            <span className="text-xl">7,00€</span>
+            <span className="text-xl">4,50€</span>
           </div>
           <div className="flex justify-between py-2 border-b border-gray-400">
             <span className="text-xl">Taiyaki mit Vanillepudding</span>
-            <span className="text-xl">6,50€</span>
+            <span className="text-xl">4,50€</span>
           </div>
         </div>
         <button className="mt-8 py-2 px-4 border border-black">
