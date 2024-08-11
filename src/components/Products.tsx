@@ -8,7 +8,9 @@ function Products() {
       name: (
         <>
           Taiyaki mit Schokolade{" "}
-          <span className="text-red-600 font-semibold">(Bald verfügbar)</span>
+          <span className="text-red-600 font-semibold">
+            (Bald verfügbar, kontaktieren Sie uns für Details)
+          </span>
         </>
       ),
       price: "4,50€",
@@ -17,7 +19,9 @@ function Products() {
       name: (
         <>
           Taiyaki mit Nuttela Creme{" "}
-          <span className="text-red-600 font-semibold">(Bald verfügbar)</span>
+          <span className="text-red-600 font-semibold">
+            (Bald verfügbar, kontaktieren Sie uns für Details)
+          </span>
         </>
       ),
       price: "4,50€",
@@ -26,7 +30,9 @@ function Products() {
       name: (
         <>
           Taiyaki mit Schoko und Erdbeere{" "}
-          <span className="text-red-600 font-semibold">(Bald verfügbar)</span>
+          <span className="text-red-600 font-semibold">
+            (Bald verfügbar, kontaktieren Sie uns für Details)
+          </span>
         </>
       ),
       price: "4,50€",
