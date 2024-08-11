@@ -39,9 +39,10 @@ export const useOrderForm = () => {
 
     const templateParams = {
       name: values.name,
-      phoneNumber: values.phoneNumber,
+      phoneNumber: values.phoneNumber ?? "none",
       email: values.email,
-      message: values.message || "",
+      message: values.message ?? "",
+      orderType: values.orderType,
       items: itemsString,
     };
     try {
