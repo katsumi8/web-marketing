@@ -4,7 +4,7 @@ import ContactImg from "../../public/assets/contact.jpg";
 import { HiOutlineChevronDoubleUp } from "react-icons/hi";
 import Link from "next/link";
 import IconItems from "./ConnectWithMe/IconItems";
-import Form from "./Form";
+import OrderingForm from "./OrderingForm";
 
 function Contact() {
   return (
@@ -43,7 +43,7 @@ function Contact() {
           {/* Right side */}
           <div className="col-span-3 h-auto w-full rounded-xl shadow-xl shadow-gray-400 lg:p-4">
             <div className="p-4">
-              <Form />
+              <OrderingForm />
             </div>
           </div>
         </div>

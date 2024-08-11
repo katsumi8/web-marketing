@@ -44,7 +44,7 @@ function MobileNavbar({
             </p>
           </div>
         </div>
-        <div className="flex flex-col py-4">
+        <div className="flex flex-col py-4 px-4">
           <ul className="uppercase text-gray-500">
             <Link href="/">
               <li onClick={() => setNav(false)} className="py-4 text-sm">
@@ -53,17 +53,17 @@ function MobileNavbar({
             </Link>
             <Link href="/#about">
               <li onClick={() => setNav(false)} className="py-4 text-sm">
-                About
+                Über Uns
               </li>
             </Link>
             <Link href="/#products">
               <li onClick={() => setNav(false)} className="py-4 text-sm">
-                Products
+                Produkte
               </li>
             </Link>
             <Link href="/#contact">
               <li onClick={() => setNav(false)} className="py-4 text-sm">
-                Contact
+                Bestellen
               </li>
             </Link>
           </ul>
@@ -108,24 +108,24 @@ function Navbar() {
         </Link>
 
         {pathName !== "/privacy-policy" && (
-          <div>
+          <div className="px-4">
             <ul style={{ color: `#1f2937` }} className="hidden md:flex">
               <Link href="/">
                 <li className="ml-10 text-sm uppercase hover:border-b">Home</li>
               </Link>
               <Link href="/#about">
                 <li className="ml-10 text-sm uppercase hover:border-b">
-                  About
+                  Über Uns
                 </li>
               </Link>
               <Link href="/#products">
                 <li className="ml-10 text-sm uppercase hover:border-b">
-                  Products
+                  Produkte
                 </li>
               </Link>
               <Link href="/#contact">
                 <li className="ml-10 text-sm uppercase hover:border-b">
-                  Contact
+                  Bestellen
                 </li>
               </Link>
             </ul>
