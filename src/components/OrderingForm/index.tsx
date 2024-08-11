@@ -2,6 +2,7 @@
 import React from "react";
 import { useOrderForm } from "./hooks";
 import { menuItems } from "../../const/productsList";
+import LoadingSpinner from "../LoadingSpinner";
 
 function OrderingForm() {
   const {
@@ -17,6 +18,9 @@ function OrderingForm() {
     watch,
   } = useOrderForm();
 
+  if (isSubmitting) {
+    return <LoadingSpinner />;
+  }
   return (
     <form onSubmit={handleSubmit(onSubmitHandler)}>
       {isSubmitSuccessful ? (
