@@ -4,10 +4,31 @@ function Products() {
   const menuItems = [
     { name: "Taiyaki mit Anko (süße rote Bohnenpaste)", price: "4,50€" },
     { name: "Taiyaki mit Vanillepudding", price: "4,50€" },
-    { name: "Taiyaki mit Schokolade (Bald verfügbar)", price: "4,50€" },
-    { name: "Taiyaki mit Nuttela Creme (Bald verfügbar)", price: "4,50€" },
     {
-      name: "Taiyaki mit Schoko und Erdbeere (Bald verfügbar)",
+      name: (
+        <>
+          Taiyaki mit Schokolade{" "}
+          <span className="text-red-600 font-semibold">(Bald verfügbar)</span>
+        </>
+      ),
+      price: "4,50€",
+    },
+    {
+      name: (
+        <>
+          Taiyaki mit Nuttela Creme{" "}
+          <span className="text-red-600 font-semibold">(Bald verfügbar)</span>
+        </>
+      ),
+      price: "4,50€",
+    },
+    {
+      name: (
+        <>
+          Taiyaki mit Schoko und Erdbeere{" "}
+          <span className="text-red-600 font-semibold">(Bald verfügbar)</span>
+        </>
+      ),
       price: "4,50€",
     },
   ];
