@@ -35,7 +35,7 @@ function Products() {
           </span>
         </>
       ),
-      price: "4,50€",
+      price: "5,50€",
     },
   ];
   return (
