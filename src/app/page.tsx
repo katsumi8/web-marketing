@@ -4,6 +4,7 @@ import Image from "next/image";
 import TaiyakiImg from "../../public/assets/taiyaki.jpg";
 import Products from "@/components/Products";
 import Contact from "@/components/Contact";
+import Link from "next/link";
 
 export default function Home() {
   return (
@@ -17,7 +18,10 @@ export default function Home() {
           objectPosition="left"
           className="absolute inset-0 z-0"
         />
-        <div className="absolute inset-0 bg-black bg-opacity-50 p-4 md:p-32 flex flex-col justify-start items-start">
+        <div
+          className="absolute inset-0 bg-black bg-opacity-50 p-4 md:p-32 flex 
+        flex-col justify-start items-start"
+        >
           <h1 className="text-white text-3xl md:text-6xl font-bold mt-10">
             Entdecken Sie Taiyaki bei uns!
           </h1>
@@ -27,6 +31,14 @@ export default function Home() {
             einzigartigen Geschmack und die charmante Form dieses köstlichen
             Snacks, der perfekt zu jedem Anlass passt!
           </p>
+          <div className="mt-8 w-full flex justify-center">
+            <Link
+              href="/#contact"
+              className="px-32 py-4 text-3xl font-bold text-white bg-gray-300 bg-opacity-50 rounded-lg hover:bg-opacity-70 backdrop-filter backdrop-blur-lg"
+            >
+              Bestellen Sie jetzt
+            </Link>
+          </div>
         </div>
       </div>
       <Products />

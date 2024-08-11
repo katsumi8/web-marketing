@@ -46,8 +46,10 @@ export const useOrderForm = () => {
     };
     try {
       await emailjs.send(serviceId, templateId, templateParams, publicKey);
-      alert("Your message has been sent successfully!");
     } catch (error) {
+      alert(
+        "Das Senden der E-Mail ist fehlgeschlagen. Bitte aktualisieren Sie die Seite und versuchen Sie es erneut. Sollte das Problem weiterhin bestehen, kontaktieren Sie mich bitte direkt über das E-Mail-Symbol unten links.",
+      );
       console.error("EmailJS Error:", error);
     }
   };

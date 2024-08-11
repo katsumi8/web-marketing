@@ -205,7 +205,7 @@ function OrderingForm() {
             className="mt-4 w-full rounded-xl bg-gradient-to-r from-[#5651e5] to-[#709dff] p-4 text-gray-100 shadow-xl shadow-gray-400"
             type="submit"
           >
-            Nachricht Senden
+            Bestellen
           </button>
         </>
       )}
