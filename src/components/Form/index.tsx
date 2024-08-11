@@ -10,14 +10,14 @@ function Form() {
     <form onSubmit={handleSubmit}>
       {Object.keys(formErrors).length === 0 && values.isSubmitted ? (
         <div className="w-full py-2 text-center text-2xl font-bold text-lime-600">
-          <p>I received your email !</p>
-          <p>I will shortly get in touch with you.</p>
+          <p>Ich habe Ihre E-Mail erhalten!</p>
+          <p>Ich werde mich in Kürze bei Ihnen melden.</p>
         </div>
       ) : (
         <>
           <div className="grid w-full gap-4 py-2 md:grid-cols-2">
             <div className="flex flex-col">
-              <label className="py-2 text-sm uppercase">Name / Company</label>
+              <label className="py-2 text-sm uppercase">Name / Firma</label>
               <input
                 className="flex rounded-lg border-2 border-gray-300 p-3"
                 type="text"
@@ -32,7 +32,7 @@ function Form() {
               ) : null}
             </div>
             <div className="flex flex-col">
-              <label className="py-2 text-sm uppercase">Phone Number</label>
+              <label className="py-2 text-sm uppercase">Telefonnummer</label>
               <input
                 className="flex rounded-lg border-2 border-gray-300 p-3"
                 type="text"
@@ -50,7 +50,7 @@ function Form() {
             </div>
           </div>
           <div className="flex flex-col py-1">
-            <label className="py-2 text-sm uppercase">Email</label>
+            <label className="py-2 text-sm uppercase">E-Mail</label>
             <input
               className="flex rounded-lg border-2 border-gray-300 p-3"
               type="email"
@@ -65,7 +65,7 @@ function Form() {
             ) : null}
           </div>
           <div className="flex flex-col py-1">
-            <label className="py-2 text-sm uppercase">Subject</label>
+            <label className="py-2 text-sm uppercase">Betreff</label>
             <input
               className="flex rounded-lg border-2 border-gray-300 p-3"
               type="text"
@@ -82,7 +82,7 @@ function Form() {
             ) : null}
           </div>
           <div className="flex flex-col py-1">
-            <label className="py-2 text-sm uppercase">Message</label>
+            <label className="py-2 text-sm uppercase">Nachricht</label>
             <textarea
               className="flex rounded-lg border-2 border-gray-300 p-3"
               rows={10}
@@ -102,7 +102,7 @@ function Form() {
             className="mt-4 w-full rounded-xl bg-gradient-to-r from-[#5651e5] to-[#709dff] p-4 uppercase text-gray-100 shadow-xl shadow-gray-400"
             type="submit"
           >
-            Send Message
+            Nachricht Senden
           </button>
         </>
       )}
