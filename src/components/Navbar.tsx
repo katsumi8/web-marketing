@@ -5,7 +5,7 @@ import Link from "next/link";
 import { AiOutlineClose, AiOutlineMail, AiOutlineMenu } from "react-icons/ai";
 import { FaGithub, FaLinkedinIn } from "react-icons/fa";
 import { BsFillPersonLinesFill } from "react-icons/bs";
-import NavLogoImg from "../../public/assets/next.svg";
+import NavLogoImg from "../../public/assets/navImg.jpg";
 import { usePathname, useRouter } from "next/navigation";
 
 function MobileNavbar({
@@ -29,7 +29,7 @@ function MobileNavbar({
         <div>
           <div className="flex w-full items-center justify-between">
             <Link href={"/"}>
-              <Image src={NavLogoImg} alt="/" width="87" height="35" />
+              <Image className="size-20" src={NavLogoImg} alt="/" />
             </Link>
             <div
               onClick={handleNav}
@@ -104,7 +104,7 @@ function Navbar() {
     >
       <div className="flex h-full w-full items-center justify-between px-2 2xl:px-16">
         <Link href={"/"}>
-          <Image src={NavLogoImg} alt="/" width="125" height="50" />
+          <Image className="size-20" src={NavLogoImg} alt="/" />
         </Link>
 
         {pathName !== "/privacy-policy" && (

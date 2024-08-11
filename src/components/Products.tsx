@@ -5,36 +5,18 @@ function Products() {
     { name: "Taiyaki mit Anko (süße rote Bohnenpaste)", price: "4,50€" },
     { name: "Taiyaki mit Vanillepudding", price: "4,50€" },
     {
-      name: (
-        <>
-          Taiyaki mit Schokolade{" "}
-          <span className="text-red-600 font-semibold">
-            (Bald verfügbar, kontaktieren Sie uns für Details)
-          </span>
-        </>
-      ),
+      name: "Taiyaki mit Schokolade",
+      remarks: "Bald verfügbar, kontaktieren Sie uns für Details",
       price: "4,50€",
     },
     {
-      name: (
-        <>
-          Taiyaki mit Nuttela Creme{" "}
-          <span className="text-red-600 font-semibold">
-            (Bald verfügbar, kontaktieren Sie uns für Details)
-          </span>
-        </>
-      ),
+      name: "Taiyaki mit Nuttela Creme",
+      remarks: "Bald verfügbar, kontaktieren Sie uns für Details",
       price: "4,50€",
     },
     {
-      name: (
-        <>
-          Taiyaki mit Schoko und Erdbeere{" "}
-          <span className="text-red-600 font-semibold">
-            (Bald verfügbar, kontaktieren Sie uns für Details)
-          </span>
-        </>
-      ),
+      name: "Taiyaki mit Schoko und Erdbeere",
+      remarks: "Bald verfügbar, kontaktieren Sie uns für Details",
       price: "5,50€",
     },
   ];
@@ -63,12 +45,19 @@ function Products() {
               }`}
             >
               <span className="text-xl">{item.name}</span>
-              <span className="text-xl">{item.price}</span>
+              <div className="space-x-4">
+                {item.remarks && (
+                  <span className="font-semibold text-red-400">
+                    {item.remarks}
+                  </span>
+                )}
+                <span className="text-xl">{item.price}</span>
+              </div>
             </div>
           ))}
         </div>
         <button className="mt-8 py-2 px-4 border border-black">
-          Mehr sehen
+          Mehr sehen - Bald verfügbar -
         </button>
       </div>
     </div>
