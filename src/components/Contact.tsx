@@ -11,9 +11,9 @@ function Contact() {
     <div id="contact" className="w-full lg:h-full text-gray-600">
       <div className="m-auto w-full max-w-[1240px] px-2 py-16">
         <p className="text-xl uppercase tracking-widest text-[#990000]">
-          Contact
+          Bestellen Sie jetzt
         </p>
-        <h2 className="py-4">Get In Touch</h2>
+        <h2 className="py-4">Kontakt aufnehmen</h2>
         <div className="grid gap-8 lg:grid-cols-5">
           {/* left side */}
           <div className="col-span-3 h-full w-full rounded-xl p-4 shadow-xl shadow-gray-400 lg:col-span-2">
@@ -28,12 +28,14 @@ function Contact() {
               <div>
                 <h2 className="py-2">Katsumi Ishihara</h2>
                 <p className="py-4">
-                  Contact me for any inquiries or just to say hi.
-                  <br />I will get back to you as soon as possible.
+                  Kontaktieren Sie mich für Anfragen oder einfach, um Hallo zu
+                  sagen.
+                  <br />
+                  Ich werde mich so schnell wie möglich bei Ihnen melden.
                 </p>
               </div>
               <div>
-                <p className="pt-8 uppercase">Connect With me</p>
+                <p className="pt-8 uppercase">Verbinden Sie sich mit mir</p>
                 <IconItems style={"CONTACT"} />
               </div>
             </div>
