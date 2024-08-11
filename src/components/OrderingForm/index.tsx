@@ -27,6 +27,14 @@ function OrderingForm() {
         <div className="w-full py-2 text-center text-2xl font-bold text-lime-600">
           <p>Ich habe Ihre E-Mail erhalten!</p>
           <p>Ich werde mich in Kürze bei Ihnen melden.</p>
+          <p>Vielen Dank!</p>
+          <p className="mt-4 text-sm text-gray-500">
+            Ihre E-Mail-Adresse ist {watch("email")}
+          </p>
+          <p className="text-sm text-red-500">
+            Falls die E-Mail-Adresse falsch ist, aktualisieren Sie bitte die
+            Seite und geben Sie die richtige E-Mail-Adresse ein.
+          </p>
         </div>
       ) : (
         <>
