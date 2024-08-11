@@ -1,6 +1,16 @@
 import React from "react";
 
 function Products() {
+  const menuItems = [
+    { name: "Taiyaki mit Anko (süße rote Bohnenpaste)", price: "4,50€" },
+    { name: "Taiyaki mit Vanillepudding", price: "4,50€" },
+    { name: "Taiyaki mit Schokolade (Bald verfügbar)", price: "4,50€" },
+    { name: "Taiyaki mit Nuttela Creme (Bald verfügbar)", price: "4,50€" },
+    {
+      name: "Taiyaki mit Schoko und Erdbeere (Bald verfügbar)",
+      price: "4,50€",
+    },
+  ];
   return (
     <div
       id="products"
@@ -18,16 +28,17 @@ function Products() {
           Bitte kontaktieren Sie uns.
         </p>
         <div className="py-4">
-          <div className="flex justify-between py-2 border-b border-t border-gray-400">
-            <span className="text-xl">
-              Taiyaki mit Anko (süße rote Bohnenpaste)
-            </span>
-            <span className="text-xl">4,50€</span>
-          </div>
-          <div className="flex justify-between py-2 border-b border-gray-400">
-            <span className="text-xl">Taiyaki mit Vanillepudding</span>
-            <span className="text-xl">4,50€</span>
-          </div>
+          {menuItems.map((item, index) => (
+            <div
+              key={index}
+              className={`flex justify-between py-2 border-b border-gray-400 ${
+                index === 0 ? "border-t" : ""
+              }`}
+            >
+              <span className="text-xl">{item.name}</span>
+              <span className="text-xl">{item.price}</span>
+            </div>
+          ))}
         </div>
         <button className="mt-8 py-2 px-4 border border-black">
           Mehr sehen
