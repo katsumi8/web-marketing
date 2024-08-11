@@ -57,23 +57,23 @@ export const useForm = () => {
   const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
     setValues({ ...values, isSubmitted: true });
+    const serviceId = process.env.NEXT_PUBLIC_SERVICE_ID;
+    const templateId = process.env.NEXT_PUBLIC_TEMPLATE_ID;
+    const publicKey = process.env.NEXT_PUBLIC_PUBLIC_KEY;
 
+    if (!serviceId || !templateId || !publicKey) {
+      console.error("Please set environment variables.");
+      return;
+    }
     if (Object.keys(formErrors).length === 0) {
-      emailjs
-        .sendForm(
-          process.env.NEXT_PUBLIC_SERVICE_ID as string,
-          process.env.NEXT_PUBLIC_TEMPLATE_ID as string,
-          e.currentTarget,
-          process.env.NEXT_PUBLIC_PUBLIC_KEY as string,
-        )
-        .then(
-          (result) => {
-            console.log(result.text);
-          },
-          (error) => {
-            console.log(error.text);
-          },
-        );
+      emailjs.sendForm(serviceId, templateId, e.currentTarget, publicKey).then(
+        (result) => {
+          console.log(result.text);
+        },
+        (error) => {
+          console.log(error.text);
+        },
+      );
     }
   };
 
