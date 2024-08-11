@@ -32,8 +32,9 @@ function OrderingForm() {
             Ihre E-Mail-Adresse ist {watch("email")}
           </p>
           <p className="text-sm text-red-500">
-            Falls die E-Mail-Adresse falsch ist, aktualisieren Sie bitte die
-            Seite und geben Sie die richtige E-Mail-Adresse ein.
+            Falls die E-Mail-Adresse falsch ist,
+            <br /> aktualisieren Sie bitte die Seite und geben Sie die richtige
+            E-Mail-Adresse ein.
           </p>
         </div>
       ) : (
@@ -93,61 +94,71 @@ function OrderingForm() {
               Geschmack und Menge
               <span className="ml-1 text-red-500">*</span>
             </label>
-            {fields.map((item, index) => (
-              <div
-                key={item.id}
-                className="flex sm:space-x-2 py-2 flex-col sm:flex-row space-y-2 sm:space-y-0 
+            {fields.map((item, index) => {
+              const selectedTastes = fields.map((field) => field.taste);
+
+              return (
+                <div
+                  key={item.id}
+                  className="flex sm:space-x-2 py-2 flex-col sm:flex-row space-y-2 sm:space-y-0 
                     border-b border-gray-300 w-full sm:justify-between"
-              >
-                <div className="flex flex-col sm:flex-row sm:space-x-2 space-y-2 sm:space-y-0">
-                  <div className="flex flex-col">
-                    <select
-                      className="flex rounded-lg border-2 border-gray-300 sm:p-3 py-3"
-                      {...register(`items.${index}.taste`)}
+                >
+                  <div className="flex flex-col sm:flex-row sm:space-x-2 space-y-2 sm:space-y-0">
+                    <div className="flex flex-col">
+                      <select
+                        className="flex rounded-lg border-2 border-gray-300 sm:p-3 py-3"
+                        {...register(`items.${index}.taste`)}
+                      >
+                        <option value="">Wählen Sie einen Geschmack</option>
+                        {menuItems
+                          .filter(
+                            (menuItem) =>
+                              !selectedTastes.includes(menuItem.name) ||
+                              menuItem.name === item.taste,
+                          )
+                          .map((menuItem, i) => (
+                            <option key={i} value={menuItem.name}>
+                              {menuItem.name}
+                            </option>
+                          ))}
+                      </select>
+                      {!!errors["items"]?.[index]?.taste?.message && (
+                        <p className="text-xs italic text-red-500">
+                          {errors["items"]?.[index]?.taste?.message}
+                        </p>
+                      )}
+                    </div>
+                    <div className="flex flex-col">
+                      <input
+                        className="ml-auto py-1 w-12 flex sm:w-20 rounded-lg border-2 border-gray-300 sm:p-3 text-center"
+                        type="number"
+                        placeholder="Menge"
+                        min="0"
+                        {...register(`items.${index}.quantity`)}
+                      />
+                      {!!errors["items"]?.[index]?.quantity?.message && (
+                        <p className="text-xs italic text-red-500">
+                          {errors["items"]?.[index]?.quantity?.message}
+                        </p>
+                      )}
+                    </div>
+                  </div>
+                  {index > 0 && ( // 最初の項目は削除ボタンを表示しない
+                    <button
+                      type="button"
+                      className="rounded-xl bg-red-400 py-2 sm:px-3 text-white w-20 ml-auto sm:w-auto text-sm sm:text-base"
+                      onClick={() => remove(index)}
                     >
-                      <option value="">Wählen Sie einen Geschmack</option>
-                      {menuItems.map((menuItem, i) => (
-                        <option key={i} value={menuItem.name}>
-                          {menuItem.name}
-                        </option>
-                      ))}
-                    </select>
-                    {!!errors["items"]?.[index]?.taste?.message && (
-                      <p className="text-xs italic text-red-500">
-                        {errors["items"]?.[index]?.taste?.message}
-                      </p>
-                    )}
-                  </div>
-                  <div className="flex flex-col">
-                    <input
-                      className="ml-auto py-1 w-12 flex sm:w-20 rounded-lg border-2 border-gray-300 sm:p-3 text-center"
-                      type="number"
-                      placeholder="Menge"
-                      min="0"
-                      {...register(`items.${index}.quantity`)}
-                    />
-                    {!!errors["items"]?.[index]?.quantity?.message && (
-                      <p className="text-xs italic text-red-500">
-                        {errors["items"]?.[index]?.quantity?.message}
-                      </p>
-                    )}
-                  </div>
+                      Löschen
+                    </button>
+                  )}
                 </div>
-                {index > 0 && ( // 最初の項目は削除ボタンを表示しない
-                  <button
-                    type="button"
-                    className="rounded-xl bg-red-400 py-2 sm:px-3 text-white w-20 ml-auto sm:w-auto text-sm sm:text-base"
-                    onClick={() => remove(index)}
-                  >
-                    Löschen
-                  </button>
-                )}
-              </div>
-            ))}
+              );
+            })}
             <button
               type="button"
-              className="mt-2 ml-auto rounded-lg bg-gradient-to-r from-green-400 to-green-600 px-4 py-2 text-white 
-    shadow-md hover:from-green-500 hover:to-green-700"
+              className="mt-2 ml-auto rounded-lg bg-gradient-to-r from-green-400 to-green-600 
+                px-4 py-2 text-white shadow-md hover:from-green-500 hover:to-green-700"
               onClick={() => append({ taste: "", quantity: "0" })}
             >
               Geschmack hinzufügen
@@ -172,7 +183,7 @@ function OrderingForm() {
               {...register("orderType")}
               className="border-2 border-gray-300 p-2 rounded-lg"
             >
-              <option value="">Bitte wählen Sie</option>
+              <option value="">Bitte wählen Sie eine Option aus</option>
               <option value="pickup">Abholung</option>
               <option value="delivery">Lieferung</option>
             </select>

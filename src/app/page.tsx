@@ -20,7 +20,7 @@ export default function Home() {
         />
         <div
           className="absolute inset-0 bg-black bg-opacity-50 p-4 md:p-32 flex 
-        flex-col justify-start items-start"
+        flex-col sm:justify-start justify-center sm:items-start items-center"
         >
           <h1 className="text-white text-3xl md:text-6xl font-bold mt-10">
             Entdecken Sie Taiyaki bei uns!
@@ -31,10 +31,11 @@ export default function Home() {
             einzigartigen Geschmack und die charmante Form dieses köstlichen
             Snacks, der perfekt zu jedem Anlass passt!
           </p>
-          <div className="mt-8 w-full flex justify-center">
+          <div className="mt-8 sm:w-full flex justify-center w-[70%]">
             <Link
               href="/#contact"
-              className="px-32 py-4 text-3xl font-bold text-white bg-gray-300 bg-opacity-50 rounded-lg hover:bg-opacity-70 backdrop-filter backdrop-blur-lg"
+              className="px-20 sm:px-32 py-4 text-3xl font-bold text-white bg-gray-300 
+            bg-opacity-50 rounded-lg hover:bg-opacity-70 backdrop-filter backdrop-blur-lg"
             >
               Bestellen Sie jetzt
             </Link>

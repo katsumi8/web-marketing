@@ -23,7 +23,7 @@ export const useOrderForm = () => {
     control,
     name: "items", // 配列フィールドの名前
   });
-  //送信ボタンクリック後の処理
+
   const onSubmitHandler: SubmitHandler<OrderingInput> = async (values) => {
     const serviceId = process.env.NEXT_PUBLIC_SERVICE_ID;
     const templateId = process.env.NEXT_PUBLIC_TEMPLATE_ID;

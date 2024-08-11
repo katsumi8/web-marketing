@@ -28,9 +28,12 @@ export const orderingSchema = object({
     }),
   ).min(1, "Bitte wählen Sie mindestens einen Artikel aus"),
   orderType: union([
+    literal("").describe("Bitte wählen Sie eine Option aus"),
     literal("pickup").describe("Abholung"),
     literal("delivery").describe("Lieferung"),
-  ]).describe("Bitte wählen Sie entweder Abholung oder Lieferung"),
+  ]).refine((val) => val !== "", {
+    message: "Bitte wählen Sie eine Option aus",
+  }),
 }).superRefine((data, ctx) => {
   const totalQuantity = data.items.reduce(
     (acc, item) => acc + Number(item.quantity),
