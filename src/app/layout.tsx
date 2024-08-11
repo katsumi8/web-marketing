@@ -8,7 +8,7 @@ export const metadata: Metadata = {
   title: "Taiyaki in Soest",
   description: "Taiyaki in Soest",
   icons: {
-    icon: "/assets/favicon.ico",
+    icon: "/favicon.ico",
   },
 };
 
