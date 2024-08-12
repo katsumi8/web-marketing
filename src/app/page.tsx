@@ -1,5 +1,4 @@
 import About from "@/components/About";
-import Main from "@/components/Products";
 import Image from "next/image";
 import TaiyakiImg from "../../public/assets/taiyaki.jpg";
 import Products from "@/components/Products";
@@ -9,7 +8,7 @@ import Link from "next/link";
 export default function Home() {
   return (
     <div className="flex min-h-screen flex-col items-center justify-between bg-gray-100">
-      <div className="relative w-full h-screen">
+      <div className="relative h-screen w-full">
         <Image
           src={TaiyakiImg}
           alt="Taiyaki background"
@@ -18,24 +17,20 @@ export default function Home() {
           objectPosition="left"
           className="absolute inset-0 z-0"
         />
-        <div
-          className="absolute inset-0 bg-black bg-opacity-50 p-4 md:p-32 flex 
-        flex-col sm:justify-start justify-center sm:items-start items-center"
-        >
-          <h1 className="text-white text-3xl md:text-6xl font-bold mt-10">
+        <div className="absolute inset-0 flex flex-col items-center justify-center bg-black bg-opacity-50 p-4 sm:items-start sm:justify-start md:p-32">
+          <h1 className="mt-10 text-3xl font-bold text-white md:text-6xl">
             Entdecken Sie Taiyaki bei uns!
           </h1>
-          <p className="text-white text-base md:text-xl mt-4">
+          <p className="mt-4 text-base text-white md:text-xl">
             Taiyaki ist ein traditionelles japanisches Gebäck in Form eines
             Fisches, gefüllt mit süßer roter Bohnenpaste. Entdecken Sie den
             einzigartigen Geschmack und die charmante Form dieses köstlichen
             Snacks, der perfekt zu jedem Anlass passt!
           </p>
-          <div className="mt-8 sm:w-full flex justify-center w-[70%]">
+          <div className="mt-8 flex w-[70%] justify-center sm:w-full">
             <Link
               href="/#contact"
-              className="px-20 sm:px-32 py-4 text-3xl font-bold text-white bg-gray-300 
-            bg-opacity-50 rounded-lg hover:bg-opacity-70 backdrop-filter backdrop-blur-lg"
+              className="rounded-lg bg-gray-300 bg-opacity-50 px-20 py-4 text-3xl font-bold text-white backdrop-blur-lg backdrop-filter hover:bg-opacity-70 sm:px-32"
             >
               Bestellen Sie jetzt
             </Link>

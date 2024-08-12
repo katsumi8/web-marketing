@@ -3,9 +3,9 @@ import {
   literal,
   object,
   string,
-  TypeOf,
   union,
   ZodIssueCode,
+  type TypeOf,
 } from "zod";
 
 export const orderingSchema = object({

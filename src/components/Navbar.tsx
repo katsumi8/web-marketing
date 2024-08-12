@@ -2,18 +2,14 @@
 import React, { useEffect, useState } from "react";
 import Image from "next/image";
 import Link from "next/link";
-import { AiOutlineClose, AiOutlineMail, AiOutlineMenu } from "react-icons/ai";
-import { FaGithub, FaLinkedinIn } from "react-icons/fa";
-import { BsFillPersonLinesFill } from "react-icons/bs";
+import { AiOutlineClose, AiOutlineMenu } from "react-icons/ai";
 import NavLogoImg from "../../public/assets/navImg.jpg";
-import { usePathname, useRouter } from "next/navigation";
+import { usePathname } from "next/navigation";
 
 function MobileNavbar({
-  nav,
   setNav,
   handleNav,
 }: {
-  nav: boolean;
   setNav: React.Dispatch<React.SetStateAction<boolean>>;
   handleNav: () => void;
 }) {
@@ -33,18 +29,18 @@ function MobileNavbar({
             </Link>
             <div
               onClick={handleNav}
-              className="text-gray-700 cursor-pointer rounded-full p-3 shadow-lg shadow-gray-400"
+              className="cursor-pointer rounded-full p-3 text-gray-700 shadow-lg shadow-gray-400"
             >
               <AiOutlineClose />
             </div>
           </div>
           <div className="my-4 border-b border-gray-300">
-            <p className="w-[85%] py-4 md:w-[90%] text-gray-500">
+            <p className="w-[85%] py-4 text-gray-500 md:w-[90%]">
               {"Entdecken Sie Taiyaki bei uns!"}
             </p>
           </div>
         </div>
-        <div className="flex flex-col py-4 px-4">
+        <div className="flex flex-col px-4 py-4">
           <ul className="uppercase text-gray-500">
             <Link href="/">
               <li onClick={() => setNav(false)} className="py-4 text-sm">
@@ -76,7 +72,6 @@ function MobileNavbar({
 function Navbar() {
   const [nav, setNav] = useState<boolean>(false);
   const [shadow, setShadow] = useState<boolean>(false);
-  const router = useRouter();
   const pathName = usePathname();
 
   const handleNav = () => {
@@ -98,7 +93,7 @@ function Navbar() {
     <header
       className={
         shadow
-          ? "sticky top-0 z-[100] h-20 w-full shadow-xl bg-white"
+          ? "sticky top-0 z-[100] h-20 w-full bg-white shadow-xl"
           : "sticky top-0 z-[100] h-20 w-full bg-white"
       }
     >
@@ -129,13 +124,13 @@ function Navbar() {
                 </li>
               </Link>
             </ul>
-            <div onClick={handleNav} className="md:hidden text-gray-700">
+            <div onClick={handleNav} className="text-gray-700 md:hidden">
               <AiOutlineMenu size={25} />
             </div>
           </div>
         )}
       </div>
-      {nav && <MobileNavbar nav={nav} setNav={setNav} handleNav={handleNav} />}
+      {nav && <MobileNavbar setNav={setNav} handleNav={handleNav} />}
     </header>
   );
 }

@@ -5,13 +5,13 @@ function Products() {
   return (
     <div
       id="products"
-      className="w-full p-2 py-16 bg-white text-gray-600 md:h-screen items-center justify-center flex flex-col"
+      className="flex w-full flex-col items-center justify-center bg-white p-2 py-16 text-gray-600 md:h-screen"
     >
-      <div className="max-w-[1240px] mx-auto">
-        <h1 className="text-3xl font-bold mb-4 text-gray-900">
+      <div className="mx-auto max-w-[1240px]">
+        <h1 className="mb-4 text-3xl font-bold text-gray-900">
           Unsere Produkte
         </h1>
-        <p className="text-lg mb-2">Probieren Sie alles aus</p>
+        <p className="mb-2 text-lg">Probieren Sie alles aus</p>
         <p className="mb-8">
           Wir erhalten oft Anfragen zu unseren Produkten. Hier ist eine Liste
           der Produkte, die wir anbieten. Wenn Sie etwas wünschen, das nicht auf
@@ -22,7 +22,7 @@ function Products() {
           {menuItems.map((item, index) => (
             <div
               key={index}
-              className={`flex justify-between py-2 border-b border-gray-400 ${
+              className={`flex justify-between border-b border-gray-400 py-2 ${
                 index === 0 ? "border-t" : ""
               }`}
             >
@@ -38,7 +38,7 @@ function Products() {
             </div>
           ))}
         </div>
-        <button className="mt-8 py-2 px-4 border border-black">
+        <button className="mt-8 border border-black px-4 py-2">
           Mehr sehen - Bald verfügbar -
         </button>
       </div>

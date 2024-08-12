@@ -12,14 +12,14 @@ export default function PrivacyPolicy() {
   return (
     <div className="flex min-h-screen flex-col items-center justify-between bg-gray-100 p-4 text-black">
       <div className="max-w-[800px]">
-        <h1 className="text-2xl font-bold mb-4">Datenschutzerklärung</h1>
+        <h1 className="mb-4 text-2xl font-bold">Datenschutzerklärung</h1>
         <p className="mb-2">
           Wir freuen uns über Ihr Interesse an unseren Taiyaki-Produkten. Der
           Schutz Ihrer Privatsphäre ist für uns sehr wichtig. Nachstehend
           informieren wir Sie ausführlich über den Umgang mit Ihren Daten.
         </p>
 
-        <h2 className="text-xl font-semibold mt-4 mb-2">1. Verantwortlicher</h2>
+        <h2 className="mb-2 mt-4 text-xl font-semibold">1. Verantwortlicher</h2>
         <p className="mb-2">
           Verantwortlicher für die Erhebung, Verarbeitung und Nutzung Ihrer
           personenbezogenen Daten im Sinne der DSGVO ist:
@@ -31,7 +31,7 @@ export default function PrivacyPolicy() {
           {email}
         </p>
 
-        <h2 className="text-xl font-semibold mt-4 mb-2">
+        <h2 className="mb-2 mt-4 text-xl font-semibold">
           2. Erhebung und Speicherung personenbezogener Daten
         </h2>
         <p className="mb-2">
@@ -49,7 +49,7 @@ export default function PrivacyPolicy() {
           verwendet.
         </p>
 
-        <h2 className="text-xl font-semibold mt-4 mb-2">
+        <h2 className="mb-2 mt-4 text-xl font-semibold">
           3. Nutzung Ihrer Daten
         </h2>
         <p className="mb-2">
@@ -60,7 +60,7 @@ export default function PrivacyPolicy() {
           ausdrücklich eingewilligt haben.
         </p>
 
-        <h2 className="text-xl font-semibold mt-4 mb-2">4. Ihre Rechte</h2>
+        <h2 className="mb-2 mt-4 text-xl font-semibold">4. Ihre Rechte</h2>
         <p className="mb-2">
           Sie haben das Recht, jederzeit Auskunft über Ihre bei uns
           gespeicherten personenbezogenen Daten zu erhalten. Darüber hinaus
@@ -69,14 +69,14 @@ export default function PrivacyPolicy() {
           Kontaktadresse.
         </p>
 
-        <h2 className="text-xl font-semibold mt-4 mb-2">5. Datensicherheit</h2>
+        <h2 className="mb-2 mt-4 text-xl font-semibold">5. Datensicherheit</h2>
         <p className="mb-2">
           Wir sichern unsere Webseite und sonstigen Systeme durch technische und
           organisatorische Maßnahmen gegen Verlust, Zerstörung, Zugriff,
           Veränderung oder Verbreitung Ihrer Daten durch unbefugte Personen.
         </p>
 
-        <h2 className="text-xl font-semibold mt-4 mb-2">
+        <h2 className="mb-2 mt-4 text-xl font-semibold">
           6. Änderungen dieser Datenschutzerklärung
         </h2>
         <p className="mb-2">

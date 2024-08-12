@@ -6,7 +6,7 @@ import MyselfImg from "../../public/assets/myPhoto.jpeg";
 function TaiyakiDescription() {
   return (
     <div>
-      <h2 className="py-4 text-gray-700 text-xl">Was ist Taiyaki?</h2>
+      <h2 className="py-4 text-xl text-gray-700">Was ist Taiyaki?</h2>
       <p className="py-2 text-gray-600">
         Taiyaki ist ein traditionelles japanisches Gebäck, das in Form eines
         Fisches gebacken wird. Es ist ein beliebter Straßenimbiss in Japan und
@@ -40,7 +40,7 @@ function Myself() {
   return (
     <div>
       <div className="m-auto max-w-[1240px]">
-        <h2 className="py-4 text-gray-700 text-xl">Wer bin ich?</h2>
+        <h2 className="py-4 text-xl text-gray-700">Wer bin ich?</h2>
         <p className="py-2 text-gray-600">
           Mein Name ist Katsumi aus Tokio, Japan. Einer meiner Lieblingssnacks
           ist Taiyaki, gefüllt mit süßer roter Bohnenpaste (Anko) und
@@ -66,10 +66,7 @@ function About() {
           <TaiyakiDescription />
           <Myself />
         </div>
-        <div
-          className="m-auto flex h-auto w-full items-center justify-center rounded-xl 
-          p-4 shadow-xl shadow-gray-400 duration-300 ease-in hover:scale-105 flex-col space-y-16 py-8"
-        >
+        <div className="m-auto flex h-auto w-full flex-col items-center justify-center space-y-16 rounded-xl p-4 py-8 shadow-xl shadow-gray-400 duration-300 ease-in hover:scale-105">
           <Image src={AboutImg} className="rounded-xl" alt="Taiyaki" />
           <Image src={MyselfImg} className="rounded-xl" alt="Taiyaki" />
         </div>

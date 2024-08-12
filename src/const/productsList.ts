@@ -12,7 +12,7 @@ export const menuItems: Product[] = [
     price: "4,50€",
   },
   {
-    name: "Taiyaki mit Nuttela Creme",
+    name: "Taiyaki mit Nutella Creme",
     remarks: "Bald verfügbar, kontaktieren Sie uns für Details",
     price: "4,50€",
   },

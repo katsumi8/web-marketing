@@ -1,9 +1,8 @@
 "use client";
-import React, { useEffect, useState } from "react";
 import emailjs from "@emailjs/browser";
 import { useFieldArray, useForm, type SubmitHandler } from "react-hook-form";
 import { zodResolver } from "@hookform/resolvers/zod";
-import { OrderingInput, orderingSchema } from "./schema";
+import { type OrderingInput, orderingSchema } from "./schema";
 
 export const useOrderForm = () => {
   const methods = useForm<OrderingInput>({

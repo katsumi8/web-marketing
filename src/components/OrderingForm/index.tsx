@@ -100,13 +100,12 @@ function OrderingForm() {
               return (
                 <div
                   key={item.id}
-                  className="flex sm:space-x-2 py-2 flex-col sm:flex-row space-y-2 sm:space-y-0 
-                    border-b border-gray-300 w-full sm:justify-between"
+                  className="flex w-full flex-col space-y-2 border-b border-gray-300 py-2 sm:flex-row sm:justify-between sm:space-x-2 sm:space-y-0"
                 >
-                  <div className="flex flex-col sm:flex-row sm:space-x-2 space-y-2 sm:space-y-0">
+                  <div className="flex flex-col space-y-2 sm:flex-row sm:space-x-2 sm:space-y-0">
                     <div className="flex flex-col">
                       <select
-                        className="flex rounded-lg border-2 border-gray-300 sm:p-3 py-3"
+                        className="flex rounded-lg border-2 border-gray-300 py-3 sm:p-3"
                         {...register(`items.${index}.taste`)}
                       >
                         <option value="">Wählen Sie einen Geschmack</option>
@@ -130,7 +129,7 @@ function OrderingForm() {
                     </div>
                     <div className="flex flex-col">
                       <input
-                        className="ml-auto py-1 w-12 flex sm:w-20 rounded-lg border-2 border-gray-300 sm:p-3 text-center"
+                        className="ml-auto flex w-12 rounded-lg border-2 border-gray-300 py-1 text-center sm:w-20 sm:p-3"
                         type="number"
                         placeholder="Menge"
                         min="0"
@@ -146,7 +145,7 @@ function OrderingForm() {
                   {index > 0 && ( // 最初の項目は削除ボタンを表示しない
                     <button
                       type="button"
-                      className="rounded-xl bg-red-400 py-2 sm:px-3 text-white w-20 ml-auto sm:w-auto text-sm sm:text-base"
+                      className="ml-auto w-20 rounded-xl bg-red-400 py-2 text-sm text-white sm:w-auto sm:px-3 sm:text-base"
                       onClick={() => remove(index)}
                     >
                       Löschen
@@ -157,8 +156,7 @@ function OrderingForm() {
             })}
             <button
               type="button"
-              className="mt-2 ml-auto rounded-lg bg-gradient-to-r from-green-400 to-green-600 
-                px-4 py-2 text-white shadow-md hover:from-green-500 hover:to-green-700"
+              className="ml-auto mt-2 rounded-lg bg-gradient-to-r from-green-400 to-green-600 px-4 py-2 text-white shadow-md hover:from-green-500 hover:to-green-700"
               onClick={() => append({ taste: "", quantity: "0" })}
             >
               Geschmack hinzufügen
@@ -181,7 +179,7 @@ function OrderingForm() {
             </label>
             <select
               {...register("orderType")}
-              className="border-2 border-gray-300 p-2 rounded-lg"
+              className="rounded-lg border-2 border-gray-300 p-2"
             >
               <option value="">Bitte wählen Sie eine Option aus</option>
               <option value="pickup">Abholung</option>

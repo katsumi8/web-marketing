@@ -8,13 +8,13 @@ import OrderingForm from "./OrderingForm";
 
 function Contact() {
   return (
-    <div id="contact" className="w-full lg:h-full text-gray-600">
+    <div id="contact" className="w-full text-gray-600 lg:h-full">
       <div className="m-auto w-full max-w-[1240px] px-2 py-16">
         <p className="text-xl uppercase tracking-widest text-[#990000]">
           Bestellen Sie jetzt
         </p>
         <h2 className="py-4">Kontakt aufnehmen</h2>
-        <div className="sm:grid gap-8 lg:grid-cols-5 flex flex-col-reverse lg:flex-row">
+        <div className="flex flex-col-reverse gap-8 sm:grid lg:grid-cols-5 lg:flex-row">
           {/* left side */}
           <div className="col-span-3 h-full w-full rounded-xl p-4 shadow-xl shadow-gray-400 lg:col-span-2">
             <div className="h-full lg:p-4">
