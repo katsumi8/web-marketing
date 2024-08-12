@@ -1,8 +1,7 @@
-import React from "react";
 import Image from "next/image";
-import ContactImg from "../../public/assets/contact.jpg";
-import { HiOutlineChevronDoubleUp } from "react-icons/hi";
 import Link from "next/link";
+import { HiOutlineChevronDoubleUp } from "react-icons/hi";
+import ContactImg from "../../public/assets/contact.jpg";
 import IconItems from "./ConnectWithMe/IconItems";
 import OrderingForm from "./OrderingForm";
 

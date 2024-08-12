@@ -1,7 +1,6 @@
-import React from "react";
-import { FaGithub, FaLinkedinIn } from "react-icons/fa";
 import { AiOutlineMail } from "react-icons/ai";
 import { BsFillPersonLinesFill } from "react-icons/bs";
+import { FaGithub, FaLinkedinIn } from "react-icons/fa";
 import IconItem from "./IconItem";
 
 type IconItemsProps = {

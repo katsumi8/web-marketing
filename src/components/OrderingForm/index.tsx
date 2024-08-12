@@ -1,8 +1,7 @@
 "use client";
-import React from "react";
-import { useOrderForm } from "./hooks";
 import { menuItems } from "../../const/productsList";
 import LoadingSpinner from "../LoadingSpinner";
+import { useOrderForm } from "./hooks";
 
 function OrderingForm() {
   const {

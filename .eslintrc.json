@@ -4,7 +4,9 @@
     "prettier",
     "plugin:@typescript-eslint/recommended"
   ],
-  "plugins": ["@typescript-eslint"],
+  "plugins": [
+    "@typescript-eslint" // Add this line
+  ],
   "rules": {
     "curly": "error",
     "@typescript-eslint/no-explicit-any": "off",

@@ -1,7 +1,6 @@
-import React from "react";
 import Image from "next/image";
-import AboutImg from "../../public/assets/taiyakiInv.jpg";
 import MyselfImg from "../../public/assets/myPhoto.jpeg";
+import AboutImg from "../../public/assets/taiyakiInv.jpg";
 
 function TaiyakiDescription() {
   return (

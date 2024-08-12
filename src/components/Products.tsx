@@ -1,4 +1,3 @@
-import React from "react";
 import { menuItems } from "../const/productsList";
 
 function Products() {

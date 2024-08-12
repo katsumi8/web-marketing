@@ -1,9 +1,9 @@
 import About from "@/components/About";
-import Image from "next/image";
-import TaiyakiImg from "../../public/assets/taiyaki.jpg";
-import Products from "@/components/Products";
 import Contact from "@/components/Contact";
+import Products from "@/components/Products";
+import Image from "next/image";
 import Link from "next/link";
+import TaiyakiImg from "../../public/assets/taiyaki.jpg";
 
 export default function Home() {
   return (
