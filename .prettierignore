@@ -1,0 +1,6 @@
+# Ignore artifacts:
+dist
+build
+.next
+node_modules
+.git
