@@ -101,7 +101,7 @@ function OrderingForm() {
                   key={item.id}
                   className="flex w-full flex-col space-y-2 border-b border-gray-300 py-2 sm:flex-row sm:justify-between sm:space-x-2 sm:space-y-0"
                 >
-                  <div className="flex flex-col space-y-2 sm:flex-row sm:space-x-2 sm:space-y-0">
+                  <div className="flex flex-col space-y-2 sm:flex-row sm:space-x-2 sm:space-y-0 sm:justify-center sm:items-center">
                     <div className="flex flex-col">
                       <select
                         className="flex rounded-lg border-2 border-gray-300 py-3 sm:p-3"
@@ -128,9 +128,9 @@ function OrderingForm() {
                     </div>
                     <div className="flex flex-col">
                       <input
-                        className="ml-auto flex w-12 rounded-lg border-2 border-gray-300 py-1 text-center sm:w-20 sm:p-3"
+                        className="ml-auto flex w-12 rounded-lg border-2 border-gray-300 py-1 
+                            text-center sm:w-20 sm:p-3"
                         type="number"
-                        placeholder="Menge"
                         min="0"
                         {...register(`items.${index}.quantity`)}
                       />

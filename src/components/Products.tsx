@@ -19,11 +19,11 @@ function Products() {
         </p>
         <div className="py-4">
           {menuItems.map((item, index) => (
-            <div className="flex flex-col border-gray-400 border-b py-2">
-              <div
-                key={index}
-                className={`flex w-full justify-between items-center`}
-              >
+            <div
+              key={index}
+              className="flex flex-col border-gray-400 border-b py-2"
+            >
+              <div className={`flex w-full justify-between items-center`}>
                 <div className="flex flex-col">
                   <span className="sm:text-xl">{item.name}</span>
                   {item.remarks && (
