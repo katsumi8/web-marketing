@@ -2,6 +2,7 @@ export default function PrivacyPolicy() {
   const nachName = process.env.NEXT_PUBLIC_NACHNAME;
   const adresse = process.env.NEXT_PUBLIC_ADRESSE;
   const email = process.env.NEXT_PUBLIC_EMAIL;
+  const phoneNumber = process.env.NEXT_PUBLIC_PHONE_NUMBER;
   const formatDate = (date: Date) => {
     const day = String(date.getDate()).padStart(2, "0");
     const month = String(date.getMonth() + 1).padStart(2, "0"); // 月は0から始まるので+1します
@@ -37,12 +38,9 @@ export default function PrivacyPolicy() {
         <p className="mb-2">
           Wenn Sie über Facebook oder Instagram mit uns in Kontakt treten,
           erheben wir die folgenden Informationen:
-          <br />
-          - Name
-          <br />
-          - E-Mail-Adresse
-          <br />
-          - Telefonnummer
+          <br />- {nachName}
+          <br />- {email}
+          <br />- {phoneNumber}
           <br />
           Diese Daten werden ausschließlich zum Zweck der Kontaktaufnahme und
           zur Angebotserstellung für den Kauf unserer Taiyaki-Produkte

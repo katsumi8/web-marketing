@@ -34,6 +34,11 @@ export const orderingSchema = object({
   ]).refine((val) => val !== "", {
     message: "Bitte wählen Sie eine Option aus",
   }),
+  privacyPolicy: literal(true, {
+    errorMap: () => ({
+      message: "Bitte akzeptieren Sie die Datenschutzbestimmungen.",
+    }),
+  }),
 }).superRefine((data, ctx) => {
   const totalQuantity = data.items.reduce(
     (acc, item) => acc + Number(item.quantity),
@@ -46,7 +51,6 @@ export const orderingSchema = object({
         "Bitte bestellen Sie mindestens 4 Artikel aus unserem Sortiment.",
       path: ["items"],
     });
-    return;
   }
   return;
 });

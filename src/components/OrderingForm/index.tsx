@@ -1,4 +1,5 @@
 "use client";
+import Link from "next/link";
 import { menuItems } from "../../const/productsList";
 import LoadingSpinner from "../LoadingSpinner";
 import { useOrderForm } from "./hooks";
@@ -206,6 +207,34 @@ function OrderingForm() {
             {!!errors["message"]?.message && (
               <p className="text-xs italic text-red-500">
                 {errors["message"]?.message}
+              </p>
+            )}
+          </div>
+          <div className="flex flex-col">
+            <div className="flex items-start mt-4">
+              <input
+                type="checkbox"
+                id="privacyPolicy"
+                {...register("privacyPolicy")}
+                className="mt-1"
+              />
+              <label htmlFor="privacyPolicy" className="ml-2 text-sm">
+                Ich stimme den{" "}
+                <Link
+                  href="/privacy-policy"
+                  rel="noopener noreferrer"
+                  target="_blank"
+                  className="text-blue-500 underline"
+                >
+                  Datenschutzbestimmungen
+                </Link>{" "}
+                zu
+                <span className="text-red-500">*</span>
+              </label>
+            </div>
+            {!!errors["privacyPolicy"]?.message && (
+              <p className="text-xs italic text-red-500 mt-1">
+                {errors["privacyPolicy"]?.message}
               </p>
             )}
           </div>
