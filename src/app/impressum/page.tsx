@@ -12,7 +12,7 @@ export default function Impressum() {
   };
   const today = formatDate(new Date());
   return (
-    <div className="flex h-screen flex-col items-center justify-between bg-gray-100 p-4 text-black">
+    <div className="flex h-full flex-col items-center justify-between bg-gray-100 p-4 text-black">
       <div className="max-w-[800px]">
         <h1 className="mb-4 text-2xl font-bold">Impressum</h1>
         <p className="mb-2">Angaben gemäß § 5 TMG (Telemediengesetz):</p>
