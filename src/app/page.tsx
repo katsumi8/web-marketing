@@ -1,5 +1,6 @@
 import About from "@/components/About";
 import Contact from "@/components/Contact";
+import Footer from "@/components/Footer";
 import Products from "@/components/Products";
 import Image from "next/image";
 import Link from "next/link";
@@ -40,6 +41,7 @@ export default function Home() {
       <Products />
       <About />
       <Contact />
+      <Footer />
     </div>
   );
 }
