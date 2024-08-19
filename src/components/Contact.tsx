@@ -34,7 +34,7 @@ function Contact() {
                 </p>
               </div>
               <div>
-                <p className="pt-8 uppercase">Verbinden Sie sich mit mir</p>
+                <p className="pt-8">Verbinden Sie sich mit mir</p>
                 <IconItems style={"CONTACT"} />
               </div>
             </div>

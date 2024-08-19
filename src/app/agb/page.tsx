@@ -8,7 +8,7 @@ export default function AGB() {
   const today = formatDate(new Date());
 
   return (
-    <div className="flex h-full flex-col items-center justify-between bg-gray-100 p-4 text-black">
+    <div className="flex min-h-[calc(100vh-5rem)] flex-col items-center justify-between bg-gray-100 p-4 text-black">
       <div className="max-w-[800px]">
         <h1 className="mb-4 text-2xl font-bold">
           Allgemeine Geschäftsbedingungen (AGB)
