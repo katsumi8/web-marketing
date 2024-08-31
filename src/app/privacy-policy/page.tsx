@@ -9,6 +9,7 @@ export default function PrivacyPolicy() {
     const year = date.getFullYear();
     return `${day}.${month}.${year}`;
   };
+  console.log("nachName", nachName);
   const today = formatDate(new Date());
   return (
     <div className="flex min-h-[calc(100vh-5rem)] flex-col items-center justify-between bg-gray-100 p-4 text-black">
