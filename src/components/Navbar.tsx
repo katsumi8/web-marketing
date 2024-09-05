@@ -4,7 +4,7 @@ import Link from "next/link";
 import { usePathname } from "next/navigation";
 import React, { useEffect, useState } from "react";
 import { AiOutlineClose, AiOutlineMenu } from "react-icons/ai";
-import NavLogoImg from "../../public/assets/navImg.jpg";
+import NavLogoImg from "../../public/assets/navLogo.png";
 
 function MobileNavbar({
   setNav,

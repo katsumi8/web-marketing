@@ -5,8 +5,8 @@ import "./globals.css";
 const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
-  title: "Taiyaki in Soest",
-  description: "Taiyaki in Soest",
+  title: "Katsumi Ishihara Consulting",
+  description: "Katsumi Ishihara Consulting",
   icons: {
     icon: "/favicon.ico",
   },
