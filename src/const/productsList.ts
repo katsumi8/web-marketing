@@ -1,24 +1,29 @@
-type Product = {
+import type { IconType } from "react-icons";
+import { FaLaptopCode, FaPencilAlt } from "react-icons/fa";
+import { IoLogoInstagram } from "react-icons/io";
+
+type Service = {
   name: string;
-  price: string;
-  remarks?: string;
+  remarks: string;
+  icon: IconType;
 };
-export const menuItems: Product[] = [
-  { name: "Taiyaki mit Anko (süße rote Bohnenpaste)", price: "4,50€" },
-  { name: "Taiyaki mit Vanillepudding", price: "4,50€" },
+
+export const services: Service[] = [
   {
-    name: "Taiyaki mit Nutella Creme",
-    remarks: "Bald verfügbar, kontaktieren Sie uns für Details",
-    price: "4,50€",
+    name: "SNSマーケティング",
+    remarks:
+      "InstagramやFacebookのアカウント設定、コンテンツ制作、広告運用、効果分析までをサポートします。",
+    icon: IoLogoInstagram, // Icon for SNS Marketing
   },
-  // {
-  //   name: "Taiyaki mit Schokolade",
-  //   remarks: "Bald verfügbar, kontaktieren Sie uns für Details",
-  //   price: "4,50€",
-  // },
-  // {
-  //   name: "Taiyaki mit Schoko und Erdbeere",
-  //   remarks: "Bald verfügbar, kontaktieren Sie uns für Details",
-  //   price: "5,50€",
-  // },
+  {
+    name: "Webサイト制作",
+    remarks: "ホームページの開発、運用、改善を包括的に行います。",
+    icon: FaPencilAlt, // Icon for Web Design
+  },
+  {
+    name: "Webアプリケーション開発",
+    remarks:
+      "勤怠管理システム、在庫管理システム、顧客管理システムなどの社内Webアプリを開発します。",
+    icon: FaLaptopCode, // Icon for Web Application Development
+  },
 ];

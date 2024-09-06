@@ -3,7 +3,6 @@ import Link from "next/link";
 import { HiOutlineChevronDoubleUp } from "react-icons/hi";
 import ContactImg from "../../public/assets/contact.jpg";
 import IconItems from "./ConnectWithMe/IconItems";
-import OrderingForm from "./OrderingForm";
 
 function Contact() {
   return (
@@ -41,9 +40,7 @@ function Contact() {
           </div>
           {/* Right side */}
           <div className="col-span-3 h-auto w-full rounded-xl shadow-xl shadow-gray-400 lg:p-4">
-            <div className="p-4">
-              <OrderingForm />
-            </div>
+            <div className="p-4">{/* <OrderingForm /> */}</div>
           </div>
         </div>
         <div className="flex justify-center py-12">
