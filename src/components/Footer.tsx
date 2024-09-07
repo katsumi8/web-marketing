@@ -8,7 +8,9 @@ export default function Footer() {
                   md:flex-row md:justify-between md:space-y-0"
       >
         <div className="text-sm text-center md:text-left w-full">
-          <p>&copy; 2024 Taiyaki Soest. Alle Rechte vorbehalten.</p>
+          <p>
+            &copy; 2024 Katsumi Ishihara Consulting. Alle Rechte vorbehalten.
+          </p>
         </div>
         <div
           className="flex flex-col items-start md:justify-end md:items-center 
