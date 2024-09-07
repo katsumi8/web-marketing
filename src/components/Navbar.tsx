@@ -1,7 +1,7 @@
 "use client";
 import Image from "next/image";
 import Link from "next/link";
-import { usePathname } from "next/navigation";
+import { useSearchParams } from "next/navigation";
 import React, { useEffect, useState } from "react";
 import { AiOutlineClose, AiOutlineMenu } from "react-icons/ai";
 import NavLogoImg from "../../public/assets/navLogo.png";
@@ -84,7 +84,8 @@ function MobileNavbar({
 function Navbar() {
   const [nav, setNav] = useState<boolean>(false);
   const [shadow, setShadow] = useState<boolean>(false);
-  const pathName = usePathname();
+  const searchParams = useSearchParams();
+  const entryPoint = searchParams.get("origin");
 
   const handleNav = () => {
     setNav(!nav);
@@ -114,7 +115,7 @@ function Navbar() {
           <Image className="size-20" src={NavLogoImg} alt="/" />
         </Link>
 
-        {pathName !== "/privacy-policy" && (
+        {entryPoint !== "meta" && (
           <div className="px-4">
             <ul style={{ color: `#1f2937` }} className="hidden md:flex">
               {navItems.map((item, index) => (

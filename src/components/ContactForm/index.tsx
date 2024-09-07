@@ -28,7 +28,7 @@ function ContactForm() {
           </p>
           <p className="text-sm text-red-500">
             もしメールアドレスが間違っている場合は、
-            <br />{" "}
+            <br />
             ページを更新して正しいメールアドレスを入力して再送お願いします。
           </p>
         </div>

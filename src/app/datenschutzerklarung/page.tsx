@@ -11,14 +11,17 @@ export default function PrivacyPolicy() {
     return `${day}.${month}.${year}`;
   };
   const today = formatDate(new Date());
+
   return (
     <div className="flex min-h-[calc(100vh-5rem)] flex-col items-center justify-between bg-gray-100 p-4 text-black">
       <div className="max-w-[800px]">
         <h1 className="mb-4 text-2xl font-bold">Datenschutzerklärung</h1>
         <p className="mb-2">
-          Wir freuen uns über Ihr Interesse an unseren Taiyaki-Produkten. Der
-          Schutz Ihrer Privatsphäre ist für uns sehr wichtig. Nachstehend
-          informieren wir Sie ausführlich über den Umgang mit Ihren Daten.
+          Wir freuen uns über Ihr Interesse an unseren Dienstleistungen im
+          Bereich SNS-Marketing, Webseitenerstellung und Systementwicklung. Der
+          Schutz Ihrer Privatsphäre ist für uns von größter Bedeutung.
+          Nachstehend informieren wir Sie ausführlich über den Umgang mit Ihren
+          Daten.
         </p>
 
         <h2 className="mb-2 mt-4 text-xl font-semibold">1. Verantwortlicher</h2>
@@ -37,15 +40,16 @@ export default function PrivacyPolicy() {
           2. Erhebung und Speicherung personenbezogener Daten
         </h2>
         <p className="mb-2">
-          Wenn Sie über Facebook oder Instagram mit uns in Kontakt treten,
-          erheben wir die folgenden Informationen:
-          <br />- {nachName}
-          <br />- {email}
-          <br />- {phoneNumber}
+          Wenn Sie über unsere Webseite, Facebook, Instagram oder andere
+          Plattformen mit uns in Kontakt treten, erheben wir die folgenden
+          Informationen:
+          <br />- Name: {nachName} {firstName}
+          <br />- E-Mail-Adresse: {email}
+          <br />- Telefonnummer: {phoneNumber}
           <br />
           Diese Daten werden ausschließlich zum Zweck der Kontaktaufnahme und
-          zur Angebotserstellung für den Kauf unserer Taiyaki-Produkte
-          verwendet.
+          zur Erstellung von Angeboten für unsere Dienstleistungen im Bereich
+          SNS-Marketing, Webseitenerstellung und Systementwicklung verwendet.
         </p>
 
         <h2 className="mb-2 mt-4 text-xl font-semibold">
@@ -53,8 +57,8 @@ export default function PrivacyPolicy() {
         </h2>
         <p className="mb-2">
           Wir verwenden die von Ihnen mitgeteilten Daten zur Erfüllung und
-          Abwicklung Ihrer Anfragen und Bestellungen. Ihre personenbezogenen
-          Daten werden nicht an Dritte weitergegeben, es sei denn, dass dies zur
+          Abwicklung Ihrer Anfragen und Aufträge. Ihre personenbezogenen Daten
+          werden nicht an Dritte weitergegeben, es sei denn, dass dies zur
           Erfüllung unserer vertraglichen Pflichten notwendig ist oder Sie
           ausdrücklich eingewilligt haben.
         </p>

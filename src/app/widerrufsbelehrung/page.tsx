@@ -6,34 +6,41 @@ const Widerrufsbelehrung = () => {
 
         <h2 className="mb-2 mt-4 text-xl font-semibold">Widerrufsrecht</h2>
         <p className="mb-2">
-          Aufgrund der besonderen Natur unserer Produkte ist eine Rückgabe oder
-          Stornierung der Bestellung grundsätzlich nicht möglich. Sollte jedoch
-          ein erheblicher Mangel am Produkt vorliegen, werden wir
-          selbstverständlich eine Rückerstattung in Erwägung ziehen.
+          Da unsere Dienstleistungen im Bereich SNS-Marketing,
+          Webseitenerstellung und Systementwicklung individuell auf Ihre
+          Bedürfnisse zugeschnitten sind, ist ein Widerruf oder eine Stornierung
+          des Auftrags nach Beginn der Leistungserbringung grundsätzlich
+          ausgeschlossen. Sollten jedoch schwerwiegende Mängel in der
+          Leistungserbringung auftreten, werden wir gemeinsam mit Ihnen eine
+          angemessene Lösung, einschließlich einer möglichen Rückerstattung,
+          finden.
         </p>
 
         <h2 className="mb-2 mt-4 text-xl font-semibold">Rücksendungskosten</h2>
         <p className="mb-2">
-          Im Falle einer berechtigten Rückerstattung übernehmen wir die Kosten
-          für den Rückversand.
+          Im Falle einer berechtigten Rückerstattung tragen wir die anfallenden
+          Kosten, sofern diese im Zusammenhang mit unseren Dienstleistungen
+          stehen.
         </p>
 
         <h2 className="mb-2 mt-4 text-xl font-semibold">Rückgabefrist</h2>
         <p className="mb-2">
-          Eine Rückgabe ist nicht möglich, jedoch bieten wir bei berechtigten
-          Fällen eine Rückerstattung an.
+          Da es sich bei unseren Dienstleistungen um maßgeschneiderte Lösungen
+          handelt, ist eine Rückgabe nicht möglich. In berechtigten Fällen
+          bieten wir jedoch eine Rückerstattung an.
         </p>
 
         <h2 className="mb-2 mt-4 text-xl font-semibold">Erstattung</h2>
         <p className="mb-2">
-          Rückerstattungen werden in der Regel über PayPal abgewickelt.
+          Rückerstattungen werden in Absprache mit Ihnen über eine geeignete
+          Zahlungsmethode abgewickelt.
         </p>
 
         <h2 className="mb-2 mt-4 text-xl font-semibold">Kundendienst</h2>
         <p className="mb-2">
-          Für Rückfragen oder Anliegen zu Rückgaben und Stornierungen wenden Sie
-          sich bitte an die E-Mail-Adresse, die Sie bei der Bestellung verwendet
-          haben.
+          Für Rückfragen oder Anliegen zu Stornierungen und Rückerstattungen
+          wenden Sie sich bitte an die E-Mail-Adresse, die Sie bei der
+          Beauftragung unserer Dienstleistungen verwendet haben.
         </p>
       </div>
     </div>

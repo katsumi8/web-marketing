@@ -17,64 +17,70 @@ export default function AGB() {
         <h2 className="mb-2 mt-4 text-xl font-semibold">1. Geltungsbereich</h2>
         <p className="mb-2">
           Diese Allgemeinen Geschäftsbedingungen (AGB) gelten für alle
-          Bestellungen, die über unsere Webseite oder per Direktkontakt für den
-          Kauf von Taiyaki getätigt werden.
+          Dienstleistungen, die über unsere Webseite oder per Direktkontakt im
+          Bereich SNS-Marketing, Webseitenerstellung und Systementwicklung
+          beauftragt werden.
         </p>
 
         <h2 className="mb-2 mt-4 text-xl font-semibold">
           2. Vertragsabschluss
         </h2>
         <p className="mb-2">
-          Der Vertrag kommt zustande, sobald Sie Ihre Bestellung bestätigt
-          haben. Nach der Bestätigung ist die Bestellung verbindlich und kann
-          nicht mehr storniert werden.
+          Der Vertrag kommt zustande, sobald Sie unser Angebot schriftlich oder
+          elektronisch bestätigt haben. Nach der Bestätigung ist der Auftrag
+          verbindlich und kann nur in Absprache mit uns geändert oder storniert
+          werden.
         </p>
 
         <h2 className="mb-2 mt-4 text-xl font-semibold">
           3. Preise und Zahlungsbedingungen
         </h2>
         <p className="mb-2">
-          Alle angegebenen Preise sind Endpreise und enthalten die gesetzliche
-          Mehrwertsteuer. Die Bezahlung erfolgt wahlweise per PayPal oder in
-          bar. Die Zahlung muss spätestens einen Tag vor der Warenübergabe
-          erfolgen. Bei Lieferungen außerhalb von Soest können zusätzliche
-          Lieferkosten anfallen, die in angemessenem Rahmen berechnet werden.
-        </p>
-
-        <h2 className="mb-2 mt-4 text-xl font-semibold">4. Lieferung</h2>
-        <p className="mb-2">
-          Die Lieferung erfolgt ausschließlich innerhalb der Stadt Soest.
-          Lieferungen außerhalb von Soest sind nach Absprache möglich. Die
-          Lieferzeit hängt vom jeweiligen Lieferort ab.
+          Alle angegebenen Preise verstehen sich zuzüglich der gesetzlichen
+          Mehrwertsteuer. Die Bezahlung erfolgt wahlweise per Überweisung,
+          PayPal oder in bar. Die Zahlung muss spätestens sieben Tage nach
+          Rechnungsdatum erfolgen. Bei besonderen Projekten oder Anforderungen
+          können zusätzliche Kosten anfallen, die vorab mit Ihnen abgestimmt
+          werden.
         </p>
 
         <h2 className="mb-2 mt-4 text-xl font-semibold">
-          5. Rückgaberecht und Stornierungen
+          4. Leistungserbringung
         </h2>
         <p className="mb-2">
-          Rückgaben und Stornierungen sind nach Vertragsabschluss nicht möglich.
-          Bitte überprüfen Sie Ihre Bestellung sorgfältig, bevor Sie sie
-          abschließen.
+          Die Erbringung der vereinbarten Dienstleistungen erfolgt innerhalb des
+          im Vertrag festgelegten Zeitraums. Verzögerungen, die durch den Kunden
+          verursacht werden, können zu einer Anpassung des Liefertermins führen.
+        </p>
+
+        <h2 className="mb-2 mt-4 text-xl font-semibold">
+          5. Rücktrittsrecht und Stornierungen
+        </h2>
+        <p className="mb-2">
+          Ein Rücktritt vom Vertrag ist nur vor Beginn der Leistungserbringung
+          möglich. Stornierungen nach diesem Zeitpunkt bedürfen unserer
+          schriftlichen Zustimmung und können zu einer anteiligen Vergütung der
+          bereits erbrachten Leistungen führen.
         </p>
 
         <h2 className="mb-2 mt-4 text-xl font-semibold">
           6. Gewährleistung und Haftung
         </h2>
         <p className="mb-2">
-          Als Einzelunternehmer bemühe ich mich, die bestmögliche Qualität
-          meiner Taiyaki-Produkte zu gewährleisten. Sollte es dennoch zu Mängeln
-          kommen, werden diese im Rahmen der gesetzlichen Bestimmungen geregelt.
-          Für Schäden, die durch unsachgemäßen Umgang oder Lagerung der Produkte
-          nach Erhalt entstehen, übernehme ich keine Haftung. Weitergehende
+          Wir bemühen uns, die bestmögliche Qualität bei der Erbringung unserer
+          Dienstleistungen zu gewährleisten. Sollte es dennoch zu Mängeln
+          kommen, werden diese im Rahmen der gesetzlichen Bestimmungen behoben.
+          Für Schäden, die durch unsachgemäße Nutzung der gelieferten Systeme
+          oder Webseiten entstehen, übernehmen wir keine Haftung. Weitergehende
           Haftungsansprüche sind, soweit gesetzlich zulässig, ausgeschlossen.
         </p>
 
         <h2 className="mb-2 mt-4 text-xl font-semibold">7. Datenschutz</h2>
         <p className="mb-2">
-          Ihre personenbezogenen Daten werden ausschließlich zur Abwicklung
-          Ihrer Bestellung verwendet und nicht an Dritte weitergegeben, außer
-          wenn dies für die Vertragsabwicklung erforderlich ist oder Sie
-          ausdrücklich zugestimmt haben.
+          Ihre personenbezogenen Daten werden ausschließlich zur Abwicklung des
+          Vertrags verwendet und nicht an Dritte weitergegeben, außer wenn dies
+          für die Vertragsabwicklung erforderlich ist oder Sie ausdrücklich
+          zugestimmt haben.
         </p>
 
         <h2 className="mb-2 mt-4 text-xl font-semibold">
@@ -83,9 +89,9 @@ export default function AGB() {
         <p className="mb-2">
           Es gilt das Recht der Bundesrepublik Deutschland. Für alle
           Streitigkeiten, die sich aus oder im Zusammenhang mit diesem Vertrag
-          ergeben, ist der Gerichtsstand Soest, sofern der Kunde Kaufmann, eine
-          juristische Person des öffentlichen Rechts oder ein
-          öffentlich-rechtliches Sondervermögen ist.
+          ergeben, ist der Gerichtsstand der Sitz unseres Unternehmens, sofern
+          der Kunde Kaufmann, eine juristische Person des öffentlichen Rechts
+          oder ein öffentlich-rechtliches Sondervermögen ist.
         </p>
 
         <p className="mt-4">Stand: {today}</p>
