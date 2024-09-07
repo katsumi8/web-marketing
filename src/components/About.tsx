@@ -5,7 +5,6 @@ function Myself() {
   return (
     <div>
       <div className="m-auto max-w-[1240px]">
-        <h2 className="py-4 text-xl text-gray-700">私について</h2>
         <p className="py-2 text-gray-600">
           初めまして、石原克海と申します。現在はドイツに在住しており、これまでのキャリアを通じて、世界的に認められた企業で数々のプロジェクトに携わってきました。SNSマーケティング、Webサイト制作、Webアプリケーション開発を専門とし、戦略プランナーおよびフルスタックエンジニアとしての豊富な経験を持っています。
           <br />
@@ -31,10 +30,14 @@ function Myself() {
 
 function About() {
   return (
-    <div id="about" className="flex w-full items-center p-2 py-16 md:h-screen">
+    <div
+      id="about"
+      className="flex w-full items-center p-2 py-16 md:h-screen flex-col"
+    >
+      <h1 className="mb-4 text-3xl font-bold text-gray-900">About Me</h1>
+
       <div className="m-auto max-w-[1240px] grid-cols-3 gap-8 md:grid">
         <div className="col-span-2">
-          <p className="mb-4 text-3xl font-bold text-gray-900">About Me</p>
           <Myself />
         </div>
         <div className="m-auto flex h-auto w-full flex-col items-center justify-center space-y-16 rounded-xl p-4 py-8 shadow-xl shadow-gray-400 duration-300 ease-in hover:scale-105">

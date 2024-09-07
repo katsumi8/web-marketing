@@ -6,12 +6,12 @@ import IconItems from "./ConnectWithMe/IconItems";
 
 function Contact() {
   return (
-    <div id="contact" className="w-full text-gray-600 lg:h-full">
+    <div
+      id="contact"
+      className="w-full text-gray-600 lg:h-full flex-col items-center flex"
+    >
+      <h1 className="mb-4 text-3xl font-bold text-gray-900">お問い合わせ</h1>
       <div className="m-auto w-full max-w-[1240px] px-2 py-16">
-        <p className="text-xl uppercase tracking-widest text-[#990000]">
-          Bestellen Sie jetzt
-        </p>
-        <h2 className="py-4">Kontakt aufnehmen</h2>
         <div className="flex flex-col-reverse gap-8 sm:grid lg:grid-cols-5 lg:flex-row">
           {/* left side */}
           <div className="col-span-3 h-full w-full rounded-xl p-4 shadow-xl shadow-gray-400 lg:col-span-2">
@@ -26,14 +26,14 @@ function Contact() {
               <div>
                 <h2 className="py-2">Katsumi Ishihara</h2>
                 <p className="py-4">
-                  Kontaktieren Sie mich für Anfragen oder einfach, um Hallo zu
-                  sagen.
+                  ご質問やご挨拶など、ぜひお気軽にご連絡ください。
                   <br />
-                  Ich werde mich so schnell wie möglich bei Ihnen melden.
+                  できるだけ早くお返事いたします。
+                  <br />
+                  GitHubやLinkedInでつながりたい方もお待ちしています。
                 </p>
               </div>
               <div>
-                <p className="pt-8">Verbinden Sie sich mit mir</p>
                 <IconItems style={"CONTACT"} />
               </div>
             </div>

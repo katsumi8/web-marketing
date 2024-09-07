@@ -6,6 +6,34 @@ import React, { useEffect, useState } from "react";
 import { AiOutlineClose, AiOutlineMenu } from "react-icons/ai";
 import NavLogoImg from "../../public/assets/navLogo.png";
 
+const navItems = [
+  { href: "/", text: "Home" },
+  { href: "/#about", text: "About Me" },
+  { href: "/#products", text: "Services" },
+  { href: "/#contact", text: "Contact" },
+];
+
+interface NavItemProps {
+  href: string;
+  text: string;
+  isMobile: boolean;
+  onClick?: () => void;
+}
+
+const NavItem = ({ href, text, isMobile = false, onClick }: NavItemProps) => {
+  return (
+    <Link href={href}>
+      <li
+        onClick={onClick}
+        className={`text-sm ${
+          isMobile ? "py-4" : "ml-10 uppercase hover:border-b"
+        }`}
+      >
+        {text}
+      </li>
+    </Link>
+  );
+};
 function MobileNavbar({
   setNav,
   handleNav,
@@ -34,34 +62,18 @@ function MobileNavbar({
               <AiOutlineClose />
             </div>
           </div>
-          <div className="my-4 border-b border-gray-300">
-            <p className="w-[85%] py-4 text-gray-500 md:w-[90%]">
-              {"Entdecken Sie Taiyaki bei uns!"}
-            </p>
-          </div>
         </div>
         <div className="flex flex-col px-4 py-4">
           <ul className="uppercase text-gray-500">
-            <Link href="/">
-              <li onClick={() => setNav(false)} className="py-4 text-sm">
-                Home
-              </li>
-            </Link>
-            <Link href="/#about">
-              <li onClick={() => setNav(false)} className="py-4 text-sm">
-                Über Uns
-              </li>
-            </Link>
-            <Link href="/#products">
-              <li onClick={() => setNav(false)} className="py-4 text-sm">
-                Produkte
-              </li>
-            </Link>
-            <Link href="/#contact">
-              <li onClick={() => setNav(false)} className="py-4 text-sm">
-                Bestellen
-              </li>
-            </Link>
+            {navItems.map((item, index) => (
+              <NavItem
+                key={index}
+                href={item.href}
+                text={item.text}
+                isMobile={true}
+                onClick={() => setNav(false)}
+              />
+            ))}
           </ul>
         </div>
       </div>
@@ -105,24 +117,14 @@ function Navbar() {
         {pathName !== "/privacy-policy" && (
           <div className="px-4">
             <ul style={{ color: `#1f2937` }} className="hidden md:flex">
-              <Link href="/">
-                <li className="ml-10 text-sm uppercase hover:border-b">Home</li>
-              </Link>
-              <Link href="/#about">
-                <li className="ml-10 text-sm uppercase hover:border-b">
-                  Über Uns
-                </li>
-              </Link>
-              <Link href="/#products">
-                <li className="ml-10 text-sm uppercase hover:border-b">
-                  Produkte
-                </li>
-              </Link>
-              <Link href="/#contact">
-                <li className="ml-10 text-sm uppercase hover:border-b">
-                  Bestellen
-                </li>
-              </Link>
+              {navItems.map((item, index) => (
+                <NavItem
+                  key={index}
+                  href={item.href}
+                  text={item.text}
+                  isMobile={false}
+                />
+              ))}
             </ul>
             <div onClick={handleNav} className="text-gray-700 md:hidden">
               <AiOutlineMenu size={25} />
