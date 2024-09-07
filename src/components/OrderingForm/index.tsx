@@ -1,10 +1,9 @@
 "use client";
 import Link from "next/link";
-import { menuItems } from "../../const/productsList";
 import LoadingSpinner from "../LoadingSpinner";
 import { useOrderForm } from "./hooks";
 
-function OrderingForm() {
+function ContactForm() {
   const {
     isSubmitting,
     onSubmitHandler,
@@ -12,9 +11,6 @@ function OrderingForm() {
     register,
     isSubmitSuccessful,
     errors,
-    fields,
-    append,
-    remove,
     watch,
   } = useOrderForm();
 
@@ -25,16 +21,15 @@ function OrderingForm() {
     <form onSubmit={handleSubmit(onSubmitHandler)}>
       {isSubmitSuccessful ? (
         <div className="w-full py-2 text-center text-2xl font-bold text-lime-600">
-          <p>Ich habe Ihre E-Mail erhalten!</p>
-          <p>Ich werde mich in Kürze bei Ihnen melden.</p>
-          <p>Vielen Dank!</p>
+          <p>メールを受け取りました、ありがとうございます！</p>
+          <p>近日中にご連絡いたします。</p>
           <p className="mt-4 text-sm text-gray-500">
-            Ihre E-Mail-Adresse ist {watch("email")}
+            ご登録いただいたメールアドレスは {watch("email")} です。
           </p>
           <p className="text-sm text-red-500">
-            Falls die E-Mail-Adresse falsch ist,
-            <br /> aktualisieren Sie bitte die Seite und geben Sie die richtige
-            E-Mail-Adresse ein.
+            もしメールアドレスが間違っている場合は、
+            <br />{" "}
+            ページを更新して正しいメールアドレスを入力して再送お願いします。
           </p>
         </div>
       ) : (
@@ -42,7 +37,7 @@ function OrderingForm() {
           <div className="grid w-full gap-4 py-2 md:grid-cols-2">
             <div className="flex flex-col">
               <label className="py-2 text-sm">
-                Name / Firma
+                会社名/個人名
                 <span className="ml-1 text-red-500">*</span>
               </label>
               <input
@@ -58,7 +53,7 @@ function OrderingForm() {
               )}
             </div>
             <div className="flex flex-col">
-              <label className="py-2 text-sm">Telefonnummer</label>
+              <label className="py-2 text-sm">電話番号</label>
               <input
                 className="flex rounded-lg border-2 border-gray-300 p-3"
                 type="text"
@@ -90,114 +85,7 @@ function OrderingForm() {
             )}
           </div>
           <div className="flex flex-col">
-            <label className="py-2 text-sm">
-              Geschmack und Menge
-              <span className="ml-1 text-red-500">*</span>
-            </label>
-            {fields.map((item, index) => {
-              const selectedTastes = fields.map((field) => field.taste);
-
-              return (
-                <div
-                  key={item.id}
-                  className="flex w-full flex-col space-y-2 border-b border-gray-300 py-2 sm:flex-row sm:justify-between sm:space-x-2 sm:space-y-0"
-                >
-                  <div className="flex flex-col space-y-2 sm:flex-row sm:space-x-2 sm:space-y-0 sm:justify-center sm:items-center">
-                    <div className="flex flex-col">
-                      <select
-                        className="flex rounded-lg border-2 border-gray-300 py-3 sm:p-3"
-                        {...register(`items.${index}.taste`)}
-                      >
-                        <option value="">Wählen Sie einen Geschmack</option>
-                        {menuItems
-                          .filter(
-                            (menuItem) =>
-                              !selectedTastes.includes(menuItem.name) ||
-                              menuItem.name === item.taste,
-                          )
-                          .map((menuItem, i) => (
-                            <option key={i} value={menuItem.name}>
-                              {menuItem.name}
-                            </option>
-                          ))}
-                      </select>
-                      {!!errors["items"]?.[index]?.taste?.message && (
-                        <p className="text-xs italic text-red-500">
-                          {errors["items"]?.[index]?.taste?.message}
-                        </p>
-                      )}
-                    </div>
-                    <div className="flex flex-col">
-                      <input
-                        className="ml-auto flex w-12 rounded-lg border-2 border-gray-300 py-1 
-                            text-center sm:w-20 sm:p-3"
-                        type="number"
-                        min="0"
-                        {...register(`items.${index}.quantity`)}
-                      />
-                      {!!errors["items"]?.[index]?.quantity?.message && (
-                        <p className="text-xs italic text-red-500">
-                          {errors["items"]?.[index]?.quantity?.message}
-                        </p>
-                      )}
-                    </div>
-                  </div>
-                  {index > 0 && ( // 最初の項目は削除ボタンを表示しない
-                    <button
-                      type="button"
-                      className="ml-auto w-20 rounded-xl bg-red-400 py-2 text-sm text-white sm:w-auto sm:px-3 sm:text-base"
-                      onClick={() => remove(index)}
-                    >
-                      Löschen
-                    </button>
-                  )}
-                </div>
-              );
-            })}
-            <button
-              type="button"
-              className="ml-auto mt-2 rounded-lg bg-gradient-to-r from-green-400 to-green-600 px-4 py-2 text-white shadow-md hover:from-green-500 hover:to-green-700"
-              onClick={() => append({ taste: "", quantity: "0" })}
-            >
-              Geschmack hinzufügen
-            </button>
-            {!!errors["items"]?.message && (
-              <p className="text-xs italic text-red-500">
-                {errors["items"]?.message}
-              </p>
-            )}
-            {!!errors["items"]?.root?.message && (
-              <p className="text-xs italic text-red-500">
-                {errors["items"].root.message}
-              </p>
-            )}
-          </div>
-          <div className="flex flex-col">
-            <label className="py-2 text-sm">
-              Bestellungsart
-              <span className="ml-1 text-red-500">*</span>
-            </label>
-            <select
-              {...register("orderType")}
-              className="rounded-lg border-2 border-gray-300 p-2"
-            >
-              <option value="">Bitte wählen Sie eine Option aus</option>
-              <option value="pickup">Abholung</option>
-              <option value="delivery">Lieferung</option>
-            </select>
-            {!!errors["orderType"]?.message && (
-              <p className="text-xs italic text-red-500">
-                {errors["orderType"]?.message}
-              </p>
-            )}
-            {watch("orderType") === "delivery" && (
-              <p className="mt-2 text-xs italic text-blue-700">
-                Lieferung nur innerhalb der Stadt Soest.
-              </p>
-            )}
-          </div>
-          <div className="flex flex-col">
-            <label className="py-2 text-sm">Nachricht</label>
+            <label className="py-2 text-sm">お問い合わせ内容</label>
             <textarea
               className="flex rounded-lg border-2 border-gray-300 p-3"
               rows={4}
@@ -219,16 +107,15 @@ function OrderingForm() {
                 className="mt-1"
               />
               <label htmlFor="privacyPolicy" className="ml-2 text-sm">
-                Ich stimme den{" "}
                 <Link
                   href="/privacy-policy"
                   rel="noopener noreferrer"
                   target="_blank"
                   className="text-blue-500 underline"
                 >
-                  Datenschutzbestimmungen
-                </Link>{" "}
-                zu
+                  プライバシーポリシー
+                </Link>
+                に同意します。
                 <span className="text-red-500">*</span>
               </label>
             </div>
@@ -242,7 +129,7 @@ function OrderingForm() {
             className="mt-4 w-full rounded-xl bg-gradient-to-r from-[#5651e5] to-[#709dff] p-4 text-gray-100 shadow-xl shadow-gray-400"
             type="submit"
           >
-            Bestellen
+            送信
           </button>
         </>
       )}
@@ -250,4 +137,4 @@ function OrderingForm() {
   );
 }
 
-export default OrderingForm;
+export default ContactForm;
