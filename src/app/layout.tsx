@@ -1,6 +1,7 @@
+import LoadingSpinner from "@/components/LoadingSpinner";
 import type { Metadata } from "next";
 import { Inter } from "next/font/google";
-import React from "react";
+import React, { Suspense } from "react";
 import "./globals.css";
 const inter = Inter({ subsets: ["latin"] });
 
@@ -22,7 +23,9 @@ export default function RootLayout({
     <html lang="en">
       <body className={inter.className}>
         <main className="flex flex-col h-full">
-          <Navbar />
+          <Suspense fallback={<LoadingSpinner />}>
+            <Navbar />
+          </Suspense>
           <div className="h-full">{children}</div>
         </main>
       </body>
