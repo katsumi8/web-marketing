@@ -9,7 +9,7 @@ function Contact() {
   return (
     <div
       id="contact"
-      className="w-full text-gray-600 lg:h-full flex-col items-center flex"
+      className="w-full text-gray-600 md:h-screen flex-col items-center flex"
     >
       <h1 className="mb-4 text-3xl font-bold text-gray-900">お問い合わせ</h1>
       <div className="m-auto w-full max-w-[1240px] px-2 py-16">
