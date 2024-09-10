@@ -85,7 +85,10 @@ function ContactForm() {
             )}
           </div>
           <div className="flex flex-col">
-            <label className="py-2 text-sm">お問い合わせ内容</label>
+            <label className="py-2 text-sm">
+              お問い合わせ内容
+              <span className="ml-1 text-red-500">*</span>
+            </label>
             <textarea
               className="flex rounded-lg border-2 border-gray-300 p-3"
               rows={4}

@@ -1,17 +1,17 @@
 import { literal, object, string, type TypeOf } from "zod";
 
 export const contactFormSchema = object({
-  name: string().min(2, "Bitte geben Sie einen gültigen Namen ein"),
+  name: string().min(2, "Please enter your name"),
   phoneNumber: string()
     .optional()
     .refine((val) => !val || /^\d+$/.test(val), {
-      message: "Telefonnummer darf nur Zahlen enthalten",
+      message: "Please enter a valid phone number",
     }),
-  email: string().email("Bitte geben Sie eine gültige E-Mail-Adresse ein"),
-  message: string().optional(),
+  email: string().email("Please enter a valid email address"),
+  message: string().min(1, "Please enter a message"),
   privacyPolicy: literal(true, {
     errorMap: () => ({
-      message: "Bitte akzeptieren Sie die Datenschutzbestimmungen.",
+      message: "Please accept the privacy policy",
     }),
   }),
 });
