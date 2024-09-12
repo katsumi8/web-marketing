@@ -26,4 +26,10 @@ export const services: Service[] = [
       "勤怠管理システム、在庫管理システム、顧客管理システムなどの社内Webアプリを開発します。",
     icon: FaLaptopCode, // Icon for Web Application Development
   },
+  {
+    name: "MA",
+    remarks:
+      "月一の顧客リストへの一斉メール配信など既存顧客のフォローアップやアップセルの最大化を行います。",
+    icon: FaLaptopCode, // Icon for Web Application Development
+  },
 ];
