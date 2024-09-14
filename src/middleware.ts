@@ -38,12 +38,13 @@ export function middleware(request: NextRequest) {
   }
 
   if (pathnameIsMissingLocale) {
-    const newPathname = `/${defaultLanguage}${pathname}`;
-    const newUrl = new URL(newPathname, request.url);
     if (preferredLanguage !== defaultLanguage) {
-      return NextResponse.redirect(newUrl);
+      return NextResponse.redirect(
+        new URL(`/${preferredLanguage}${pathname}`, request.url),
+      );
     } else {
-      return NextResponse.rewrite(newUrl);
+      const newPathname = `/${defaultLanguage}${pathname}`;
+      return NextResponse.rewrite(new URL(newPathname, request.url));
     }
   }
 

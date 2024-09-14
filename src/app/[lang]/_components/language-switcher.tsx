@@ -1,7 +1,7 @@
 "use client";
 
 import {
-  availableLanguages,
+  availableLanguageOptions,
   cookieName,
   defaultLanguage,
 } from "@/app/i18n/settings";
@@ -17,10 +17,14 @@ export const LanguageSwitcher = ({ currentLanguage = defaultLanguage }) => {
   };
 
   return (
-    <select value={currentLanguage} onChange={handleLanguageChange}>
-      {availableLanguages.map((lang) => (
-        <option key={lang} value={lang}>
-          {lang.toUpperCase()}
+    <select
+      className="block border border-gray-100 p-1 bg-inherit rounded-md shadow-sm focus:outline-none focus:ring-blue-500 focus:border-blue-500"
+      value={currentLanguage}
+      onChange={handleLanguageChange}
+    >
+      {availableLanguageOptions.map((lang) => (
+        <option key={lang.code} value={lang.code}>
+          {`${lang.flag} ${lang.code}`}
         </option>
       ))}
     </select>

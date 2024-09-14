@@ -1,4 +1,5 @@
 "use client";
+import LanguageSwitcher from "@/app/[lang]/_components/language-switcher";
 import Image from "next/image";
 import Link from "next/link";
 import { useSearchParams } from "next/navigation";
@@ -25,21 +26,22 @@ const NavItem = ({ href, text, isMobile = false, onClick }: NavItemProps) => {
     <Link href={href}>
       <li
         onClick={onClick}
-        className={`text-sm ${
-          isMobile ? "py-4" : "ml-10 uppercase hover:border-b"
-        }`}
+        className={`text-sm ${isMobile ? "py-4" : "uppercase hover:border-b"}`}
       >
         {text}
       </li>
     </Link>
   );
 };
+
 function MobileNavbar({
   setNav,
   handleNav,
+  lang,
 }: {
   setNav: React.Dispatch<React.SetStateAction<boolean>>;
   handleNav: () => void;
+  lang: string;
 }) {
   return (
     <div
@@ -64,7 +66,7 @@ function MobileNavbar({
           </div>
         </div>
         <div className="flex flex-col px-4 py-4">
-          <ul className="uppercase text-gray-500">
+          <ul className="uppercase text-gray-500 flex flex-col">
             {navItems.map((item, index) => (
               <NavItem
                 key={index}
@@ -74,6 +76,9 @@ function MobileNavbar({
                 onClick={() => setNav(false)}
               />
             ))}
+            <div className="text-sm text-gray-500">
+              <LanguageSwitcher currentLanguage={lang} />
+            </div>
           </ul>
         </div>
       </div>
@@ -81,7 +86,7 @@ function MobileNavbar({
   );
 }
 
-function Navbar() {
+function Navbar({ params }: { params: { lang: string } }) {
   const [nav, setNav] = useState<boolean>(false);
   const [shadow, setShadow] = useState<boolean>(false);
   const searchParams = useSearchParams();
@@ -117,7 +122,10 @@ function Navbar() {
 
         {entryPoint !== "meta" && (
           <div className="px-4">
-            <ul style={{ color: `#1f2937` }} className="hidden md:flex">
+            <ul
+              style={{ color: `#1f2937` }}
+              className="hidden md:flex justify-between space-x-5 items-center"
+            >
               {navItems.map((item, index) => (
                 <NavItem
                   key={index}
@@ -126,6 +134,9 @@ function Navbar() {
                   isMobile={false}
                 />
               ))}
+              <div className="ml-10 hover:border-b text-sm">
+                <LanguageSwitcher currentLanguage={params.lang} />
+              </div>
             </ul>
             <div onClick={handleNav} className="text-gray-700 md:hidden">
               <AiOutlineMenu size={25} />
@@ -133,7 +144,13 @@ function Navbar() {
           </div>
         )}
       </div>
-      {nav && <MobileNavbar setNav={setNav} handleNav={handleNav} />}
+      {nav && (
+        <MobileNavbar
+          setNav={setNav}
+          handleNav={handleNav}
+          lang={params.lang}
+        />
+      )}
     </header>
   );
 }
