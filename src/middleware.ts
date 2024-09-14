@@ -31,12 +31,6 @@ export function middleware(request: NextRequest) {
     (lang) => !pathname.startsWith(`/${lang}/`) && pathname !== `/${lang}`,
   );
 
-  if (!request.cookies.has(cookieName)) {
-    const response = NextResponse.next();
-    response.cookies.set(cookieName, preferredLanguage);
-    return response;
-  }
-
   if (pathnameIsMissingLocale) {
     if (preferredLanguage !== defaultLanguage) {
       return NextResponse.redirect(
@@ -48,5 +42,11 @@ export function middleware(request: NextRequest) {
     }
   }
 
-  return NextResponse.next();
+  // クッキーがない場合でも、リダイレクト後にクッキーを設定する
+  const response = NextResponse.next();
+  if (!request.cookies.has(cookieName)) {
+    response.cookies.set(cookieName, preferredLanguage);
+  }
+
+  return response;
 }
