@@ -33,12 +33,16 @@ export function middleware(request: NextRequest) {
 
   if (pathnameIsMissingLocale) {
     if (preferredLanguage !== defaultLanguage) {
-      return NextResponse.redirect(
+      const response = NextResponse.redirect(
         new URL(`/${preferredLanguage}${pathname}`, request.url),
       );
+      response.cookies.set(cookieName, preferredLanguage);
+      return response;
     } else {
       const newPathname = `/${defaultLanguage}${pathname}`;
-      return NextResponse.rewrite(new URL(newPathname, request.url));
+      const response = NextResponse.rewrite(new URL(newPathname, request.url));
+      response.cookies.set(cookieName, defaultLanguage);
+      return response;
     }
   }
 
