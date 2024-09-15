@@ -1,9 +1,12 @@
 "use client";
+import { useTranslation } from "@/app/i18n/client";
 import Link from "next/link";
+import { Trans } from "react-i18next";
 import LoadingSpinner from "../LoadingSpinner";
 import { useOrderForm } from "./hooks";
 
-function ContactForm() {
+function ContactForm({ lang }: { lang: string }) {
+  const { t } = useTranslation(lang);
   const {
     isSubmitting,
     onSubmitHandler,
@@ -21,15 +24,16 @@ function ContactForm() {
     <form onSubmit={handleSubmit(onSubmitHandler)}>
       {isSubmitSuccessful ? (
         <div className="w-full py-2 text-center text-2xl font-bold text-lime-600">
-          <p>メールを受け取りました、ありがとうございます！</p>
-          <p>近日中にご連絡いたします。</p>
+          <p>{t("contactForm:form_submit_successful.header")}</p>
+          <p>{t("contactForm:form_submit_successful.body")}</p>
           <p className="mt-4 text-sm text-gray-500">
-            ご登録いただいたメールアドレスは {watch("email")} です。
+            <Trans
+              i18nKey="contactForm:form_submit_successful.confirmation"
+              values={{ email: watch("email") }}
+            />
           </p>
           <p className="text-sm text-red-500">
-            もしメールアドレスが間違っている場合は、
-            <br />
-            ページを更新して正しいメールアドレスを入力して再送お願いします。
+            {t("contactForm:form_submit_successful.error")}
           </p>
         </div>
       ) : (
@@ -37,7 +41,7 @@ function ContactForm() {
           <div className="grid w-full gap-4 py-2 md:grid-cols-2">
             <div className="flex flex-col">
               <label className="py-2 text-sm">
-                会社名/個人名
+                {t("contactForm:name_label")}
                 <span className="ml-1 text-red-500">*</span>
               </label>
               <input
@@ -53,7 +57,9 @@ function ContactForm() {
               )}
             </div>
             <div className="flex flex-col">
-              <label className="py-2 text-sm">電話番号</label>
+              <label className="py-2 text-sm">
+                {t("contactForm:phone_label")}
+              </label>
               <input
                 className="flex rounded-lg border-2 border-gray-300 p-3"
                 type="text"
@@ -69,7 +75,7 @@ function ContactForm() {
           </div>
           <div className="flex flex-col py-1">
             <label className="py-2 text-sm">
-              E-Mail
+              {t("contactForm:email_label")}
               <span className="ml-1 text-red-500">*</span>
             </label>
             <input
@@ -86,7 +92,7 @@ function ContactForm() {
           </div>
           <div className="flex flex-col">
             <label className="py-2 text-sm">
-              お問い合わせ内容
+              {t("contactForm:message_label")}
               <span className="ml-1 text-red-500">*</span>
             </label>
             <textarea
@@ -110,16 +116,33 @@ function ContactForm() {
                 className="mt-1"
               />
               <label htmlFor="privacyPolicy" className="ml-2 text-sm">
-                <Link
-                  href="/privacy-policy"
-                  rel="noopener noreferrer"
-                  target="_blank"
-                  className="text-blue-500 underline"
-                >
-                  プライバシーポリシー
-                </Link>
-                に同意します。
-                <span className="text-red-500">*</span>
+                {lang === "ja" ? (
+                  <>
+                    <Link
+                      href="/privacy-policy"
+                      rel="noopener noreferrer"
+                      target="_blank"
+                      className="text-blue-500 underline"
+                    >
+                      {t("contactForm:privacy_policy.label")}
+                    </Link>
+                    {t("contactForm:privacy_policy.agreement")}
+                    <span className="text-red-500">*</span>
+                  </>
+                ) : (
+                  <>
+                    {t("contactForm:privacy_policy.agreement")}{" "}
+                    <Link
+                      href="/privacy-policy"
+                      rel="noopener noreferrer"
+                      target="_blank"
+                      className="text-blue-500 underline"
+                    >
+                      {t("contactForm:privacy_policy.label")}
+                    </Link>
+                    <span className="text-red-500">*</span>
+                  </>
+                )}
               </label>
             </div>
             {!!errors["privacyPolicy"]?.message && (
@@ -132,7 +155,7 @@ function ContactForm() {
             className="mt-4 w-full rounded-xl bg-gradient-to-r from-[#5651e5] to-[#709dff] p-4 text-gray-100 shadow-xl shadow-gray-400"
             type="submit"
           >
-            送信
+            {t("contactForm:submit_button")}
           </button>
         </>
       )}

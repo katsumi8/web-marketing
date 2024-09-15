@@ -86,7 +86,7 @@ function MobileNavbar({
   );
 }
 
-function Navbar({ params }: { params: { lang: string } }) {
+function Navbar({ lang }: { lang: string }) {
   const [nav, setNav] = useState<boolean>(false);
   const [shadow, setShadow] = useState<boolean>(false);
   const searchParams = useSearchParams();
@@ -135,7 +135,7 @@ function Navbar({ params }: { params: { lang: string } }) {
                 />
               ))}
               <div className="ml-10 hover:border-b text-sm">
-                <LanguageSwitcher currentLanguage={params.lang} />
+                <LanguageSwitcher currentLanguage={lang} />
               </div>
             </ul>
             <div onClick={handleNav} className="text-gray-700 md:hidden">
@@ -145,11 +145,7 @@ function Navbar({ params }: { params: { lang: string } }) {
         )}
       </div>
       {nav && (
-        <MobileNavbar
-          setNav={setNav}
-          handleNav={handleNav}
-          lang={params.lang}
-        />
+        <MobileNavbar setNav={setNav} handleNav={handleNav} lang={lang} />
       )}
     </header>
   );

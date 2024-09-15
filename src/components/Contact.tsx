@@ -1,3 +1,4 @@
+import { useTranslation } from "@/app/i18n/client";
 import Image from "next/image";
 import Link from "next/link";
 import { HiOutlineChevronDoubleUp } from "react-icons/hi";
@@ -5,13 +6,17 @@ import ContactImg from "../../public/assets/contact.jpg";
 import IconItems from "./ConnectWithMe/IconItems";
 import ContactForm from "./ContactForm";
 
-function Contact() {
+function Contact({ lang }: { lang: string }) {
+  const { t } = useTranslation(lang);
+
   return (
     <div
       id="contact"
       className="w-full text-gray-600 md:h-screen flex-col items-center flex"
     >
-      <h1 className="mb-4 text-3xl font-bold text-gray-900">お問い合わせ</h1>
+      <h1 className="mb-4 text-3xl font-bold text-gray-900">
+        {t("contactPage:contact_title")}
+      </h1>
       <div className="m-auto w-full max-w-[1240px] px-2 py-16">
         <div className="flex flex-col-reverse gap-8 sm:grid lg:grid-cols-5 lg:flex-row">
           {/* left side */}
@@ -25,14 +30,8 @@ function Contact() {
                 />
               </div>
               <div>
-                <h2 className="py-2">Katsumi Ishihara</h2>
-                <p className="py-4">
-                  ご質問やご挨拶など、ぜひお気軽にご連絡ください。
-                  <br />
-                  できるだけ早くお返事いたします。
-                  <br />
-                  GitHubやLinkedInでつながりたい方もお待ちしています。
-                </p>
+                <h2 className="py-2">{t("contactPage:my_name")}</h2>
+                <p className="py-4">{t("contactPage:description")}</p>
               </div>
               <div>
                 <IconItems style={"CONTACT"} />
@@ -42,7 +41,7 @@ function Contact() {
           {/* Right side */}
           <div className="col-span-3 h-auto w-full rounded-xl shadow-xl shadow-gray-400 lg:p-4">
             <div className="p-4">
-              <ContactForm />
+              <ContactForm lang={lang} />
             </div>
           </div>
         </div>

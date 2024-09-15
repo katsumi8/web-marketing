@@ -1,65 +1,55 @@
+import { useTranslation } from "@/app/i18n/client";
 import Image from "next/image";
+import { Trans } from "react-i18next";
 import MyselfImg from "../../public/assets/myPhoto.jpeg";
 
-function Myself() {
+function Myself({ lang }: { lang: string }) {
+  const { t } = useTranslation(lang);
+
   return (
     <section>
       <div className="m-auto max-w-[1240px]">
         <p className="py-2 text-gray-600">
-          初めまして、石原克海と申します。現在はドイツ在住で、これまでのキャリアを通じて、世界的に認められた企業で数々のプロジェクトに携わってきました。
-          <strong>SNSマーケティング</strong>、<strong>ホームページ開発</strong>
-          、<strong>マーケティングオートメーション（MA）</strong>、
-          <strong>Webアプリケーション開発</strong>
-          を専門とし、戦略プランナーおよびフルスタックエンジニアとしての豊富な経験を持っています。
+          <Trans i18nKey="about:intro" components={{ bold: <strong /> }} />
         </p>
         <div className="py-2">
-          <h3 className="text-xl font-semibold">アクセンチュアでの実績</h3>
-          <p className="text-gray-600">
-            キャリアの始まりは、
-            <strong>世界最大級コンサルティング会社、アクセンチュア</strong>での
-            <strong>業務効率化</strong>や新規事業立ち上げです。
-            ここでの経験が、戦略的なビジネス改革や最適化の基盤を築きました。
-          </p>
-        </div>
-        <div className="py-2">
-          <h3 className="text-xl font-semibold">IIJでの新規事業開発</h3>
-          <p className="text-gray-600">
-            新規事業リードと
-            <strong>データ自動化</strong>に携わり、テクノロジー理解を深め、
-            最適なソリューションを提供してきました。
-          </p>
-        </div>
-
-        <div className="py-2">
           <h3 className="text-xl font-semibold">
-            Kuchenmeisterでの戦略アドバイザーとしての活動
+            {t("about:accenture_title")}
           </h3>
           <p className="text-gray-600">
-            ドイツの<strong>Kuchenmeister</strong>では、日本市場向けの
-            <strong>戦略アドバイザー</strong>
-            として、商品戦略や実際の営業支援活動を通じて
-            <strong>売上を10%向上</strong>させることに貢献しました
+            <Trans
+              i18nKey="about:accenture"
+              components={{ bold: <strong /> }}
+            />
           </p>
         </div>
-
+        <div className="py-2">
+          <h3 className="text-xl font-semibold">{t("about:iij_title")}</h3>
+          <p className="text-gray-600">
+            <Trans i18nKey="about:iij" components={{ bold: <strong /> }} />
+          </p>
+        </div>
         <div className="py-2">
           <h3 className="text-xl font-semibold">
-            ベンチャー企業でのエンジニアリングリード
+            {t("about:kuchenmeister_title")}
           </h3>
           <p className="text-gray-600">
-            ベンチャー企業では、<strong>フルスタックエンジニア</strong>として、
-            <strong>Webアプリ開発</strong>と営業データの分析・自動化を行い、
-            <strong>営業活動を効率化</strong>しました。
+            <Trans
+              i18nKey="about:kuchenmeister"
+              components={{ bold: <strong /> }}
+            />
           </p>
         </div>
-
         <div className="py-2">
-          <h3 className="text-xl font-semibold">ビジネス成功へのサポート</h3>
+          <h3 className="text-xl font-semibold">{t("about:venture_title")}</h3>
+          <p className="text-gray-600">
+            <Trans i18nKey="about:venture" components={{ bold: <strong /> }} />
+          </p>
+        </div>
+        <div className="py-2">
+          <h3 className="text-xl font-semibold">{t("about:support_title")}</h3>
           <p className="py-2 text-gray-600">
-            <strong>SNSマーケティング</strong>、<strong>Web開発</strong>、
-            <strong>SEO</strong>、<strong>MA</strong>
-            など、幅広い分野でサポートします。
-            あなたのビジネスに最適な解決策を提供します。
+            <Trans i18nKey="about:support" components={{ bold: <strong /> }} />
           </p>
         </div>
       </div>
@@ -67,7 +57,7 @@ function Myself() {
   );
 }
 
-function About() {
+function About({ lang }: { lang: string }) {
   return (
     <div
       id="about"
@@ -77,7 +67,7 @@ function About() {
 
       <div className="m-auto max-w-[1240px] grid-cols-3 gap-8 md:grid">
         <div className="col-span-2">
-          <Myself />
+          <Myself lang={lang} />
         </div>
         <div className="m-auto flex h-auto w-full flex-col items-center justify-center space-y-16 rounded-xl p-4 py-8 shadow-xl shadow-gray-400 duration-300 ease-in hover:scale-105">
           <Image src={MyselfImg} className="rounded-xl" alt="Taiyaki" />

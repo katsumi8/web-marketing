@@ -59,8 +59,8 @@ export default function HomeComponent({
         </div>
       </div>
       <Service lang={lang} />
-      <About />
-      <Contact />
+      <About lang={lang} />
+      <Contact lang={lang} />
       <Footer />
     </div>
   );

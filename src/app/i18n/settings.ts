@@ -8,7 +8,13 @@ export const availableLanguages = availableLanguageOptions.map(
   (lang) => lang.code,
 );
 export const cookieName = "i18next";
-export const namespaces = ["translation", "services"];
+export const namespaces = [
+  "translation",
+  "services",
+  "about",
+  "contactPage",
+  "contactForm",
+];
 export function getOptions(lng = defaultLanguage) {
   return {
     lng,

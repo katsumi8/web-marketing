@@ -45,11 +45,7 @@ export default function rootlayout({
         <LanguageProvider initialLanguage={lang}>
           <main className="flex flex-col h-full">
             <Suspense fallback={<Loadingspinner />}>
-              <Navbar
-                params={{
-                  lang,
-                }}
-              />
+              <Navbar lang={lang} />
             </Suspense>
             <div className="h-full">{children}</div>
           </main>
