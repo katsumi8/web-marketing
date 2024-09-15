@@ -14,10 +14,10 @@ function Contact({ lang }: { lang: string }) {
       id="contact"
       className="w-full text-gray-600 md:h-screen flex-col items-center flex"
     >
-      <h1 className="mb-4 text-3xl font-bold text-gray-900">
+      <h1 className="text-3xl font-bold text-gray-900">
         {t("contactPage:contact_title")}
       </h1>
-      <div className="m-auto w-full max-w-[1240px] px-2 py-16">
+      <div className="w-full max-w-[1240px] px-2 py-16">
         <div className="flex flex-col-reverse gap-8 sm:grid lg:grid-cols-5 lg:flex-row">
           {/* left side */}
           <div className="col-span-3 h-full w-full rounded-xl p-4 shadow-xl shadow-gray-400 lg:col-span-2">

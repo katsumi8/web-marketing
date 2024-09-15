@@ -63,9 +63,9 @@ function About({ lang }: { lang: string }) {
       id="about"
       className="flex w-full items-center p-2 py-16 md:h-screen flex-col"
     >
-      <h1 className="mb-4 text-3xl font-bold text-gray-900">About Me</h1>
+      <h1 className="text-3xl font-bold text-gray-900">About Me</h1>
 
-      <div className="m-auto max-w-[1240px] grid-cols-3 gap-8 md:grid">
+      <div className="py-4 max-w-[1240px] grid-cols-3 gap-8 md:grid">
         <div className="col-span-2">
           <Myself lang={lang} />
         </div>

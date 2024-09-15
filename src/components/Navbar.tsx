@@ -37,11 +37,9 @@ const NavItem = ({ href, text, isMobile = false, onClick }: NavItemProps) => {
 function MobileNavbar({
   setNav,
   handleNav,
-  lang,
 }: {
   setNav: React.Dispatch<React.SetStateAction<boolean>>;
   handleNav: () => void;
-  lang: string;
 }) {
   return (
     <div
@@ -147,9 +145,7 @@ function Navbar({ lang }: { lang: string }) {
           </div>
         )}
       </div>
-      {nav && (
-        <MobileNavbar setNav={setNav} handleNav={handleNav} lang={lang} />
-      )}
+      {nav && <MobileNavbar setNav={setNav} handleNav={handleNav} />}
     </header>
   );
 }
