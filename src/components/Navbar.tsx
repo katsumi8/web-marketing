@@ -76,9 +76,6 @@ function MobileNavbar({
                 onClick={() => setNav(false)}
               />
             ))}
-            <div className="text-sm text-gray-500">
-              <LanguageSwitcher currentLanguage={lang} />
-            </div>
           </ul>
         </div>
       </div>
@@ -138,8 +135,14 @@ function Navbar({ lang }: { lang: string }) {
                 <LanguageSwitcher currentLanguage={lang} />
               </div>
             </ul>
-            <div onClick={handleNav} className="text-gray-700 md:hidden">
-              <AiOutlineMenu size={25} />
+
+            <div className="md:hidden flex items-center space-x-4">
+              <div className="text-sm text-gray-500 md:hidden">
+                <LanguageSwitcher currentLanguage={lang} />
+              </div>
+              <div onClick={handleNav} className="text-gray-700 md:hidden">
+                <AiOutlineMenu size={25} />
+              </div>
             </div>
           </div>
         )}
