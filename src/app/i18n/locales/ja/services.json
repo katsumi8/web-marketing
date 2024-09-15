@@ -1,0 +1,20 @@
+{
+  "services": {
+    "snsMarketing": {
+      "name": "SNSマーケティング",
+      "remarks": "InstagramやFacebookのアカウント設定、コンテンツ制作、広告運用、効果分析までをサポートします。"
+    },
+    "webDevelopment": {
+      "name": "Webサイト制作",
+      "remarks": "ホームページの開発、運用、改善、SEOを包括的に行います。"
+    },
+    "webAppDevelopment": {
+      "name": "Webアプリケーション開発",
+      "remarks": "勤怠管理システム、在庫管理システム、顧客管理システムなどの社内Webアプリを開発します。"
+    },
+    "ma": {
+      "name": "MA",
+      "remarks": "月一の顧客リストへの一斉メール配信など既存顧客のフォローアップやアップセルの最大化を行います。"
+    }
+  }
+}

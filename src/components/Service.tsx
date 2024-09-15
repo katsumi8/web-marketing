@@ -1,6 +1,8 @@
-import { services } from "../const/productsList";
+import { useServiceList } from "@/hooks/useServiceList";
 
-function Service() {
+function Service({ lang }: { lang: string }) {
+  const { services } = useServiceList(lang);
+
   return (
     <div
       id="products"
