@@ -19,15 +19,15 @@ export default function Footer() {
           <Link href="/impressum" passHref legacyBehavior>
             <a className="text-sm hover:text-blue-300">Impressum</a>
           </Link>
-          <Link href="/agb" passHref legacyBehavior>
-            <a className="text-sm hover:text-blue-300">AGB</a>
-          </Link>
+          {/* <Link href="/agb" passHref legacyBehavior> */}
+          {/*   <a className="text-sm hover:text-blue-300">AGB</a> */}
+          {/* </Link> */}
           <Link href="/datenschutzerklarung" passHref legacyBehavior>
             <a className="text-sm hover:text-blue-300">Datenschutzerklärung</a>
           </Link>
-          <Link href="/widerrufsbelehrung" passHref legacyBehavior>
-            <a className="text-sm hover:text-blue-300">Widerrufsbelehrung</a>
-          </Link>
+          {/* <Link href="/widerrufsbelehrung" passHref legacyBehavior> */}
+          {/*   <a className="text-sm hover:text-blue-300">Widerrufsbelehrung</a> */}
+          {/* </Link> */}
         </div>
       </div>
     </footer>
