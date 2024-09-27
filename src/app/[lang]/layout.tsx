@@ -1,10 +1,10 @@
+import "@/app/globals.css";
 import Loadingspinner from "@/components/LoadingSpinner";
 import { dir } from "i18next";
 import type { Metadata } from "next";
 import { Inter } from "next/font/google";
 import react, { Suspense } from "react";
 import { LanguageProvider } from "../i18n/client";
-import "./globals.css";
 const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
