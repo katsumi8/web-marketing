@@ -2,10 +2,11 @@ import { getTranslation } from "../i18n/server";
 import HomeComponent from "./_components/homeComponent";
 
 export const metadata = {
-  title: "営業活動を最大化 | Katsumi Ishihara Consulting",
+  title:
+    "ドイツでのHP制作、リニューアルとSEO最適化 | Katsumi Ishihara Consulting",
   description:
-    "ビジネスの成功を支える戦略と技術的ソリューションを提供します。ホームページ制作からSNSマーケティングまで、幅広いサービスであなたのビジネスをサポートします。",
-  keywords: ["営業活動", "ホームページ制作", "SNSマーケティング"],
+    "ドイツ、フランス、イタリア、スペインなどのEU(欧州)在住の皆様へ。ホームページの制作・リニューアル、そしてSEO最適化はお任せください。ウェブサイトの課題を解決し、オンラインでの集客をサポートします。",
+  keywords: ["ホームページ制作", "ドイツ", "SEO最適化"],
 };
 
 export default async function Home({ params }: { params: { lang: string } }) {

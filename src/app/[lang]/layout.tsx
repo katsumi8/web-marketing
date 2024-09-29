@@ -10,7 +10,7 @@ const inter = Inter({ subsets: ["latin"] });
 export const metadata: Metadata = {
   title: "katsumi ishihara consulting",
   description:
-    "Boost your business success with our comprehensive strategies and technical solutions. We offer a wide range of services including website creation and SEO, SNS marketing on platforms like Instagram and Facebook, web application development for internal systems, and marketing automation to maximize customer engagement and upselling opportunities.",
+    "ドイツ、フランス、イタリア、スペインに在住の皆様、ホームページの制作・リニューアル、SEO最適化お悩みでしたら、ぜひご相談を！",
   icons: {
     icon: "/favicon.ico",
   },
