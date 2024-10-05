@@ -1,11 +1,9 @@
 import "@/app/globals.css";
-import Loadingspinner from "@/components/LoadingSpinner";
+import Navbar from "@/components/Navbar";
 import { dir } from "i18next";
 import type { Metadata } from "next";
-import dynamic from "next/dynamic";
 import { Inter } from "next/font/google";
 import type react from "react";
-import { Suspense } from "react";
 import { LanguageProvider } from "../i18n/client";
 import { availableLanguages } from "../i18n/settings";
 const inter = Inter({ subsets: ["latin"] });
@@ -34,8 +32,6 @@ export const metadata: Metadata = {
   // },
 };
 
-const Navbar = dynamic(() => import("@/components/Navbar"), { ssr: false });
-
 export default function rootlayout({
   children,
   params: { lang },
@@ -45,12 +41,12 @@ export default function rootlayout({
 }>) {
   return (
     <html lang={lang} dir={dir(lang)}>
-      <body className={inter.className}>
+      <body className={`${inter.className} h-full`}>
         <LanguageProvider initialLanguage={lang}>
+          <header className="sticky top-0 h-20 z-50">
+            <Navbar lang={lang} />
+          </header>
           <main className="flex flex-col h-full">
-            <Suspense fallback={<Loadingspinner />}>
-              <Navbar lang={lang} />
-            </Suspense>
             <div className="h-full">{children}</div>
           </main>
         </LanguageProvider>

@@ -1,3 +1,4 @@
+"use client";
 import { useServiceList } from "@/hooks/useServiceList";
 
 function Service({ lang }: { lang: string }) {

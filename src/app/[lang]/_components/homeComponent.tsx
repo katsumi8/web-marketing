@@ -1,11 +1,9 @@
-"use client";
 import About from "@/components/About";
 import Contact from "@/components/Contact";
 import Footer from "@/components/Footer";
 import Service from "@/components/Service";
 import Image from "next/image";
 import Link from "next/link";
-import { Trans } from "react-i18next";
 import BgImg from "../../../../public/assets/digitalBackground.jpg";
 
 export default function HomeComponent({
@@ -39,13 +37,14 @@ export default function HomeComponent({
             {title}
           </h1>
           <p className="mt-10 text-base text-white md:text-xl">
-            <Trans
-              defaults={description}
-              components={{
-                bold: <span className="font-bold text-white" />,
-                highlight: <span className="text-white font-semibold" />,
-              }}
-            />
+            {description}
+            {/* <Trans */}
+            {/*   defaults={description} */}
+            {/*   components={{ */}
+            {/*     bold: <span className="font-bold text-white" />, */}
+            {/*     highlight: <span className="text-white font-semibold" />, */}
+            {/*   }} */}
+            {/* /> */}
           </p>
           <div className="mt-8 flex w-[70%] justify-center sm:w-full">
             <Link
