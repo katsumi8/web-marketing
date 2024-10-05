@@ -8,6 +8,7 @@ import { Suspense } from "react";
 import { LanguageProvider } from "../i18n/client";
 import { availableLanguages } from "../i18n/settings";
 import Loading from "./loading";
+
 const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
