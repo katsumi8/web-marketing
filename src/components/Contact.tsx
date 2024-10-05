@@ -1,4 +1,4 @@
-import { useTranslation } from "@/app/i18n/client";
+import { getTranslation } from "@/app/i18n/server";
 import Image from "next/image";
 import Link from "next/link";
 import { HiOutlineChevronDoubleUp } from "react-icons/hi";
@@ -6,8 +6,8 @@ import ContactImg from "../../public/assets/contact.jpg";
 import IconItems from "./ConnectWithMe/IconItems";
 import ContactForm from "./ContactForm";
 
-function Contact({ lang }: { lang: string }) {
-  const { t } = useTranslation(lang);
+async function Contact({ lang }: { lang: string }) {
+  const { t } = await getTranslation(lang);
 
   return (
     <div

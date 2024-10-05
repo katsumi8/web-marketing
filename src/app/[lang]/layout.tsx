@@ -2,9 +2,12 @@ import "@/app/globals.css";
 import Loadingspinner from "@/components/LoadingSpinner";
 import { dir } from "i18next";
 import type { Metadata } from "next";
+import dynamic from "next/dynamic";
 import { Inter } from "next/font/google";
-import react, { Suspense } from "react";
+import type react from "react";
+import { Suspense } from "react";
 import { LanguageProvider } from "../i18n/client";
+import { availableLanguages } from "../i18n/settings";
 const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
@@ -31,7 +34,7 @@ export const metadata: Metadata = {
   // },
 };
 
-const Navbar = react.lazy(() => import("@/components/Navbar"));
+const Navbar = dynamic(() => import("@/components/Navbar"), { ssr: false });
 
 export default function rootlayout({
   children,
@@ -54,4 +57,8 @@ export default function rootlayout({
       </body>
     </html>
   );
+}
+
+export async function generateStaticParams() {
+  return availableLanguages;
 }
