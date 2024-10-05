@@ -4,7 +4,7 @@ import LanguageSwitcher from "@/app/[lang]/_components/language-switcher";
 import Image from "next/image";
 import Link from "next/link";
 import { useSearchParams } from "next/navigation";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { AiOutlineMenu } from "react-icons/ai";
 import NavLogoImg from "../../../public/assets/navLogo.png";
 import { navItems } from "./const";
@@ -21,25 +21,24 @@ export default function Navbar({ lang }: { lang: string }) {
     setNav(!nav);
   };
 
-  // useEffect(() => {
-  //   const handleShadow = () => {
-  //     // Throttled shadow state update
-  //     console.log("scrolling", window.scrollY);
-  //     if (window.scrollY >= 90) {
-  //       setShadow(true);
-  //     } else {
-  //       setShadow(false);
-  //     }
-  //   };
-  //
-  //   // Attach the scroll event listener
-  //   window.addEventListener("scroll", handleShadow);
-  //
-  //   // Clean up the event listener on unmount
-  //   return () => {
-  //     window.removeEventListener("scroll", handleShadow);
-  //   };
-  // }, []);
+  useEffect(() => {
+    const handleShadow = () => {
+      // Throttled shadow state update
+      if (window.scrollY >= 90) {
+        setShadow(true);
+      } else {
+        setShadow(false);
+      }
+    };
+
+    // Attach the scroll event listener
+    window.addEventListener("scroll", handleShadow);
+
+    // Clean up the event listener on unmount
+    return () => {
+      window.removeEventListener("scroll", handleShadow);
+    };
+  }, []);
 
   return (
     <div className={shadow ? "w-full bg-white shadow-xl" : "w-full bg-white"}>

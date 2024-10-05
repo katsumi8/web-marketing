@@ -7,6 +7,7 @@ import type react from "react";
 import { Suspense } from "react";
 import { LanguageProvider } from "../i18n/client";
 import { availableLanguages } from "../i18n/settings";
+import Loading from "./loading";
 const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
@@ -45,7 +46,7 @@ export default function rootlayout({
       <body className={`${inter.className} h-full`}>
         <LanguageProvider initialLanguage={lang}>
           <header className="sticky top-0 h-20 z-50">
-            <Suspense fallback={<div>Loading...</div>}>
+            <Suspense fallback={<Loading />}>
               <Navbar lang={lang} />
             </Suspense>
           </header>

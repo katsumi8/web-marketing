@@ -1,8 +1,8 @@
 "use client";
+import Loading from "@/app/[lang]/loading";
 import { useTranslation } from "@/app/i18n/client";
 import Link from "next/link";
 import { Trans } from "react-i18next";
-import LoadingSpinner from "../LoadingSpinner";
 import { useOrderForm } from "./hooks";
 
 function ContactForm({ lang }: { lang: string }) {
@@ -18,7 +18,7 @@ function ContactForm({ lang }: { lang: string }) {
   } = useOrderForm();
 
   if (isSubmitting) {
-    return <LoadingSpinner />;
+    return <Loading />;
   }
   return (
     <form onSubmit={handleSubmit(onSubmitHandler)}>
