@@ -4,6 +4,7 @@ import { dir } from "i18next";
 import type { Metadata } from "next";
 import { Inter } from "next/font/google";
 import type react from "react";
+import { Suspense } from "react";
 import { LanguageProvider } from "../i18n/client";
 import { availableLanguages } from "../i18n/settings";
 const inter = Inter({ subsets: ["latin"] });
@@ -44,7 +45,9 @@ export default function rootlayout({
       <body className={`${inter.className} h-full`}>
         <LanguageProvider initialLanguage={lang}>
           <header className="sticky top-0 h-20 z-50">
-            <Navbar lang={lang} />
+            <Suspense fallback={<div>Loading...</div>}>
+              <Navbar lang={lang} />
+            </Suspense>
           </header>
           <main className="flex flex-col h-full">
             <div className="h-full">{children}</div>

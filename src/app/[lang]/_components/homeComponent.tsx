@@ -36,16 +36,7 @@ export default function HomeComponent({
           <h1 className="mt-10 text-3xl font-bold text-white md:text-6xl">
             {title}
           </h1>
-          <p className="mt-10 text-base text-white md:text-xl">
-            {description}
-            {/* <Trans */}
-            {/*   defaults={description} */}
-            {/*   components={{ */}
-            {/*     bold: <span className="font-bold text-white" />, */}
-            {/*     highlight: <span className="text-white font-semibold" />, */}
-            {/*   }} */}
-            {/* /> */}
-          </p>
+          <p className="mt-10 text-base text-white md:text-xl">{description}</p>
           <div className="mt-8 flex w-[70%] justify-center sm:w-full">
             <Link
               href="/#contact"
