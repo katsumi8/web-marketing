@@ -1,4 +1,5 @@
 import "@/app/globals.css";
+import Footer from "@/components/Footer";
 import Navbar from "@/components/Navbar";
 import { dir } from "i18next";
 import type { Metadata } from "next";
@@ -61,6 +62,9 @@ export default function rootlayout({
           <main className="flex flex-col h-full">
             <div className="h-full">{children}</div>
           </main>
+          <footer>
+            <Footer />
+          </footer>
         </LanguageProvider>
       </body>
     </html>

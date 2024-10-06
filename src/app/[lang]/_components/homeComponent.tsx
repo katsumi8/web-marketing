@@ -1,6 +1,5 @@
 import About from "@/components/About";
 import Contact from "@/components/Contact";
-import Footer from "@/components/Footer";
 import Service from "@/components/Service";
 import Image from "next/image";
 import Link from "next/link";
@@ -50,7 +49,6 @@ export default function HomeComponent({
       <Service lang={lang} />
       <About lang={lang} />
       <Contact lang={lang} />
-      <Footer />
     </div>
   );
 }
