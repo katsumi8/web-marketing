@@ -20,21 +20,14 @@ export const metadata: Metadata = {
   icons: {
     icon: "/favicon.ico",
   },
-  // opengraph: {
-  //   title: "katsumi ishihara consulting",
-  //   description: "ビジネス成功へのパートナー",
-  //   // todo: change this to the actual url
-  //   url: "https://katsumiishihara.com",
-  //   images: [
-  //     {
-  //       // todo: change this to the actual image
-  //       url: "/og-image.jpg",
-  //       width: 800,
-  //       height: 600,
-  //       alt: "katsumi ishihara consulting",
-  //     },
-  //   ],
-  // },
+  openGraph: {
+    title: "katsumi ishihara consulting",
+    description:
+      "ドイツ、フランス、イタリア、スペインに在住の皆様、ホームページの制作・リニューアル、SEO最適化お悩みでしたら、ぜひご相談を！",
+    locale: "ja_JP",
+    url: "https://katsumiishihara.com",
+    alternateLocale: ["de_DE", "en_GB", "fr_FR", "it_IT", "es_ES"],
+  },
 };
 
 export default function rootlayout({

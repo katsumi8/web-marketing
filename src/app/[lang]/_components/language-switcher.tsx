@@ -25,7 +25,7 @@ export const LanguageSwitcher = ({ currentLanguage = defaultLanguage }) => {
     >
       {availableLanguageOptions.map((lang) => (
         <option key={lang.code} value={lang.code}>
-          {`${lang.flag} ${lang.code}`}
+          {`${lang.flag} ${lang.label.toUpperCase()}`}
         </option>
       ))}
     </select>
