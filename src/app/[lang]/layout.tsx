@@ -3,7 +3,6 @@ import Navbar from "@/components/Navbar";
 import { dir } from "i18next";
 import type { Metadata } from "next";
 import { Inter } from "next/font/google";
-import Script from "next/script";
 import type react from "react";
 import { Suspense } from "react";
 import { LanguageProvider } from "../i18n/client";
@@ -46,10 +45,10 @@ export default function rootlayout({
   return (
     <html lang={lang} dir={dir(lang)}>
       <head>
-        <Script
-          src="https://cdn-cookieyes.com/client_data/4cf946313672c296203e3c28/script.js"
-          strategy="beforeInteractive"
-        />
+        {/* <Script */}
+        {/*   src="https://cdn-cookieyes.com/client_data/4cf946313672c296203e3c28/script.js" */}
+        {/*   strategy="beforeInteractive" */}
+        {/* /> */}
       </head>
       <body className={`${inter.className} h-full`}>
         <LanguageProvider initialLanguage={lang}>

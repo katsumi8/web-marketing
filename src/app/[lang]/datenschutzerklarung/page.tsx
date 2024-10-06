@@ -1,16 +1,9 @@
 export default function PrivacyPolicy() {
-  const nachName = process.env.NEXT_PUBLIC_NACHNAME;
+  const lastName = process.env.NEXT_PUBLIC_NACHNAME;
   const firstName = process.env.NEXT_PUBLIC_VORNAME;
   const adresse = process.env.NEXT_PUBLIC_ADRESSE;
   const email = process.env.NEXT_PUBLIC_EMAIL;
   const phoneNumber = process.env.NEXT_PUBLIC_PHONE_NUMBER;
-  const formatDate = (date: Date) => {
-    const day = String(date.getDate()).padStart(2, "0");
-    const month = String(date.getMonth() + 1).padStart(2, "0"); // 月は0から始まるので+1します
-    const year = date.getFullYear();
-    return `${day}.${month}.${year}`;
-  };
-  const today = formatDate(new Date());
 
   return (
     <div className="flex min-h-[calc(100vh-5rem)] flex-col items-center justify-between bg-gray-100 p-4 text-black">
@@ -152,74 +145,509 @@ export default function PrivacyPolicy() {
               vor dem Zugriff durch Dritte ist nicht möglich.
             </p>
           </div>
-          {/* TODO: from page 4 */}
           <div className="flex flex-col space-y-1">
-            <h3 className="font-semibold"></h3>
-            <p></p>
+            <h3 className="font-semibold">
+              Hinweis zur verantwortlichen Stelle
+            </h3>
+            <div className="flex flex-col space-y-1">
+              <p>
+                Die verantwortliche Stelle für die Datenverarbeitung auf dieser
+                Website ist:
+              </p>
+              <p>
+                {firstName} {lastName}
+              </p>
+              <p>{adresse}</p>
+              <p>Telefon: {phoneNumber} </p>
+              <p>E-Mail: {email}</p>
+              <p>
+                Verantwortliche Stelle ist die natürliche oder juristische
+                Person, die allein oder gemeinsam mit anderen über die Zwecke
+                und Mittel der Verarbeitung von personenbezogenen Daten (z. B.
+                Namen, E-Mail-Adressen o. Ä.) entscheidet.
+              </p>
+            </div>
+          </div>
+          <div className="flex flex-col space-y-1">
+            <h3 className="font-semibold">Speicherdauer</h3>
+            <p>
+              Soweit innerhalb dieser Datenschutzerklärung keine speziellere
+              Speicherdauer genannt wurde, verbleiben Ihre personenbezogenen
+              Daten bei uns, bis der Zweck für die Datenverarbeitung entfällt.
+              Wenn Sie ein berechtigtes Löschersuchen geltend machen oder eine
+              Einwilligung zur Datenverarbeitung widerrufen, werden Ihre Daten
+              gelöscht, sofern wir keine anderen rechtlich zulässigen Gründe für
+              die Speicherung Ihrer personenbezogenen Daten haben (z. B. steuer-
+              oder handelsrechtliche Aufbewahrungsfristen); im letztgenannten
+              Fall erfolgt die Löschung nach Fortfall dieser Gründe.
+            </p>
+          </div>
+          <div className="flex flex-col space-y-1">
+            <h3 className="font-semibold">
+              Allgemeine Hinweise zu den Rechtsgrundlagen der Datenverarbeitung
+              auf dieser Website
+            </h3>
+            <p>
+              Sofern Sie in die Datenverarbeitung eingewilligt haben,
+              verarbeiten wir Ihre personenbezogenen Daten auf Grundlage von
+              Art. 6 Abs. 1 lit. a DSGVO bzw. Art. 9 Abs. 2 lit. a DSGVO, sofern
+              besondere Datenkategorien nach Art. 9 Abs. 1 DSGVO verarbeitet
+              werden. Im Falle einer ausdrücklichen Einwilligung in die
+              Übertragung personenbezogener Daten in Drittstaaten erfolgt die
+              Datenverarbeitung außerdem auf Grundlage von Art. 49 Abs. 1 lit. a
+              DSGVO. Sofern Sie in die Speicherung von Cookies oder in den
+              Zugriff auf Informationen in Ihr Endgerät (z. B. via
+              Device-Fingerprinting) eingewilligt haben, erfolgt die
+              Datenverarbeitung zusätzlich auf Grundlage von § 25 Abs. 1 TDDDG.
+              Die Einwilligung ist jederzeit widerrufbar. Sind Ihre Daten zur
+              Vertragserfüllung oder zur Durchführung vorvertraglicher Maßnahmen
+              erforderlich, verarbeiten wir Ihre Daten auf Grundlage des Art. 6
+              Abs. 1 lit. b DSGVO. Des Weiteren verarbeiten wir Ihre Daten,
+              sofern diese zur Erfüllung einer rechtlichen Verpflichtung
+              erforderlich sind auf Grundlage von Art. 6 Abs. 1 lit. c DSGVO.
+              Die Datenverarbeitung kann ferner auf Grundlage unseres
+              berechtigten Interesses nach Art. 6 Abs. 1 lit. f DSGVO erfolgen.
+              Über die jeweils im Einzelfall einschlägigen Rechtsgrundlagen wird
+              in den folgenden Absätzen dieser Datenschutzerklärung informiert.
+            </p>
+          </div>
+          <div className="flex flex-col space-y-1">
+            <h3 className="font-semibold">
+              Empfänger von personenbezogenen Daten
+            </h3>
+            <p>
+              Im Rahmen unserer Geschäftstätigkeit arbeiten wir mit
+              verschiedenen externen Stellen zusammen. Dabei ist teilweise auch
+              eine Übermittlung von personenbezogenen Daten an diese externen
+              Stellen erforderlich. Wir geben personenbezogene Daten nur dann an
+              externe Stellen weiter, wenn dies im Rahmen einer
+              Vertragserfüllung erforderlich ist, wenn wir gesetzlich hierzu
+              verpflichtet sind (z. B. Weitergabe von Daten an Steuerbehörden),
+              wenn wir ein berechtigtes Interesse nach Art. 6 Abs. 1 lit. f
+              DSGVO an der Weitergabe haben oder wenn eine sonstige
+              Rechtsgrundlage die Datenweitergabe erlaubt. Beim Einsatz von
+              Auftragsverarbeitern geben wir personenbezogene Daten unserer
+              Kunden nur auf Grundlage eines gültigen Vertrags über
+              Auftragsverarbeitung weiter. Im Falle einer gemeinsamen
+              Verarbeitung wird ein Vertrag über gemeinsame Verarbeitung
+              geschlossen.
+            </p>
+          </div>
+          {/* // TODO: from page 5 */}
+          <div className="flex flex-col space-y-1">
+            <h3 className="font-semibold">
+              Widerruf Ihrer Einwilligung zur Datenverarbeitung
+            </h3>
+            <p>
+              Viele Datenverarbeitungsvorgänge sind nur mit Ihrer ausdrücklichen
+              Einwilligung möglich. Sie können eine bereits erteilte
+              Einwilligung jederzeit widerrufen. Die Rechtmäßigkeit der bis zum
+              Widerruf erfolgten Datenverarbeitung bleibt vom Widerruf
+              unberührt.
+            </p>
+          </div>
+          <div className="flex flex-col space-y-1">
+            <h3 className="font-semibold">
+              Widerspruchsrecht gegen die Datenerhebung in besonderen Fällen
+              sowie gegen Direktwerbung (Art. 21 DSGVO)
+            </h3>
+            <p>
+              WENN DIE DATENVERARBEITUNG AUF GRUNDLAGE VON ART. 6 ABS. 1 LIT. E
+              ODER F DSGVO ERFOLGT, HABEN SIE JEDERZEIT DAS RECHT, AUS GRÜNDEN,
+              DIE SICH AUS IHRER BESONDEREN SITUATION ERGEBEN, GEGEN DIE
+              VERARBEITUNG IHRER PERSONENBEZOGENEN DATEN WIDERSPRUCH EINZULEGEN;
+              DIES GILT AUCH FÜR EIN AUF DIESE BESTIMMUNGEN GESTÜTZTES
+              PROFILING. DIE JEWEILIGE RECHTSGRUNDLAGE, AUF DENEN EINE
+              VERARBEITUNG BERUHT, ENTNEHMEN SIE DIESER DATENSCHUTZERKLÄRUNG.
+              WENN SIE WIDERSPRUCH EINLEGEN, WERDEN WIR IHRE BETROFFENEN
+              PERSONENBEZOGENEN DATEN NICHT MEHR VERARBEITEN, ES SEI DENN, WIR
+              KÖNNEN ZWINGENDE SCHUTZWÜRDIGE GRÜNDE FÜR DIE VERARBEITUNG
+              NACHWEISEN, DIE IHRE INTERESSEN, RECHTE UND FREIHEITEN ÜBERWIEGEN
+              ODER DIE VERARBEITUNG DIENT DER GELTENDMACHUNG, AUSÜBUNG ODER
+              VERTEIDIGUNG VON RECHTSANSPRÜCHEN (WIDERSPRUCH NACH ART. 21 ABS. 1
+              DSGVO). WERDEN IHRE PERSONENBEZOGENEN DATEN VERARBEITET, UM
+              DIREKTWERBUNG ZU BETREIBEN, SO HABEN SIE DAS RECHT, JEDERZEIT
+              WIDERSPRUCH GEGEN DIE VERARBEITUNG SIE BETREFFENDER
+              PERSONENBEZOGENER DATEN ZUM ZWECKE DERARTIGER WERBUNG EINZULEGEN;
+              DIES GILT AUCH FÜR DAS PROFILING, SOWEIT ES MIT SOLCHER
+              DIREKTWERBUNG IN VERBINDUNG STEHT. WENN SIE WIDERSPRECHEN, WERDEN
+              IHRE PERSONENBEZOGENEN DATEN ANSCHLIESSEND NICHT MEHR ZUM ZWECKE
+              DER DIREKTWERBUNG VERWENDET (WIDERSPRUCH NACH ART. 21 ABS. 2
+              DSGVO).
+            </p>
+          </div>
+          <div className="flex flex-col space-y-1">
+            <h3 className="font-semibold">
+              Beschwerderecht bei der zuständigen Aufsichtsbehörde
+            </h3>
+            <p>
+              Im Falle von Verstößen gegen die DSGVO steht den Betroffenen ein
+              Beschwerderecht bei einer Aufsichtsbehörde, insbesondere in dem
+              Mitgliedstaat ihres gewöhnlichen Aufenthalts, ihres Arbeitsplatzes
+              oder des Orts des mutmaßlichen Verstoßes zu. Das Beschwerderecht
+              besteht unbeschadet anderweitiger verwaltungsrechtlicher oder
+              gerichtlicher Rechtsbehelfe.
+            </p>
           </div>
           <div className="flex flex-col space-y-1">
             <h3 className="font-semibold"></h3>
             <p></p>
           </div>
           <div className="flex flex-col space-y-1">
-            <h3 className="font-semibold"></h3>
-            <p></p>
+            <h3 className="font-semibold">Recht auf Datenübertragbarkeit</h3>
+            <p>
+              Sie haben das Recht, Daten, die wir auf Grundlage Ihrer
+              Einwilligung oder in Erfüllung eines Vertrags automatisiert
+              verarbeiten, an sich oder an einen Dritten in einem gängigen,
+              maschinenlesbaren Format aushändigen zu lassen. Sofern Sie die
+              direkte Übertragung der Daten an einen anderen Verantwortlichen
+              verlangen, erfolgt dies nur, soweit es technisch machbar ist.
+            </p>
           </div>
           <div className="flex flex-col space-y-1">
-            <h3 className="font-semibold"></h3>
-            <p></p>
+            <h3 className="font-semibold">
+              Auskunft, Berichtigung und Löschung
+            </h3>
+            <p>
+              Sie haben im Rahmen der geltenden gesetzlichen Bestimmungen
+              jederzeit das Recht auf unentgeltliche Auskunft über Ihre
+              gespeicherten personenbezogenen Daten, deren Herkunft und
+              Empfänger und den Zweck der Datenverarbeitung und ggf. ein Recht
+              auf Berichtigung oder Löschung dieser Daten. Hierzu sowie zu
+              weiteren Fragen zum Thema personenbezogene Daten können Sie sich
+              jederzeit an uns wenden.
+            </p>
           </div>
           <div className="flex flex-col space-y-1">
-            <h3 className="font-semibold"></h3>
-            <p></p>
+            <h3 className="font-semibold">
+              Recht auf Einschränkung der Verarbeitung
+            </h3>
+            <div className="flex flex-col space-y-1">
+              <p>
+                Sie haben das Recht, die Einschränkung der Verarbeitung Ihrer
+                personenbezogenen Daten zu verlangen. Hierzu können Sie sich
+                jederzeit an uns wenden. Das Recht auf Einschränkung der
+                Verarbeitung besteht in folgenden Fällen:
+              </p>
+              <ul className="list-disc px-4">
+                <li>
+                  Wenn Sie die Richtigkeit Ihrer bei uns gespeicherten
+                  personenbezogenen Daten bestreiten, benötigen wir in der Regel
+                  Zeit, um dies zu überprüfen. Für die Dauer der Prüfung haben
+                  Sie das Recht, die Einschränkung der Verarbeitung Ihrer
+                  personenbezogenen Daten zu verlangen.
+                </li>
+                <li>
+                  Wenn die Verarbeitung Ihrer personenbezogenen Daten
+                  unrechtmäßig geschah/geschieht, können Sie statt der Löschung
+                  die Einschränkung der Datenverarbeitung verlangen.
+                </li>
+                <li>
+                  Wenn wir Ihre personenbezogenen Daten nicht mehr benötigen,
+                  Sie sie jedoch zur Ausübung, Verteidigung oder Geltendmachung
+                  von Rechtsansprüchen benötigen, haben Sie das Recht, statt der
+                  Löschung die Einschränkung der Verarbeitung Ihrer
+                  personenbezogenen Daten zu verlangen.
+                </li>
+                <li>
+                  Wenn Sie einen Widerspruch nach Art. 21 Abs. 1 DSGVO eingelegt
+                  haben, muss eine Abwägung zwischen Ihren und unseren
+                  Interessen vorgenommen werden. Solange noch nicht feststeht,
+                  wessen Interessen überwiegen, haben Sie das Recht, die
+                  Einschränkung der Verarbeitung Ihrer personenbezogenen Daten
+                  zu verlangen.
+                </li>
+              </ul>
+              <p>
+                Wenn Sie die Verarbeitung Ihrer personenbezogenen Daten
+                eingeschränkt haben, dürfen diese Daten – von ihrer Speicherung
+                abgesehen – nur mit Ihrer Einwilligung oder zur Geltendmachung,
+                Ausübung oder Verteidigung von Rechtsansprüchen oder zum Schutz
+                der Rechte einer anderen natürlichen oder juristischen Person
+                oder aus Gründen eines wichtigen öffentlichen Interesses der
+                Europäischen Union oder eines Mitgliedstaats verarbeitet werden.
+              </p>
+            </div>
           </div>
           <div className="flex flex-col space-y-1">
-            <h3 className="font-semibold"></h3>
-            <p></p>
+            <h3 className="font-semibold">SSL- bzw. TLS-Verschlüsselung</h3>
+            <p>
+              Diese Seite nutzt aus Sicherheitsgründen und zum Schutz der
+              Übertragung vertraulicher Inhalte, wie zum Beispiel Bestellungen
+              oder Anfragen, die Sie an uns als Seitenbetreiber senden, eine
+              SSL- bzw. TLSVerschlüsselung. Eine verschlüsselte Verbindung
+              erkennen Sie daran, dass die Adresszeile des Browsers von
+              „http://“ auf „https://“ wechselt und an dem Schloss-Symbol in
+              Ihrer Browserzeile. Wenn die SSL- bzw. TLS-Verschlüsselung
+              aktiviert ist, können die Daten, die Sie an uns übermitteln, nicht
+              von Dritten mitgelesen werden.
+            </p>
           </div>
+
           <div className="flex flex-col space-y-1">
-            <h3 className="font-semibold"></h3>
-            <p></p>
-          </div>
-          <div className="flex flex-col space-y-1">
-            <h3 className="font-semibold"></h3>
-            <p></p>
-          </div>
-          <div className="flex flex-col space-y-1">
-            <h3 className="font-semibold"></h3>
-            <p></p>
-          </div>
-          <div className="flex flex-col space-y-1">
-            <h3 className="font-semibold"></h3>
-            <p></p>
-          </div>
-          <div className="flex flex-col space-y-1">
-            <h3 className="font-semibold"></h3>
-            <p></p>
-          </div>
-          <div className="flex flex-col space-y-1">
-            <h3 className="font-semibold"></h3>
-            <p></p>
+            <h3 className="font-semibold">Widerspruch gegen Werbe-E-Mails</h3>
+            <p>
+              Der Nutzung von im Rahmen der Impressumspflicht veröffentlichten
+              Kontaktdaten zur Übersendung von nicht ausdrücklich angeforderter
+              Werbung und Informationsmaterialien wird hiermit widersprochen.
+              Die Betreiber der Seiten behalten sich ausdrücklich rechtliche
+              Schritte im Falle der unverlangten Zusendung von
+              Werbeinformationen, etwa durch Spam-E-Mails, vor.
+            </p>
           </div>
         </div>
 
-        {/* TODO: Big chank  */}
         <div className="flex flex-col justify-center space-y-2 py-4">
           <h2 className="text-xl font-semibold">
             4. Datenerfassung auf dieser Website
           </h2>
           <div className="flex flex-col space-y-1">
-            <h3 className="font-semibold"></h3>
-            <p></p>
+            <h3 className="font-semibold">Cookies</h3>
+            <div className="flex flex-col space-y-1">
+              <p>
+                Unsere Internetseiten verwenden so genannte „Cookies“. Cookies
+                sind kleine Datenpakete und richten auf Ihrem Endgerät keinen
+                Schaden an. Sie werden entweder vorübergehend für die Dauer
+                einer Sitzung (Session-Cookies) oder dauerhaft (permanente
+                Cookies) auf Ihrem Endgerät gespeichert. Session-Cookies werden
+                nach Ende Ihres Besuchs automatisch gelöscht. Permanente Cookies
+                bleiben auf Ihrem Endgerät gespeichert, bis Sie diese selbst
+                löschen oder eine automatische Löschung durch Ihren Webbrowser
+                erfolgt.
+              </p>
+              <p>
+                Cookies können von uns (First-Party-Cookies) oder von
+                Drittunternehmen stammen (sog. Third-PartyCookies).
+                Third-Party-Cookies ermöglichen die Einbindung bestimmter
+                Dienstleistungen von Drittunternehmen innerhalb von Webseiten
+                (z. B. Cookies zur Abwicklung von Zahlungsdienstleistungen).
+              </p>
+              <p>
+                Cookies haben verschiedene Funktionen. Zahlreiche Cookies sind
+                technisch notwendig, da bestimmte Webseitenfunktionen ohne diese
+                nicht funktionieren würden (z. B. die Warenkorbfunktion oder die
+                Anzeige von Videos). Andere Cookies können zur Auswertung des
+                Nutzerverhaltens oder zu Werbezwecken verwendet werden.
+              </p>
+              <p>
+                Cookies, die zur Durchführung des elektronischen
+                Kommunikationsvorgangs, zur Bereitstellung bestimmter, von Ihnen
+                erwünschter Funktionen (z. B. für die Warenkorbfunktion) oder
+                zur Optimierung der Website (z. B. Cookies zur Messung des
+                Webpublikums) erforderlich sind (notwendige Cookies), werden auf
+                Grundlage von Art. 6 Abs. 1 lit. f DSGVO gespeichert, sofern
+                keine andere Rechtsgrundlage angegeben wird. Der
+                Websitebetreiber hat ein berechtigtes Interesse an der
+                Speicherung von notwendigen Cookies zur technisch fehlerfreien
+                und optimierten Bereitstellung seiner Dienste. Sofern eine
+                Einwilligung zur Speicherung von Cookies und vergleichbaren
+                Wiedererkennungstechnologien abgefragt wurde, erfolgt die
+                Verarbeitung ausschließlich auf Grundlage dieser Einwilligung
+                (Art. 6 Abs. 1 lit. a DSGVO und § 25 Abs. 1 TDDDG); die
+                Einwilligung ist jederzeit widerrufbar.
+              </p>
+              <p>
+                Sie können Ihren Browser so einstellen, dass Sie über das Setzen
+                von Cookies informiert werden und Cookies nur im Einzelfall
+                erlauben, die Annahme von Cookies für bestimmte Fälle oder
+                generell ausschließen sowie das automatische Löschen der Cookies
+                beim Schließen des Browsers aktivieren. Bei der Deaktivierung
+                von Cookies kann die Funktionalität dieser Website eingeschränkt
+                sein.
+              </p>
+              <p>
+                Welche Cookies und Dienste auf dieser Website eingesetzt werden,
+                können Sie dieser Datenschutzerklärung entnehmen.
+              </p>
+            </div>
+          </div>
+
+          <div className="flex flex-col space-y-1">
+            <h3 className="font-semibold">
+              Cookie Notice & Compliance (yesCookie)
+            </h3>
+            <div className="flex flex-col space-y-1">
+              <p>
+                Diese Website nutzt das Tool <strong>yesCookie</strong>, um die
+                Zustimmung zur Speicherung bestimmter Cookies auf Ihrem Endgerät
+                einzuholen und diese datenschutzkonform zu dokumentieren.
+                yesCookie ermöglicht es den Nutzern, über die Nutzung von
+                Cookies auf unserer Website informiert zu werden und
+                individuelle Einstellungen vorzunehmen, welche Cookies sie
+                zulassen oder ablehnen möchten.
+              </p>
+              <p>
+                Die Verwendung von yesCookie erfolgt, um den gesetzlichen
+                Verpflichtungen nach der DSGVO (Art. 6 Abs. 1 lit. c DSGVO)
+                nachzukommen. Die Verarbeitung der Daten erfolgt auf Grundlage
+                Ihrer Einwilligung (Art. 6 Abs. 1 lit. a DSGVO). Diese
+                Einwilligung können Sie jederzeit widerrufen.
+              </p>
+            </div>
+          </div>
+          <div className="flex flex-col space-y-1">
+            <h3 className="font-semibold">Server-Log-Dateien</h3>
+            <div className="flex flex-col space-y-1">
+              <p>
+                Der Provider der Seiten erhebt und speichert automatisch
+                Informationen in so genannten Server-LogDateien, die Ihr Browser
+                automatisch an uns übermittelt. Dies sind:
+              </p>
+              <ul className="list-disc px-4">
+                <li>Browsertyp und Browserversion</li>
+                <li>verwendetes Betriebssystem</li>
+                <li>Referrer URL</li>
+                <li>Hostname des zugreifenden Rechners</li>
+                <li>Uhrzeit der Serveranfrage</li>
+                <li>IP-Adresse</li>
+              </ul>
+              <p>
+                Eine Zusammenführung dieser Daten mit anderen Datenquellen wird
+                nicht vorgenommen.
+              </p>
+              <p>
+                Die Erfassung dieser Daten erfolgt auf Grundlage von Art. 6 Abs.
+                1 lit. f DSGVO. Der Websitebetreiber hat ein berechtigtes
+                Interesse an der technisch fehlerfreien Darstellung und der
+                Optimierung seiner Website – hierzu müssen die Server-Log-Files
+                erfasst werden.
+              </p>
+            </div>
+          </div>
+          <div className="flex flex-col space-y-1">
+            <h3 className="font-semibold">Kontaktformular</h3>
+            <div className="flex flex-col space-y-1">
+              <p>
+                Wenn Sie uns per Kontaktformular Anfragen zukommen lassen,
+                werden Ihre Angaben aus dem Anfrageformular inklusive der von
+                Ihnen dort angegebenen Kontaktdaten zwecks Bearbeitung der
+                Anfrage und für den Fall von Anschlussfragen bei uns
+                gespeichert. Diese Daten geben wir nicht ohne Ihre Einwilligung
+                weiter.
+              </p>
+              <p>
+                Die Verarbeitung dieser Daten erfolgt auf Grundlage von Art. 6
+                Abs. 1 lit. b DSGVO, sofern Ihre Anfrage mit der Erfüllung eines
+                Vertrags zusammenhängt oder zur Durchführung vorvertraglicher
+                Maßnahmen erforderlich ist. In allen übrigen Fällen beruht die
+                Verarbeitung auf unserem berechtigten Interesse an der
+                effektiven Bearbeitung der an uns gerichteten Anfragen (Art. 6
+                Abs. 1 lit. f DSGVO) oder auf Ihrer Einwilligung (Art. 6 Abs. 1
+                lit. a DSGVO) sofern diese abgefragt wurde; die Einwilligung ist
+                jederzeit widerrufbar.
+              </p>
+              <p>
+                Die von Ihnen im Kontaktformular eingegebenen Daten verbleiben
+                bei uns, bis Sie uns zur Löschung auffordern, Ihre Einwilligung
+                zur Speicherung widerrufen oder der Zweck für die
+                Datenspeicherung entfällt (z. B. nach abgeschlossener
+                Bearbeitung Ihrer Anfrage). Zwingende gesetzliche Bestimmungen –
+                insbesondere Aufbewahrungsfristen – bleiben unberührt.
+              </p>
+            </div>
+          </div>
+          <div className="flex flex-col space-y-1">
+            <h3 className="font-semibold">
+              Anfrage per E-Mail, Telefon oder Telefax
+            </h3>
+            <div className="flex flex-col space-y-1">
+              <p>
+                Wenn Sie uns per E-Mail, Telefon oder Telefax kontaktieren, wird
+                Ihre Anfrage inklusive aller daraus hervorgehenden
+                personenbezogenen Daten (Name, Anfrage) zum Zwecke der
+                Bearbeitung Ihres Anliegens bei uns gespeichert und verarbeitet.
+                Diese Daten geben wir nicht ohne Ihre Einwilligung weiter.
+              </p>
+              <p>
+                Die Verarbeitung dieser Daten erfolgt auf Grundlage von Art. 6
+                Abs. 1 lit. b DSGVO, sofern Ihre Anfrage mit der Erfüllung eines
+                Vertrags zusammenhängt oder zur Durchführung vorvertraglicher
+                Maßnahmen erforderlich ist. In allen übrigen Fällen beruht die
+                Verarbeitung auf unserem berechtigten Interesse an der
+                effektiven Bearbeitung der an uns gerichteten Anfragen (Art. 6
+                Abs. 1 lit. f DSGVO) oder auf Ihrer Einwilligung (Art. 6 Abs. 1
+                lit. a DSGVO) sofern diese abgefragt wurde; die Einwilligung ist
+                jederzeit widerrufbar.
+              </p>
+              <p>
+                Die von Ihnen an uns per Kontaktanfragen übersandten Daten
+                verbleiben bei uns, bis Sie uns zur Löschung auffordern, Ihre
+                Einwilligung zur Speicherung widerrufen oder der Zweck für die
+                Datenspeicherung entfällt (z. B. nach abgeschlossener
+                Bearbeitung Ihres Anliegens). Zwingende gesetzliche Bestimmungen
+                – insbesondere gesetzliche Aufbewahrungsfristen – bleiben
+                unberührt.
+              </p>
+            </div>
+          </div>
+          <div className="flex flex-col space-y-1">
+            <h3 className="font-semibold">Google Tag Manager</h3>
+            <div className="flex flex-col space-y-1">
+              <p>
+                Wir verwenden den Google Tag Manager. Mit diesem Dienst können
+                Website-Tags über eine Oberfläche verwaltet werden. Der Google
+                Tag Manager implementiert lediglich Tags. Das bedeutet, dass
+                keine Cookies verwendet und keine personenbezogenen Daten
+                erfasst werden. Der Google Tag Manager löst andere Tags aus, die
+                wiederum unter Umständen Daten erfassen. Der Google Tag Manager
+                greift jedoch nicht auf diese Daten zu. Wenn auf Domain- oder
+                Cookie-Ebene eine Deaktivierung vorgenommen wurde, bleibt diese
+                für alle Tracking-Tags bestehen, die mit dem Google Tag Manager
+                implementiert werden.
+              </p>
+            </div>
+          </div>
+          <div className="flex flex-col space-y-1">
+            <h3 className="font-semibold">Google Analytics 4</h3>
+            <div className="flex flex-col space-y-1">
+              <p>
+                Diese Website nutzt Funktionen des Webanalysedienstes Google
+                Analytics 4 (GA4).
+              </p>
+              <p>
+                Google Analytics 4 sammelt verschiedene Datenpunkte, darunter
+                Informationen über das Nutzerverhalten auf der Website, die
+                Interaktionen und die Quelle des Zugriffs. Im Gegensatz zur
+                vorherigen Version von Google Analytics verwendet GA4 eine
+                ereignisbasierte Datenstruktur, bei der die Erhebung von
+                Nutzerdaten flexibler gestaltet ist und weniger stark von
+                Cookies abhängt.
+              </p>
+              <p>
+                GA4 ermöglicht eine Analyse des Nutzerverhaltens auf Basis von
+                Ereignissen und aggregierten Daten. Die gesammelten
+                Informationen werden in der Regel an Server von Google
+                übertragen und dort verarbeitet. Dabei werden auch standardmäßig
+                Anonymisierungsfunktionen wie die IP-Anonymisierung genutzt, um
+                die Privatsphäre der Nutzer zu schützen.
+              </p>
+              <p>
+                Die Nutzung von Google Analytics 4 erfolgt auf Grundlage von
+                Art. 6 Abs. 1 lit. f DSGVO. Der Websitebetreiber hat ein
+                berechtigtes Interesse an der Analyse des Nutzerverhaltens, um
+                sein Webangebot und seine Werbung zu optimieren. Sofern eine
+                entsprechende Einwilligung abgefragt wurde (z. B. zur
+                Speicherung von Cookies), erfolgt die Verarbeitung
+                ausschließlich auf Grundlage von Art. 6 Abs. 1 lit. a DSGVO; die
+                Einwilligung ist jederzeit widerrufbar.
+              </p>
+            </div>
           </div>
         </div>
 
         <div className="flex flex-col justify-center space-y-2 py-4">
           <h2 className="text-xl font-semibold">5. Plugins und Tools</h2>
-          <p></p>
+          <h3 className="font-semibold">Font Awesome (lokales Hosting)</h3>
+          <p>
+            Diese Seite nutzt zur einheitlichen Darstellung von Schriftarten
+            Font Awesome. Font Awesome ist lokal installiert. Eine Verbindung zu
+            Servern von Fonticons, Inc. findet dabei nicht statt. Weitere
+            Informationen zu Font Awesome finden Sie in der Datenschutzerklärung
+            für Font Awesome unter: https://fontawesome.com/privacy.
+          </p>
         </div>
 
-        <p className="mt-4">Stand: {today}</p>
+        <p className="mt-4">Stand: 06.10.2024</p>
       </div>
     </div>
   );
