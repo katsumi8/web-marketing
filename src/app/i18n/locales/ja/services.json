@@ -1,12 +1,12 @@
 {
   "services": {
-    "snsMarketing": {
-      "name": "SNSマーケティング",
-      "remarks": "InstagramやFacebookのアカウント設定、コンテンツ制作、広告運用、効果分析までをサポートします。"
+    "conversionAnalysis": {
+      "name": "コンバージョン分析",
+      "remarks": "ウェブサイトやランディングページのコンバージョン率を分析し、最適化するための施策を提案・実行します。"
     },
     "webDevelopment": {
       "name": "Webサイト(ホームページ)制作・リニューアル",
-      "remarks": "ホームページの開発、運用、改善、SEOを包括的に行います。Wordpressももちろん対応します。Wordpressでできないことも開発を通じて可能にします。"
+      "remarks": "ホームページの開発、運用、改善、SEOを包括的に行います。"
     },
     "webAppDevelopment": {
       "name": "Webアプリケーション開発",

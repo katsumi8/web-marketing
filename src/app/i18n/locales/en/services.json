@@ -1,9 +1,5 @@
 {
   "services": {
-    "snsMarketing": {
-      "name": "SNS Marketing",
-      "remarks": "We support account setup, content creation, ad management, and performance analysis on Instagram and Facebook."
-    },
     "webDevelopment": {
       "name": "Website Development",
       "remarks": "We provide comprehensive website development, SEO, management, and improvement services."
@@ -15,6 +11,10 @@
     "ma": {
       "name": "MA",
       "remarks": "We maximize follow-up and upselling strategies for existing customers, including monthly email campaigns to customer lists."
+    },
+    "conversionAnalysis": {
+      "name": "Conversion Analysis",
+      "remarks": "We analyze and optimize the conversion rates of your website or landing pages by proposing and executing effective strategies."
     }
   }
 }

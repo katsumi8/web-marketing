@@ -152,7 +152,8 @@ function ContactForm({ lang }: { lang: string }) {
             )}
           </div>
           <button
-            className="mt-4 w-full rounded-xl bg-gradient-to-r from-[#5651e5] to-[#709dff] p-4 text-gray-100 shadow-xl shadow-gray-400"
+            className="mt-4 w-full rounded-xl bg-gradient-to-r from-[#5651e5] to-[#709dff] p-4 text-gray-100 shadow-xl shadow-gray-400 
+             hover:from-[#709dff] hover:to-[#5651e5] hover:shadow-2xl transition-transform duration-300 ease-in-out"
             type="submit"
           >
             {t("contactForm:submit_button")}

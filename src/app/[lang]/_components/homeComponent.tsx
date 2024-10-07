@@ -1,9 +1,11 @@
+import Service from "@/app/[lang]/services/_components/ServiceList";
 import About from "@/components/About";
-import Contact from "@/components/Contact";
-import Service from "@/components/Service";
 import Image from "next/image";
 import Link from "next/link";
+import { HiOutlineChevronDoubleUp } from "react-icons/hi";
 import BgImg from "../../../../public/assets/digitalBackground.jpg";
+import ContactAndProfile from "../contact/_components/ContactAndProfile";
+import Concerns from "./Concerns";
 
 export default function HomeComponent({
   title,
@@ -46,9 +48,17 @@ export default function HomeComponent({
           </div>
         </div>
       </div>
+      <Concerns lang={lang} />
       <Service lang={lang} />
       <About lang={lang} />
-      <Contact lang={lang} />
+      <ContactAndProfile lang={lang} />
+      <div className="flex justify-center py-10">
+        <Link href={"/"}>
+          <div className="cursor-pointer rounded-full p-4 shadow-lg shadow-gray-400 duration-300 ease-in hover:scale-110">
+            <HiOutlineChevronDoubleUp className="text-[#990000]" size={30} />
+          </div>
+        </Link>
+      </div>
     </div>
   );
 }
