@@ -1,5 +1,4 @@
 import Service from "@/app/[lang]/services/_components/ServiceList";
-import About from "@/components/About";
 import Image from "next/image";
 import Link from "next/link";
 import { HiOutlineChevronDoubleUp } from "react-icons/hi";
@@ -50,7 +49,6 @@ export default function HomeComponent({
       </div>
       <Concerns lang={lang} />
       <Service lang={lang} />
-      <About lang={lang} />
       <ContactAndProfile lang={lang} />
       <div className="flex justify-center py-10">
         <Link href={"/"}>
