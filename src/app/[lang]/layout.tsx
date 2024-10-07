@@ -47,7 +47,7 @@ export default function rootlayout({
       </head>
       <body className={`${inter.className} h-full`}>
         <LanguageProvider initialLanguage={lang}>
-          <header className="sticky top-0 h-20 z-50">
+          <header className="sticky top-0 h-20 z-[100]">
             <Suspense fallback={<Loading />}>
               <Navbar lang={lang} />
             </Suspense>
