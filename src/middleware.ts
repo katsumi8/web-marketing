@@ -27,6 +27,7 @@ export function middleware(request: NextRequest) {
     defaultLanguage;
 
   const pathname = request.nextUrl.pathname;
+
   const pathnameIsMissingLocale = availableLanguages.every(
     (lang) => !pathname.startsWith(`/${lang}/`) && pathname !== `/${lang}`,
   );
