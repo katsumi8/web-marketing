@@ -1,6 +1,7 @@
 import "@/app/globals.css";
 import Footer from "@/components/Footer";
 import Navbar from "@/components/Navbar";
+import { GoogleAnalytics, GoogleTagManager } from "@next/third-parties/google";
 import { dir } from "i18next";
 import type { Metadata } from "next";
 import { Inter } from "next/font/google";
@@ -44,6 +45,8 @@ export default function rootlayout({
           src="https://cdn-cookieyes.com/client_data/4cf946313672c296203e3c28/script.js"
           strategy="beforeInteractive"
         />
+        <GoogleTagManager gtmId="GTM-MNW5RZ92" />
+        <GoogleAnalytics gaId="G-QLCM1CYZ17" />
       </head>
       <body className={`${inter.className} h-full`}>
         <LanguageProvider initialLanguage={lang}>
