@@ -1,5 +1,5 @@
 import type { MetadataRoute } from "next";
-import { availableLanguages } from "../i18n/settings";
+import { availableLanguages } from "./i18n/settings";
 
 export default function sitemap(): MetadataRoute.Sitemap {
   const baseUrl = "https://www.katsumi-ishihara-consulting.com";

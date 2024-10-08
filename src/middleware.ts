@@ -27,6 +27,9 @@ export function middleware(request: NextRequest) {
     defaultLanguage;
 
   const pathname = request.nextUrl.pathname;
+  if (pathname === "/robots.txt" || pathname === "/sitemap.xml") {
+    return NextResponse.next();
+  }
 
   const pathnameIsMissingLocale = availableLanguages.every(
     (lang) => !pathname.startsWith(`/${lang}/`) && pathname !== `/${lang}`,
@@ -43,6 +46,7 @@ export function middleware(request: NextRequest) {
       const newPathname = `/${defaultLanguage}${pathname}`;
       const response = NextResponse.rewrite(new URL(newPathname, request.url));
       response.cookies.set(cookieName, defaultLanguage);
+      console.log("response", response);
       return response;
     }
   }
