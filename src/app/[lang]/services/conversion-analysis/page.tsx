@@ -1,6 +1,13 @@
+import type { Metadata } from "next";
 import Link from "next/link";
 import { IoMdAnalytics } from "react-icons/io";
 
+export const metadata: Metadata = {
+  title: "コンバージョン分析 | Katsumi Ishihara Consulting",
+  description:
+    "コンバージョン分析を行い、ウェブサイトの集客数を増やすための改善策を導き出します。",
+  keywords: ["コンバージョン分析", "集客数", "売上アップ"],
+};
 export default function ConversionAnalysis() {
   return (
     <div className="w-full bg-gray-100 min-h-screen flex flex-col items-center text-gray-100">

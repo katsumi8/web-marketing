@@ -1,3 +1,10 @@
+import type { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title: "Impressum | Katsumi Ishihara Consulting",
+  description: "Impressum von Katsumi Ishihara Consulting",
+};
+
 export default function Impressum() {
   const companyName = "Katsumi Ishihara Consulting"; // あなたの会社名
   const adresse = process.env.NEXT_PUBLIC_ADRESSE; // あなたの住所

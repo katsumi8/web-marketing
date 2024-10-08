@@ -1,5 +1,13 @@
+import type { Metadata } from "next";
 import Link from "next/link";
 import { FaPencilAlt } from "react-icons/fa";
+
+export const metadata: Metadata = {
+  title: "ホームページ制作・リニューアル | Katsumi Ishihara Consulting",
+  description:
+    "ホームページ(ウェブサイト)の制作・リニューアルを通じて、集客数を増やし、新規顧客の獲得につなげることができます。",
+  keywords: ["ホームページ制作", "リニューアル", "SEO対策", "集客数増加"],
+};
 
 export default function WebDevelopment() {
   return (

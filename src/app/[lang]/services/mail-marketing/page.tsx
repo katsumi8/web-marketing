@@ -1,5 +1,13 @@
+import type { Metadata } from "next";
 import Link from "next/link";
 import { FaEnvelope } from "react-icons/fa";
+
+export const metadata: Metadata = {
+  title: "メールマーケティング | Katsumi Ishihara Consulting",
+  description:
+    "メールマーケティングを効果的に活用することで、顧客との関係を深め、売上向上やリード獲得につなげることができます。",
+  keywords: ["メールマーケティング", "リード獲得", "顧客エンゲージメント"],
+};
 
 export default function MailMarketing() {
   return (

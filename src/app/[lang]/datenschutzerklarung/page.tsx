@@ -1,3 +1,10 @@
+import type { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title: "Datenschutzerklärung | Katsumi Ishihara Consulting",
+  description: "Datenschutzerklärung von Katsumi Ishihara Consulting",
+};
+
 export default function PrivacyPolicy() {
   const lastName = process.env.NEXT_PUBLIC_NACHNAME;
   const firstName = process.env.NEXT_PUBLIC_VORNAME;

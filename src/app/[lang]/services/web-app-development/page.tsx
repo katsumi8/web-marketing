@@ -1,5 +1,13 @@
+import type { Metadata } from "next";
 import Link from "next/link";
 import { FaLaptopCode } from "react-icons/fa";
+
+export const metadata: Metadata = {
+  title: "ウェブアプリ開発 | Katsumi Ishihara Consulting",
+  description:
+    "業務を効率化したい方、オリジナルアプリを開発したい方に向けたウェブアプリ開発サービスを提供しています。",
+  keywords: ["ウェブアプリ開発", "業務効率化", "オリジナルアプリ"],
+};
 
 export default function WebAppDevelopment() {
   return (
