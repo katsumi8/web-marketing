@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import { FaPencilAlt } from "react-icons/fa";
+import type { Service, WithContext } from "schema-dts";
 
 export const metadata: Metadata = {
   title: "ホームページ制作・リニューアル | Katsumi Ishihara Consulting",
@@ -10,8 +11,38 @@ export const metadata: Metadata = {
 };
 
 export default function WebDevelopment() {
+  const jsonLd: WithContext<Service> = {
+    "@context": "https://schema.org",
+    "@type": "Service",
+    name: "ホームページ制作・リニューアル",
+    description:
+      "ホームページ(ウェブサイト)の制作・リニューアルを通じて、集客数を増やし、新規顧客の獲得につなげることができます。",
+    provider: {
+      "@type": "Organization",
+      name: "Katsumi Ishihara Consulting",
+      url: "https://yourwebsite.com", // あなたのサイトのURLに置き換えてください
+      // "logo"は削除しました
+    },
+    serviceType: ["ホームページ制作", "リニューアル", "SEO対策"],
+    areaServed: {
+      "@type": "Country",
+      name: "ドイツ",
+    },
+    offers: {
+      "@type": "Offer",
+      url: "https://katsumi-ishihara-consulting.com/services/web-development", // サービスページのURL
+      priceCurrency: "EUR", // 通貨をユーロに変更
+      availability: "https://schema.org/InStock",
+      // 必要に応じて価格情報を追加
+    },
+  };
+
   return (
     <div className="w-full bg-gray-100 min-h-screen flex flex-col items-center text-gray-100">
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+      />
       <div className="flex w-full sm:justify-end relative">
         {/* Top section with title and image */}
         <div className="absolute top-0 left-0 w-full h-1/2 bg-white z-0"></div>
