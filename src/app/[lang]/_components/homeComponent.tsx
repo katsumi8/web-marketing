@@ -51,7 +51,7 @@ export default function HomeComponent({
       <Service lang={lang} />
       <ContactAndProfile lang={lang} />
       <div className="flex justify-center py-8">
-        <Link href={"/"}>
+        <Link href={"/"} aria-label="go top">
           <div className="cursor-pointer rounded-full p-4 shadow-lg shadow-gray-400 duration-300 ease-in hover:scale-110">
             <HiOutlineChevronDoubleUp className="text-[#990000]" size={30} />
           </div>
