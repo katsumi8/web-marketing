@@ -1,4 +1,5 @@
 import Link from "next/link";
+import { FaArrowRight } from "react-icons/fa";
 
 export default function Concerns({ lang }: { lang: string }) {
   return (
@@ -80,10 +81,14 @@ export default function Concerns({ lang }: { lang: string }) {
 
         {/* Button with slashes extending from the top */}
         <Link
-          className="bg-blue-500 text-white py-3 px-6 rounded-lg hover:bg-blue-600 w-56 relative text-center"
+          className="relative w-full rounded-xl bg-gradient-to-r from-[#5651e5] to-[#709dff] p-4 text-gray-100 shadow-xl shadow-gray-400 
+            hover:from-[#709dff] hover:to-[#5651e5] hover:shadow-2xl transition duration-300 ease-in-out text-center flex justify-center items-center group"
           href={"#contact"}
         >
-          {lang === "ja" ? "無料で相談する！" : "Contact Us"}
+          <span className="relative z-10">
+            {lang === "ja" ? "お問い合わせ" : "Contact Us"}
+          </span>
+          <FaArrowRight className="absolute right-8 top-1/2 transform -translate-y-1/2 text-white transition-all duration-200 group-hover:right-4" />
         </Link>
       </div>
     </div>
