@@ -46,7 +46,6 @@ export function middleware(request: NextRequest) {
       const newPathname = `/${defaultLanguage}${pathname}`;
       const response = NextResponse.rewrite(new URL(newPathname, request.url));
       response.cookies.set(cookieName, defaultLanguage);
-      console.log("response", response);
       return response;
     }
   }

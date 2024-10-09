@@ -12,7 +12,6 @@ export const LanguageSwitcher = ({ currentLanguage = defaultLanguage }) => {
     event: React.ChangeEvent<HTMLSelectElement>,
   ) => {
     const newLocale = event.target.value;
-    console.log(newLocale);
     Cookies.set(cookieName, newLocale);
     window.location.href = "/";
   };

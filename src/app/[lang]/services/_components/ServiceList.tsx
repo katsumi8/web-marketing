@@ -23,7 +23,7 @@ export default async function ServiceList({ lang }: { lang: string }) {
                 <Icon className="text-gray-200 size-10" />
               </div>
               <h2 className="text-2xl font-bold text-center">{item.name}</h2>
-              <p className="w-full md:w-[70%] py-2">{item.remarks}</p>
+              <p className="w-full py-2">{item.remarks}</p>
             </Link>
           );
         })}
