@@ -10,7 +10,7 @@ export default async function ContactAndProfile({ lang }: { lang: string }) {
   return (
     <div
       id="contact"
-      className="w-full text-gray-600 md:h-screen flex-col items-center flex"
+      className="w-full text-gray-600 md:h-screen flex-col items-center flex py-16"
     >
       <h1 className="text-3xl font-bold text-gray-900">
         {t("contactPage:contact_title")}
