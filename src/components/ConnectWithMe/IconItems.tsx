@@ -19,16 +19,25 @@ function IconItems({ style }: IconItemsProps) {
       <IconItem
         url={"https://www.linkedin.com/in/katsumi-ishihara-99371b15a/"}
         newTab={true}
+        ariaLabel="Visit LinkedIn profile"
       >
         <FaLinkedinIn />
       </IconItem>
-      <IconItem url={"https://github.com/katsumi8"} newTab={true}>
+      <IconItem
+        url={"https://github.com/katsumi8"}
+        newTab={true}
+        ariaLabel="Visit GitHub profile"
+      >
         <FaGithub />
       </IconItem>
-      <IconItem url={"mailto:katsumi.ishihara08@gmail.com"} newTab={true}>
+      <IconItem
+        url={"mailto:katsumi.ishihara08@gmail.com"}
+        newTab={true}
+        ariaLabel="Send an email"
+      >
         <AiOutlineMail />
       </IconItem>
-      <IconItem url="/#contact" newTab={false}>
+      <IconItem url="/contact" newTab={false} ariaLabel="Go to contact section">
         {/* <Link href="/#contact"> */}
         <BsFillPersonLinesFill />
       </IconItem>

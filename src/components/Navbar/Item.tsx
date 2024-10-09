@@ -13,13 +13,11 @@ export default function NavItem({
   onClick,
 }: NavItemProps) {
   return (
-    <Link href={href}>
-      <li
-        onClick={onClick}
-        className={`text-sm ${isMobile ? "py-4" : "uppercase hover:border-b"}`}
-      >
-        {text}
-      </li>
-    </Link>
+    <li
+      onClick={onClick}
+      className={`text-sm ${isMobile ? "py-4" : "uppercase hover:border-b"}`}
+    >
+      <Link href={href}>{text}</Link>
+    </li>
   );
 }
