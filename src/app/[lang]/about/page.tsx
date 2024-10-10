@@ -1,3 +1,4 @@
+import Breadcrumbs from "@/components/Breadcrumbs";
 import type { Metadata } from "next";
 import MyJourney from "./_components/MyJourney";
 
@@ -9,5 +10,12 @@ export const metadata: Metadata = {
 };
 
 export default function About({ params }: { params: { lang: string } }) {
-  return <MyJourney lang={params.lang} />;
+  return (
+    <div className="w-full bg-gray-100 min-h-screen flex flex-col items-center text-gray-100">
+      <div className="w-full py-4 px-6 text-gray-400">
+        <Breadcrumbs segments={["about"]} />
+      </div>
+      <MyJourney lang={params.lang} />;
+    </div>
+  );
 }

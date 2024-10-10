@@ -1,3 +1,4 @@
+import Breadcrumbs from "@/components/Breadcrumbs";
 import type { Metadata } from "next";
 import ContactAndProfile from "./_components/ContactAndProfile";
 
@@ -13,5 +14,12 @@ export default async function Contact({
 }: {
   params: { lang: string };
 }) {
-  return <ContactAndProfile lang={params.lang} />;
+  return (
+    <div className="w-full bg-gray-100 min-h-screen flex flex-col items-center text-gray-100">
+      <div className="w-full py-4 px-6 text-gray-400">
+        <Breadcrumbs segments={["contact"]} />
+      </div>
+      <ContactAndProfile lang={params.lang} />;
+    </div>
+  );
 }

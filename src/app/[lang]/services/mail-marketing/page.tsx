@@ -1,3 +1,4 @@
+import Breadcrumbs from "@/components/Breadcrumbs";
 import type { Metadata } from "next";
 import Link from "next/link";
 import { FaEnvelope } from "react-icons/fa";
@@ -10,8 +11,13 @@ export const metadata: Metadata = {
 };
 
 export default function MailMarketing() {
+  const segments = ["services", "mail-marketing"];
   return (
     <div className="w-full bg-gray-100 min-h-screen flex flex-col items-center text-gray-100">
+      {/* Breadcrumbs を表示 */}
+      <div className="w-full py-4 px-6 text-gray-400 bg-white">
+        <Breadcrumbs segments={segments} />
+      </div>
       <div className="flex w-full sm:justify-end relative">
         {/* Top section with title and image */}
         <div className="absolute top-0 left-0 w-full h-1/2 bg-white z-0"></div>

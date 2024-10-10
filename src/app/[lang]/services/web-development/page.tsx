@@ -1,3 +1,4 @@
+import Breadcrumbs from "@/components/Breadcrumbs";
 import type { Metadata } from "next";
 import Link from "next/link";
 import { FaPencilAlt } from "react-icons/fa";
@@ -11,6 +12,7 @@ export const metadata: Metadata = {
 };
 
 export default function WebDevelopment() {
+  const segments = ["services", "web-development"];
   const jsonLd: WithContext<Service> = {
     "@context": "https://schema.org",
     "@type": "Service",
@@ -43,6 +45,10 @@ export default function WebDevelopment() {
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
       />
+      {/* Breadcrumbs を表示 */}
+      <div className="w-full py-4 px-6 text-gray-400 bg-white">
+        <Breadcrumbs segments={segments} />
+      </div>
       <div className="flex w-full sm:justify-end relative">
         {/* Top section with title and image */}
         <div className="absolute top-0 left-0 w-full h-1/2 bg-white z-0"></div>

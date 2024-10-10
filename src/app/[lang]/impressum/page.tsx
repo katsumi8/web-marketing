@@ -1,3 +1,4 @@
+import Breadcrumbs from "@/components/Breadcrumbs";
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
@@ -14,6 +15,9 @@ export default function Impressum() {
 
   return (
     <div className="flex min-h-[calc(100vh-5rem)] flex-col items-center justify-between bg-gray-100 p-4 text-black">
+      <div className="w-full py-4 px-6 text-gray-400">
+        <Breadcrumbs segments={["impressum"]} />
+      </div>
       <div className="max-w-[800px]">
         <div className="flex flex-col justify-center space-y-4 py-4">
           <h1 className="text-2xl font-bold">Impressum</h1>

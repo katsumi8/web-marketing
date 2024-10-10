@@ -1,5 +1,5 @@
 import Link from "next/link";
-import { getServiceList } from "../utils/getServiceList";
+import { getServiceList } from "../_utils/getServiceList";
 
 export default async function ServiceList({ lang }: { lang: string }) {
   const { services } = await getServiceList(lang);
