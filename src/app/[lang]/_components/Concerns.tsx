@@ -60,29 +60,25 @@ export default function Concerns({ lang }: { lang: string }) {
         </div>
       </div>
       {/* CTA */}
-      <div className="mt-8 flex justify-center flex-col items-center relative">
-        {/* Container for the bubble and slashes */}
-        <div className="relative flex items-center justify-center mb-4">
-          {/* Left Slash */}
-          <span className="text-2xl text-gray-600 absolute left-0 bottom-[-20px] transform -translate-x-8">
-            \
-          </span>
-
+      <div className="mt-8 flex justify-center flex-col items-center relative space-y-3">
+        {/* Container for the bubble with before and after slashes */}
+        <div className="relative flex items-center justify-center">
           {/* Text in the bubble */}
-          <p className="text-xl text-gray-800 py-2 rounded-lg">
-            1分でお問い合わせ完了！
+          <p
+            className="text-xl font-semibold text-gray-800 py-2 px-4 relative z-10 
+            before:content-['\\'] after:content-['/'] 
+            before:absolute after:absolute 
+            before:-left-8 after:-right-8 
+            before:text-3xl after:text-3xl before:text-gray-300 after:text-gray-300"
+          >
+            無料相談受付中！
           </p>
-
-          {/* Right Slash */}
-          <span className="text-2xl text-gray-600 absolute right-0 bottom-[-20px] transform translate-x-8">
-            /
-          </span>
         </div>
 
         {/* Button with slashes extending from the top */}
         <Link
           className="relative w-full rounded-xl bg-gradient-to-r from-[#5651e5] to-[#709dff] p-4 text-gray-100 shadow-xl shadow-gray-400 
-            hover:from-[#709dff] hover:to-[#5651e5] hover:shadow-2xl transition duration-300 ease-in-out text-center flex justify-center items-center group"
+      hover:from-[#709dff] hover:to-[#5651e5] hover:shadow-2xl transition duration-300 ease-in-out text-center flex justify-center items-center group"
           href={"#contact"}
         >
           <span className="relative z-10">
