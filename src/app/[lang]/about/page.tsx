@@ -9,13 +9,13 @@ export const metadata: Metadata = {
   keywords: ["経歴", "ドイツ", "SEO最適化", "リニューアル"],
 };
 
-export default function About({ params }: { params: { lang: string } }) {
+export default function About() {
   return (
     <div className="w-full bg-gray-100 min-h-screen flex flex-col items-center text-gray-100">
       <div className="w-full py-4 px-6 text-gray-400">
         <Breadcrumbs segments={["about"]} />
       </div>
-      <MyJourney lang={params.lang} />;
+      <MyJourney />;
     </div>
   );
 }

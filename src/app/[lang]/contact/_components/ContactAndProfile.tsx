@@ -6,15 +6,15 @@ import ContactForm from "./ContactForm";
 
 export default async function ContactAndProfile({ lang }: { lang: string }) {
   const { t } = await getTranslation(lang);
-
+  const title = t("contact_title", { ns: "contactPage" });
+  const myName = t("my_name", { ns: "contactPage" });
+  const description = t("description", { ns: "contactPage" });
   return (
     <div
       id="contact"
       className="w-full text-gray-600 md:h-screen flex-col items-center flex py-16"
     >
-      <h1 className="text-3xl font-bold text-gray-900">
-        {t("contactPage:contact_title")}
-      </h1>
+      <h1 className="text-3xl font-bold text-gray-900">{title}</h1>
       <div className="w-full max-w-[1240px] px-2 py-16">
         <div className="flex flex-col-reverse gap-8 sm:grid lg:grid-cols-5 lg:flex-row">
           {/* left side */}
@@ -28,8 +28,8 @@ export default async function ContactAndProfile({ lang }: { lang: string }) {
                 />
               </div>
               <div>
-                <h2 className="py-2">{t("contactPage:my_name")}</h2>
-                <p className="py-4">{t("contactPage:description")}</p>
+                <h2 className="py-2">{myName}</h2>
+                <p className="py-4">{description}</p>
               </div>
               <div>
                 <IconItems style={"CONTACT"} />

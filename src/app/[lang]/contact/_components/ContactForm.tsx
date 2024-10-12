@@ -20,28 +20,41 @@ function ContactForm({ lang }: { lang: string }) {
   if (isSubmitting) {
     return <Loading />;
   }
+  const textsForSubmit = t("form_submit_successful", {
+    ns: "contactForm",
+    returnObjects: true,
+  });
+  const nameLabel = t("name_label", { ns: "contactForm" });
+  const phoneLabel = t("phone_label", { ns: "contactForm" });
+  const emailLabel = t("email_label", { ns: "contactForm" });
+  const messageLabel = t("message_label", { ns: "contactForm" });
+  const privacyPolicy = t("privacy_policy", {
+    ns: "contactForm",
+    returnObjects: true,
+  });
+  const submitButton = t("submit_button", { ns: "contactForm" });
+
   return (
     <form onSubmit={handleSubmit(onSubmitHandler)}>
       {isSubmitSuccessful ? (
         <div className="w-full py-2 text-center text-2xl font-bold text-lime-600">
-          <p>{t("contactForm:form_submit_successful.header")}</p>
-          <p>{t("contactForm:form_submit_successful.body")}</p>
+          <p>{textsForSubmit.header}</p>
+          <p>{textsForSubmit.body}</p>
           <p className="mt-4 text-sm text-gray-500">
             <Trans
-              i18nKey="contactForm:form_submit_successful.confirmation"
+              i18nKey="form_submit_successful.confirmation"
+              ns="contactForm"
               values={{ email: watch("email") }}
             />
           </p>
-          <p className="text-sm text-red-500">
-            {t("contactForm:form_submit_successful.error")}
-          </p>
+          <p className="text-sm text-red-500">{textsForSubmit.error}</p>
         </div>
       ) : (
         <>
           <div className="grid w-full gap-4 py-2 md:grid-cols-2">
             <div className="flex flex-col">
               <label className="py-2 text-sm" htmlFor="name">
-                {t("contactForm:name_label")}
+                {nameLabel}
                 <span className="ml-1 text-red-500">*</span>
               </label>
               <input
@@ -58,7 +71,7 @@ function ContactForm({ lang }: { lang: string }) {
             </div>
             <div className="flex flex-col">
               <label className="py-2 text-sm" htmlFor="phoneNumber">
-                {t("contactForm:phone_label")}
+                {phoneLabel}
               </label>
               <input
                 className="flex rounded-lg border-2 border-gray-300 p-3"
@@ -75,7 +88,7 @@ function ContactForm({ lang }: { lang: string }) {
           </div>
           <div className="flex flex-col py-1">
             <label className="py-2 text-sm" htmlFor="email">
-              {t("contactForm:email_label")}
+              {emailLabel}
               <span className="ml-1 text-red-500">*</span>
             </label>
             <input
@@ -92,7 +105,7 @@ function ContactForm({ lang }: { lang: string }) {
           </div>
           <div className="flex flex-col">
             <label className="py-2 text-sm" htmlFor="message">
-              {t("contactForm:message_label")}
+              {messageLabel}
               <span className="ml-1 text-red-500">*</span>
             </label>
             <textarea
@@ -124,21 +137,21 @@ function ContactForm({ lang }: { lang: string }) {
                       target="_blank"
                       className="text-blue-500 underline"
                     >
-                      {t("contactForm:privacy_policy.label")}
+                      {privacyPolicy.label}
                     </Link>
-                    {t("contactForm:privacy_policy.agreement")}
+                    {privacyPolicy.agreement}
                     <span className="text-red-500">*</span>
                   </>
                 ) : (
                   <>
-                    {t("contactForm:privacy_policy.agreement")}{" "}
+                    {privacyPolicy.agreement}{" "}
                     <Link
                       href="/privacy-policy"
                       rel="noopener noreferrer"
                       target="_blank"
                       className="text-blue-500 underline"
                     >
-                      {t("contactForm:privacy_policy.label")}
+                      {privacyPolicy.label}
                     </Link>
                     <span className="text-red-500">*</span>
                   </>
@@ -156,7 +169,7 @@ function ContactForm({ lang }: { lang: string }) {
              hover:from-[#709dff] hover:to-[#5651e5] hover:shadow-2xl transition-transform duration-300 ease-in-out"
             type="submit"
           >
-            {t("contactForm:submit_button")}
+            {submitButton}
           </button>
         </>
       )}
