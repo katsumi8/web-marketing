@@ -1,3 +1,5 @@
+import type { InitOptions } from "i18next";
+
 export const defaultLanguage = "ja";
 export const availableLanguageOptions = [
   { code: defaultLanguage, label: "JP", flag: "🇯🇵" },
@@ -15,7 +17,8 @@ export const namespaces = [
   "contactPage",
   "contactForm",
 ];
-export function getOptions(lng = defaultLanguage) {
+
+export function getOptions(lng = defaultLanguage): InitOptions {
   return {
     lng,
     defaultNS: defaultLanguage,

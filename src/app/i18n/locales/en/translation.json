@@ -2,5 +2,30 @@
   "title": "Maximize Your Sales Efforts",
   "description": "We provide expert solutions to elevate your business. We specialize in social media marketing (Meta Ads), web design with SEO, and web application development, offering comprehensive support from custom web solutions like attendance tracking and inventory management systems. Our marketing automation services ensure effective follow-ups and upselling strategies, helping you stay connected with your clients and grow your business.",
   "contactButtonText": "Contact Us",
-  "imageAlt": "A digital background symbolizing business success"
+  "imageAlt": "A digital background symbolizing business success",
+  "concernsSection": {
+    "title": "Are you facing these concerns?",
+    "concerns": [
+      {
+        "heading": "Struggling to attract more visitors...",
+        "description": "The number of visitors to your website is not increasing as expected."
+      },
+      {
+        "heading": "Outdated design with poor user experience...",
+        "description": "You want to update your website to a modern design that is more user-friendly."
+      },
+      {
+        "heading": "No inquiries or purchases at all...",
+        "description": "Even though your website is ready, you are not receiving inquiries or purchases."
+      },
+      {
+        "heading": "Lack of reach to existing customers...",
+        "description": "Although the number of existing customers is increasing, you lack the manpower to follow up."
+      }
+    ],
+    "cta": {
+      "bubbleText": "Free Consultation Available!",
+      "buttonText": "Contact Us Now!"
+    }
+  }
 }

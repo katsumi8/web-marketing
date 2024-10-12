@@ -1,3 +1,4 @@
+import { getTranslation } from "@/app/i18n/server";
 import Breadcrumbs from "@/components/Breadcrumbs";
 import type { Metadata } from "next";
 import Link from "next/link";
@@ -9,8 +10,18 @@ export const metadata: Metadata = {
     "コンバージョン分析を行い、ウェブサイトの集客数を増やすための改善策を導き出します。",
   keywords: ["コンバージョン分析", "集客数", "売上アップ"],
 };
-export default function ConversionAnalysis() {
+export default async function ConversionAnalysis({
+  params,
+}: {
+  params: { lang: string };
+}) {
   const segments = ["services", "conversion-analysis"];
+
+  const { t } = await getTranslation(params.lang);
+  const service = t("services.conversionAnalysis", {
+    returnObjects: true,
+    ns: "services",
+  });
   return (
     <div className="w-full bg-gray-100 min-h-screen flex flex-col items-center text-gray-100">
       {/* Breadcrumbs を表示 */}
@@ -25,17 +36,17 @@ export default function ConversionAnalysis() {
           {/* Left side: Title, subtitle, buttons */}
           <div className="md:w-2/3 text-left space-y-4 flex-grow px-2">
             <h1 className="text-4xl font-bold text-gray-100">
-              Webサイトの集客数を増やすために、
-              <span className="text-white">コンバージョン分析</span>
-              を行いましょう！
+              {service.title}
             </h1>
             <div className="flex space-x-4 mt-4 text-sm">
-              <p className="p-2 border border-gray-300 rounded-lg text-gray-100 transition">
-                売上アップ
-              </p>
-              <p className="p-2 border border-gray-300 rounded-lg text-gray-100 transition">
-                問い合わせ数の増加
-              </p>
+              {service.desires.map((desire, index) => (
+                <p
+                  key={index}
+                  className="p-2 border border-gray-300 rounded-lg text-gray-100 transition"
+                >
+                  {desire}
+                </p>
+              ))}
             </div>
           </div>
 
@@ -53,51 +64,39 @@ export default function ConversionAnalysis() {
       >
         {/* Problem */}
         <div className="problem-section">
-          <p className="text-lg text-gray-600">
-            ウェブサイトへのアクセス数はあるものの、思うようにコンバージョン率が上がらず、売上やお問い合わせ数が伸び悩んでいませんか？多くの企業が同様の課題に直面し、コンバージョン率向上のための具体的な改善策を見つけられずにいます。
-          </p>
+          <p className="text-lg text-gray-600">{service.description}</p>
         </div>
 
         {/* Solution（解決策） */}
         <div className="flex flex-col py-4">
           <h2 className="text-3xl font-bold text-gray-800 py-4">
-            キーとなるポイント
+            {service.keyPoints}
           </h2>
           <div className="w-full flex justify-evenly">
-            <div className="rounded-full bg-red-400 size-36 flex items-center justify-center">
-              <p className="text-gray-100 text-center p-2">原因箇所特定</p>
-            </div>
-            <div className="rounded-full bg-red-400 size-36 flex items-center justify-center">
-              <p className="text-gray-100 text-center p-2">仮説構築</p>
-            </div>
-            <div className="rounded-full bg-red-400 size-36 flex items-center justify-center">
-              <p className="text-gray-100 text-center p-2">テスト実施</p>
-            </div>
-            <div className="rounded-full bg-red-400 size-36 flex items-center justify-center">
-              <p className="text-gray-100 text-center p-2">継続的な改善</p>
-            </div>
+            {service.points.map((point, index) => (
+              <div
+                key={index}
+                className="rounded-full bg-red-400 size-36 flex items-center justify-center"
+              >
+                <p className="text-gray-100 text-center p-2">{point}</p>
+              </div>
+            ))}
           </div>
         </div>
 
         <div className="py-4">
-          <p className="text-lg text-gray-600">
-            これらのポイントを踏まえ、コンバージョン分析を行うことで、ユーザーのニーズや行動を的確に把握し、効果的な改善策を導き出すことができます。それにより、コンバージョン率を向上させ、ビジネス成果の最大化につなげることが可能です。
-          </p>
+          <p className="text-lg text-gray-600">{service.solution}</p>
         </div>
 
         <div className="space-y-3 py-4">
-          <p className="text-lg text-gray-600">
-            あなたのウェブサイトの潜在力を引き出すコンバージョン分析をお任せください！
-          </p>
+          <p className="text-lg text-gray-600">{service.cta.myMessage}</p>
           <Link
             href="/contact"
             className="inline-block bg-blue-500 text-white text-center py-3 px-6 rounded-lg hover:bg-blue-600 transition"
           >
-            無料で相談する！
+            {service.cta.buttonText}
           </Link>
-          <p className="text-sm text-gray-500">
-            ご相談は1分で完了します。今すぐ、簡単にお問い合わせください！
-          </p>
+          <p className="text-sm text-gray-500">{service.cta.bubbleText}</p>
         </div>
       </div>
     </div>

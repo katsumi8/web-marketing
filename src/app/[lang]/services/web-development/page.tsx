@@ -1,3 +1,4 @@
+import { getTranslation } from "@/app/i18n/server";
 import Breadcrumbs from "@/components/Breadcrumbs";
 import type { Metadata } from "next";
 import Link from "next/link";
@@ -11,8 +12,17 @@ export const metadata: Metadata = {
   keywords: ["ホームページ制作", "リニューアル", "SEO対策", "集客数増加"],
 };
 
-export default function WebDevelopment() {
+export default async function WebDevelopment({
+  params,
+}: {
+  params: { lang: string };
+}) {
   const segments = ["services", "web-development"];
+  const { t } = await getTranslation(params.lang);
+  const service = t("services.webDevelopment", {
+    returnObjects: true,
+    ns: "services",
+  });
   const jsonLd: WithContext<Service> = {
     "@context": "https://schema.org",
     "@type": "Service",
@@ -57,15 +67,17 @@ export default function WebDevelopment() {
           {/* Left side: Title, subtitle, buttons */}
           <div className="md:w-2/3 text-left space-y-4 flex-grow px-2">
             <h1 className="text-4xl font-bold text-gray-100">
-              ホームページ(ウェブサイト)制作・リニューアル
+              {service.title}
             </h1>
             <div className="flex space-x-4 mt-4 text-sm">
-              <p className="p-2 border border-gray-300 rounded-lg text-gray-100 transition">
-                集客を増やしたい
-              </p>
-              <p className="p-2 border border-gray-300 rounded-lg text-gray-100 transition">
-                デザインをリニューアルしたい
-              </p>
+              {service.desires.map((desire, index) => (
+                <p
+                  key={index}
+                  className="p-2 border border-gray-300 rounded-lg text-gray-100 transition"
+                >
+                  {desire}
+                </p>
+              ))}
             </div>
           </div>
 
@@ -83,10 +95,7 @@ export default function WebDevelopment() {
       >
         {/* Problem */}
         <div className="problem-section">
-          <p className="text-lg text-gray-600">
-            現在のWebサイトのデザインが古く、ユーザーの関心を引くことができず、集客が思うように伸びない。また、SEO対策が不十分なために、検索エンジンで上位表示されず、新規顧客の流入が少ない。
-            多くの方が同様の課題に直面し、Webサイトを改良する必要性を感じながらも、どこから手をつければ良いのか悩んでいるのです。
-          </p>
+          <p className="text-lg text-gray-600">{service.description}</p>
         </div>
 
         {/* Solution（解決策） */}
@@ -95,47 +104,30 @@ export default function WebDevelopment() {
             キーとなるポイント
           </h2>
           <div className="w-full flex justify-evenly">
-            <div className="rounded-full bg-red-400 size-36 flex items-center justify-center">
-              <p className="text-gray-100 text-center p-2">顧客論点設計</p>
-            </div>
-            <div className="rounded-full bg-red-400 size-36 flex items-center justify-center">
-              <p className="text-gray-100 text-center p-2">
-                表示スピード最適化
-              </p>
-            </div>
-            <div className="rounded-full bg-red-400 size-36 flex items-center justify-center">
-              <p className="text-gray-100 text-center p-2">
-                ユーザビリティの向上
-              </p>
-            </div>
-            <div className="rounded-full bg-red-400 size-36 flex items-center justify-center">
-              <p className="text-gray-100 text-center p-2">
-                コンバージョン率の最大化
-              </p>
-            </div>
+            {service.points.map((point, index) => (
+              <div
+                key={index}
+                className="rounded-full bg-red-400 size-36 flex items-center justify-center"
+              >
+                <p className="text-gray-100 text-center p-2">{point}</p>
+              </div>
+            ))}
           </div>
         </div>
 
         <div className="py-4">
-          <p className="text-lg text-gray-600">
-            これらのポイントを踏まえ、Webサイトの制作 /
-            リニューアルを行い、ユーザーの関心を引くデザインに変更することで、集客数を増やし、新規顧客の獲得につなげることができます。
-          </p>
+          <p className="text-lg text-gray-600">{service.solution}</p>
         </div>
 
         <div className="space-y-3 py-4">
-          <p className="text-lg text-gray-600">
-            あなたのビジネスを成功に導くWebサイトを一緒に作りましょう!
-          </p>
+          <p className="text-lg text-gray-600">{service.cta.myMessage}</p>
           <Link
             href="/contact"
             className="inline-block bg-blue-500 text-white text-center py-3 px-6 rounded-lg hover:bg-blue-600 transition"
           >
-            無料で相談する！
+            {service.cta.buttonText}
           </Link>
-          <p className="text-sm text-gray-500">
-            ご相談は1分で完了します。今すぐ、簡単にお問い合わせください！
-          </p>
+          <p className="text-sm text-gray-500">{service.cta.bubbleText}</p>
         </div>
       </div>
     </div>
