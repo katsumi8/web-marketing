@@ -4,10 +4,10 @@ import type { Metadata, ResolvingMetadata } from "next";
 import type { PageProps } from "../page";
 import ServiceList from "./_components/ServiceList";
 
-export async function generateMetadata(
+export const generateMetadata = async (
   { params }: PageProps,
   parent: ResolvingMetadata,
-): Promise<Metadata> {
+): Promise<Metadata> => {
   const lang = params.lang;
 
   const { t } = await getTranslation(lang);
@@ -17,16 +17,25 @@ export async function generateMetadata(
   const previousImages = (await parent).openGraph?.images || [];
 
   return {
-    title: metadata.title,
-    description: metadata.description,
-    keywords: metadata.keywords,
-    openGraph: {
-      title: metadata.title,
-      description: metadata.description,
-      images: [...previousImages],
-    },
+    title: "サービス一覧 | Katsumi Ishihara Consulting",
+    description:
+      "当社の提供するサービス一覧です。コンバージョン分析、ウェブアプリ開発、ウェブサイト制作・リニューアルなど、あなたのビジネスをサポートするサービスを紹介します。",
+    keywords: [
+      "サービス",
+      "コンバージョン分析",
+      "ウェブアプリ開発",
+      "ホームページ制作",
+    ],
+    // title: metadata.title,
+    // description: metadata.description,
+    // keywords: metadata.keywords,
+    // openGraph: {
+    //   title: metadata.title,
+    //   description: metadata.description,
+    //   images: [...previousImages],
+    // },
   };
-}
+};
 
 export default function Services({ params }: PageProps) {
   return (
