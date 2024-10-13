@@ -11,8 +11,9 @@ export const generateMetadata = async (
   const lang = params.lang;
 
   const { t } = await getTranslation(lang);
+  console.log("Translation function:", t);
   const metadata = t("services", { ns: "meta", returnObjects: true });
-
+  console.log("Metadata from translation:", metadata);
   // optionally access and extend (rather than replace) parent metadata
   const previousImages = (await parent).openGraph?.images || [];
 
