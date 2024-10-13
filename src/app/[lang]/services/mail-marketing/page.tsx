@@ -1,21 +1,38 @@
 import { getTranslation } from "@/app/i18n/server";
 import Breadcrumbs from "@/components/Breadcrumbs";
-import type { Metadata } from "next";
+import type { Metadata, ResolvingMetadata } from "next";
 import Link from "next/link";
 import { FaEnvelope } from "react-icons/fa";
+import type { PageProps } from "../../page";
 
-export const metadata: Metadata = {
-  title: "メールマーケティング | Katsumi Ishihara Consulting",
-  description:
-    "メールマーケティングを効果的に活用することで、顧客との関係を深め、売上向上やリード獲得につなげることができます。",
-  keywords: ["メールマーケティング", "リード獲得", "顧客エンゲージメント"],
-};
+export async function generateMetadata(
+  { params }: PageProps,
+  parent: ResolvingMetadata,
+): Promise<Metadata> {
+  const lang = params.lang;
 
-export default async function MailMarketing({
-  params,
-}: {
-  params: { lang: string };
-}) {
+  const { t } = await getTranslation(lang);
+  const metadata = t("services.mailMarketing", {
+    ns: "meta",
+    returnObjects: true,
+  });
+
+  // optionally access and extend (rather than replace) parent metadata
+  const previousImages = (await parent).openGraph?.images || [];
+
+  return {
+    title: metadata.title,
+    description: metadata.description,
+    keywords: metadata.keywords,
+    openGraph: {
+      title: metadata.title,
+      description: metadata.description,
+      images: [...previousImages],
+    },
+  };
+}
+
+export default async function MailMarketing({ params }: PageProps) {
   const segments = ["services", "mail-marketing"];
   const { t } = await getTranslation(params.lang);
   const service = t("services.mailMarketing", {

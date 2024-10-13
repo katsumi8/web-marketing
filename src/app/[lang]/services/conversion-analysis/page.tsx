@@ -1,20 +1,38 @@
 import { getTranslation } from "@/app/i18n/server";
 import Breadcrumbs from "@/components/Breadcrumbs";
-import type { Metadata } from "next";
+import type { Metadata, ResolvingMetadata } from "next";
 import Link from "next/link";
 import { IoMdAnalytics } from "react-icons/io";
+import type { PageProps } from "../../page";
 
-export const metadata: Metadata = {
-  title: "コンバージョン分析 | Katsumi Ishihara Consulting",
-  description:
-    "コンバージョン分析を行い、ウェブサイトの集客数を増やすための改善策を導き出します。",
-  keywords: ["コンバージョン分析", "集客数", "売上アップ"],
-};
-export default async function ConversionAnalysis({
-  params,
-}: {
-  params: { lang: string };
-}) {
+export async function generateMetadata(
+  { params }: PageProps,
+  parent: ResolvingMetadata,
+): Promise<Metadata> {
+  const lang = params.lang;
+
+  const { t } = await getTranslation(lang);
+  const metadata = t("services.conversionAnalysis", {
+    ns: "meta",
+    returnObjects: true,
+  });
+
+  // optionally access and extend (rather than replace) parent metadata
+  const previousImages = (await parent).openGraph?.images || [];
+
+  return {
+    title: metadata.title,
+    description: metadata.description,
+    keywords: metadata.keywords,
+    openGraph: {
+      title: metadata.title,
+      description: metadata.description,
+      images: [...previousImages],
+    },
+  };
+}
+
+export default async function ConversionAnalysis({ params }: PageProps) {
   const segments = ["services", "conversion-analysis"];
 
   const { t } = await getTranslation(params.lang);

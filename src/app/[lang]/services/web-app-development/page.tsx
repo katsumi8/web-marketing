@@ -1,21 +1,38 @@
 import { getTranslation } from "@/app/i18n/server";
 import Breadcrumbs from "@/components/Breadcrumbs";
-import type { Metadata } from "next";
+import type { Metadata, ResolvingMetadata } from "next";
 import Link from "next/link";
 import { FaLaptopCode } from "react-icons/fa";
+import type { PageProps } from "../../page";
 
-export const metadata: Metadata = {
-  title: "ウェブアプリ開発 | Katsumi Ishihara Consulting",
-  description:
-    "業務を効率化したい方、オリジナルアプリを開発したい方に向けたウェブアプリ開発サービスを提供しています。",
-  keywords: ["ウェブアプリ開発", "業務効率化", "オリジナルアプリ"],
-};
+export async function generateMetadata(
+  { params }: PageProps,
+  parent: ResolvingMetadata,
+): Promise<Metadata> {
+  const lang = params.lang;
 
-export default async function WebAppDevelopment({
-  params,
-}: {
-  params: { lang: string };
-}) {
+  const { t } = await getTranslation(lang);
+  const metadata = t("services.webAppDevelopment", {
+    ns: "meta",
+    returnObjects: true,
+  });
+
+  // optionally access and extend (rather than replace) parent metadata
+  const previousImages = (await parent).openGraph?.images || [];
+
+  return {
+    title: metadata.title,
+    description: metadata.description,
+    keywords: metadata.keywords,
+    openGraph: {
+      title: metadata.title,
+      description: metadata.description,
+      images: [...previousImages],
+    },
+  };
+}
+
+export default async function WebAppDevelopment({ params }: PageProps) {
   const segments = ["services", "web-app-development"];
 
   const { t } = await getTranslation(params.lang);

@@ -1,22 +1,39 @@
 import { getTranslation } from "@/app/i18n/server";
 import Breadcrumbs from "@/components/Breadcrumbs";
-import type { Metadata } from "next";
+import type { Metadata, ResolvingMetadata } from "next";
 import Link from "next/link";
 import { FaPencilAlt } from "react-icons/fa";
 import type { Service, WithContext } from "schema-dts";
+import type { PageProps } from "../../page";
 
-export const metadata: Metadata = {
-  title: "ホームページ制作・リニューアル | Katsumi Ishihara Consulting",
-  description:
-    "ホームページ(ウェブサイト)の制作・リニューアルを通じて、集客数を増やし、新規顧客の獲得につなげることができます。",
-  keywords: ["ホームページ制作", "リニューアル", "SEO対策", "集客数増加"],
-};
+export async function generateMetadata(
+  { params }: PageProps,
+  parent: ResolvingMetadata,
+): Promise<Metadata> {
+  const lang = params.lang;
 
-export default async function WebDevelopment({
-  params,
-}: {
-  params: { lang: string };
-}) {
+  const { t } = await getTranslation(lang);
+  const metadata = t("services.webDevelopment", {
+    ns: "meta",
+    returnObjects: true,
+  });
+
+  // optionally access and extend (rather than replace) parent metadata
+  const previousImages = (await parent).openGraph?.images || [];
+
+  return {
+    title: metadata.title,
+    description: metadata.description,
+    keywords: metadata.keywords,
+    openGraph: {
+      title: metadata.title,
+      description: metadata.description,
+      images: [...previousImages],
+    },
+  };
+}
+
+export default async function WebDevelopment({ params }: PageProps) {
   const segments = ["services", "web-development"];
   const { t } = await getTranslation(params.lang);
   const service = t("services.webDevelopment", {

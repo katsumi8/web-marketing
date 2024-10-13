@@ -1,22 +1,36 @@
-import type { Metadata } from "next";
+import type { Metadata, ResolvingMetadata } from "next";
 import { getTranslation } from "../i18n/server";
 import HomeComponent from "./_components/homeComponent";
 
-export const metadata: Metadata = {
-  title:
-    "ドイツでのHP制作、リニューアルとSEO最適化 | Katsumi Ishihara Consulting",
-  description:
-    "ドイツ、フランス、イタリア、スペインなどのEU(欧州)在住の皆様へ。ホームページの制作・リニューアル、そしてSEO最適化はお任せください。ウェブサイトの課題を解決し、オンラインでの集客をサポートします。",
-  keywords: ["ホームページ制作", "ドイツ", "SEO最適化", "リニューアル"],
-  openGraph: {
-    title:
-      "ドイツでのHP制作、リニューアルとSEO最適化 | Katsumi Ishihara Consulting",
-    description:
-      "EU在住の皆様へ。ホームページの課題を解決し、オンラインでの集客をサポートします。詳しくは当サイトをご覧ください。",
-  },
+export type PageProps = {
+  params: { lang: string };
 };
 
-export default async function Home({ params }: { params: { lang: string } }) {
+export async function generateMetadata(
+  { params }: PageProps,
+  parent: ResolvingMetadata,
+): Promise<Metadata> {
+  const lang = params.lang;
+
+  const { t } = await getTranslation(lang);
+  const homeMetadata = t("home", { ns: "meta", returnObjects: true });
+
+  // optionally access and extend (rather than replace) parent metadata
+  const previousImages = (await parent).openGraph?.images || [];
+
+  return {
+    title: homeMetadata.title,
+    description: homeMetadata.description,
+    keywords: homeMetadata.keywords,
+    openGraph: {
+      title: homeMetadata.title,
+      description: homeMetadata.description,
+      images: [...previousImages],
+    },
+  };
+}
+
+export default async function Home({ params }: PageProps) {
   const { lang } = params;
   const { t } = await getTranslation(lang);
 

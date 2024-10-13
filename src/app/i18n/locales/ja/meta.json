@@ -1,0 +1,47 @@
+{
+  "home": {
+    "title": "ドイツでのHP制作、リニューアルとSEO最適化 | Katsumi Ishihara Consulting",
+    "description": "ドイツ、フランス、イタリア、スペインなどのEU(欧州)在住の皆様へ。ホームページの制作・リニューアル、そしてSEO最適化はお任せください。ウェブサイトの課題を解決し、オンラインでの集客をサポートします。",
+    "keywords": ["ホームページ制作", "ドイツ", "SEO最適化", "リニューアル"]
+  },
+  "about": {
+    "title": "経歴 | Katsumi Ishihara Consulting",
+    "description": "経歴を紹介します。ドイツでのHP制作、リニューアルとSEO最適化を専門としております。",
+    "keywords": ["経歴", "ドイツ", "SEO最適化", "リニューアル"]
+  },
+  "contact": {
+    "title": "お問い合わせ | Katsumi Ishihara Consulting",
+    "description": "お問い合わせはこちらから。無料相談を受け付けております。ホームページの課題を解決し、オンラインでの集客をサポートします。",
+    "keywords": ["Contact", "Consultation", "Website", "Online Marketing"]
+  },
+  "services": {
+    "title": "サービス一覧 | Katsumi Ishihara Consulting",
+    "description": "当社の提供するサービス一覧です。コンバージョン分析、ウェブアプリ開発、ウェブサイト制作・リニューアルなど、あなたのビジネスをサポートするサービスを紹介します。",
+    "keywords": [
+      "サービス",
+      "コンバージョン分析",
+      "ウェブアプリ開発",
+      "ホームページ制作"
+    ],
+    "conversionAnalysis": {
+      "title": "コンバージョン分析 | Katsumi Ishihara Consulting",
+      "description": "コンバージョン分析を行い、ウェブサイトの集客数を増やすための改善策を導き出します。",
+      "keywords": ["コンバージョン分析", "集客数", "売上アップ"]
+    },
+    "mailMarketing": {
+      "title": "メールマーケティング | Katsumi Ishihara Consulting",
+      "description": "メールマーケティングを効果的に活用することで、顧客との関係を深め、売上向上やリード獲得につなげることができます。",
+      "keywords": ["メールマーケティング", "リード獲得", "顧客エンゲージメント"]
+    },
+    "webAppDevelopment": {
+      "title": "ウェブアプリ開発 | Katsumi Ishihara Consulting",
+      "description": "業務を効率化したい方、オリジナルアプリを開発したい方に向けたウェブアプリ開発サービスを提供しています。",
+      "keywords": ["ウェブアプリ開発", "業務効率化", "オリジナルアプリ"]
+    },
+    "webDevelopment": {
+      "title": "ホームページ制作・リニューアル | Katsumi Ishihara Consulting",
+      "description": "ホームページ(ウェブサイト)の制作・リニューアルを通じて、集客数を増やし、新規顧客の獲得につなげることができます。",
+      "keywords": ["ホームページ制作", "リニューアル", "SEO対策", "集客数増加"]
+    }
+  }
+}
