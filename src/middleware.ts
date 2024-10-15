@@ -27,7 +27,11 @@ export function middleware(request: NextRequest) {
     defaultLanguage;
 
   const pathname = request.nextUrl.pathname;
-  if (pathname === "/robots.txt" || pathname === "/sitemap.xml") {
+  if (
+    pathname === "/robots.txt" ||
+    pathname === "/sitemap.xml" ||
+    pathname.startsWith("/favicon.ico")
+  ) {
     return NextResponse.next();
   }
 
