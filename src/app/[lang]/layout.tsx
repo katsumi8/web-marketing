@@ -41,7 +41,6 @@ export default function rootlayout({
   return (
     <html lang={lang} dir={dir(lang)}>
       <head>
-        <link rel="icon" href="/favicon.ico" />
         <Script
           src="https://cdn-cookieyes.com/client_data/4cf946313672c296203e3c28/script.js"
           strategy="beforeInteractive"
