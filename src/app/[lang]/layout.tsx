@@ -18,9 +18,6 @@ export const metadata: Metadata = {
   title: "katsumi ishihara consulting",
   description:
     "ドイツ、フランス、イタリア、スペインに在住の皆様、ホームページの制作・リニューアル、SEO最適化お悩みでしたら、ぜひご相談を！",
-  icons: {
-    icon: "/favicon.ico",
-  },
   openGraph: {
     title: "katsumi ishihara consulting",
     description:
