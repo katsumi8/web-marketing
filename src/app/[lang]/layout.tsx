@@ -51,6 +51,16 @@ export default function rootlayout({
         />
         <GoogleTagManager gtmId="GTM-MNW5RZ92" />
         <GoogleAnalytics gaId="G-QLCM1CYZ17" />
+
+        <Script id="google-ads-conversion" strategy="afterInteractive">
+          {`
+          gtag('event', 'conversion', {
+            'send_to': 'AW-10891910687/WFIICOny4-QZEJ-81cko',
+            'value': 1.0,
+            'currency': 'EUR'
+          });
+        `}
+        </Script>
       </head>
       <body className={`${inter.className} h-full`}>
         <LanguageProvider initialLanguage={lang}>
