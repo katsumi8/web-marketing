@@ -1,7 +1,9 @@
 import Link from "next/link";
+
 type BreadcrumbsProps = {
   segments: string[];
 };
+
 export default function Breadcrumbs({ segments }: BreadcrumbsProps) {
   const breadcrumbs = segments.map((segment, index) => {
     const href = "/" + segments.slice(0, index + 1).join("/");
@@ -11,44 +13,63 @@ export default function Breadcrumbs({ segments }: BreadcrumbsProps) {
     const segmentName = decodeURIComponent(segment);
 
     return (
-      <span key={href}>
+      <li
+        key={href}
+        className="inline-flex items-center font-bold"
+        itemProp="itemListElement"
+        itemScope
+        itemType="https://schema.org/ListItem"
+      >
         {!isLast ? (
           <>
             <Link
               href={href}
-              className="relative inline-block 
-              before:absolute before:w-full before:scale-x-0 before:h-[2px] 
-              before:bottom-0 before:left-0 before:bg-gray-400 
-              before:origin-bottom-right 
-              before:transition-transform before:duration-300 
-              hover:before:scale-x-100 hover:before:origin-bottom-left"
+              itemProp="item"
+              className="text-[#52b5ee] no-underline hover:underline"
             >
-              {segmentName}
+              <span itemProp="name">{segmentName}</span>
             </Link>
-            {" / "}
+            <meta itemProp="position" content={(index + 2).toString()} />
+            <span className="mx-1 text-[#555]">{">"}</span>
           </>
         ) : (
-          <span className="cursor-not-allowed">{segmentName}</span>
+          <>
+            <span itemProp="name">{segmentName}</span>
+            <meta itemProp="position" content={(index + 2).toString()} />
+          </>
         )}
-      </span>
+      </li>
     );
   });
 
   return (
     <nav aria-label="breadcrumbs">
-      <Link
-        href="/"
-        className="relative inline-block 
-        before:absolute before:w-full before:scale-x-0 before:h-[2px] 
-        before:bottom-0 before:left-0 before:bg-gray-400 
-        before:origin-bottom-right 
-        before:transition-transform before:duration-300 
-        hover:before:scale-x-100 hover:before:origin-bottom-left"
+      <ol
+        className="m-0 p-0 list-none flex items-center"
+        itemScope
+        itemType="https://schema.org/BreadcrumbList"
       >
-        home
-      </Link>
-      {segments.length > 0 && <span> / </span>}
-      {breadcrumbs}
+        {/* ホームへのリンク */}
+        <li
+          className="inline-flex items-center font-bold"
+          itemProp="itemListElement"
+          itemScope
+          itemType="https://schema.org/ListItem"
+        >
+          <Link
+            href="/"
+            itemProp="item"
+            className="text-[#52b5ee] no-underline hover:underline"
+          >
+            <span itemProp="name">Startseite</span>
+          </Link>
+          <meta itemProp="position" content="1" />
+          {segments.length > 0 && (
+            <span className="mx-1 text-[#555]">{">"}</span>
+          )}
+        </li>
+        {breadcrumbs}
+      </ol>
     </nav>
   );
 }
