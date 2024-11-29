@@ -61,7 +61,7 @@ export default function Breadcrumbs({ segments }: BreadcrumbsProps) {
             itemProp="item"
             className="text-[#52b5ee] no-underline hover:underline"
           >
-            <span itemProp="name">Startseite</span>
+            <span itemProp="name">home</span>
           </Link>
           <meta itemProp="position" content="1" />
           {segments.length > 0 && (
