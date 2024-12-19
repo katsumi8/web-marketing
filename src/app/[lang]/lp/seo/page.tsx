@@ -8,6 +8,7 @@ import History from "./_components/history";
 import KeyFeaturesWithCTA from "./_components/keyFeaturesWithCTA";
 import Offerings from "./_components/offerings";
 import PerformanceShowcase from "./_components/performanceShowcase";
+import Price from "./_components/price";
 
 export default function LandingPageSEO() {
   return (
@@ -25,14 +26,7 @@ export default function LandingPageSEO() {
       {/* お問い合わせ後の流れ */}
       <CustomerJourneySteps />
       {/* 料金プランセクション + CTA */}
-      <section className="py-16 bg-[#aedbf5] w-full flex flex-col items-center">
-        <h2 className="text-3xl font-bold mb-8">料金プランについて</h2>
-        <p className="p-10">
-          月あたりの費用は 1,200〜2,000程度を想定いただければ十分です。
-          実際の金額は依頼内容や作業ボリュームによって前後するため、
-          詳細はお問い合わせの上ご確認ください。
-        </p>
-      </section>
+      <Price />
       {/* FAQセクション */}
       <FAQ />
       {/* お問い合わせセクション */}
