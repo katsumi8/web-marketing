@@ -6,7 +6,7 @@ import Link from "next/link";
 import { useSearchParams } from "next/navigation";
 import { useEffect, useState } from "react";
 import { AiOutlineMenu } from "react-icons/ai";
-import NavLogoImg from "../../../public/assets/navLogo.png";
+import NavLogoImg from "../../../public/assets/navLogo.webp";
 import { navItems } from "./const";
 import NavItem from "./Item";
 import MobileNavbar from "./MobileNavbar";

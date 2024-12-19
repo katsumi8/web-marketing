@@ -2,11 +2,36 @@
 import Loading from "@/app/[lang]/loading";
 import { useTranslation } from "@/app/i18n/client";
 import Link from "next/link";
+import { useEffect } from "react";
 import { Trans } from "react-i18next";
 import { useOrderForm } from "./hooks";
 
 function ContactForm({ lang }: { lang: string }) {
   const { t } = useTranslation(lang);
+  useEffect(() => {
+    const contactSection = document.getElementById("contact");
+    const inputField = document.getElementById("name");
+
+    const observer = new IntersectionObserver(
+      ([entry]) => {
+        if (entry.isIntersecting && inputField) {
+          // #contactが表示されたら最初の入力フィールドにフォーカスする
+          inputField.focus();
+        }
+      },
+      { threshold: 0.5 }, // 50%表示されたらイベントを発火
+    );
+
+    if (contactSection) {
+      observer.observe(contactSection);
+    }
+
+    return () => {
+      if (contactSection) {
+        observer.unobserve(contactSection);
+      }
+    };
+  }, []);
   const {
     isSubmitting,
     onSubmitHandler,

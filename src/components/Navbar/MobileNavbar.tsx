@@ -1,7 +1,7 @@
 import Image from "next/image";
 import Link from "next/link";
 import { AiOutlineClose } from "react-icons/ai";
-import NavLogoImg from "../../../public/assets/navLogo.png";
+import NavLogoImg from "../../../public/assets/navLogo.webp";
 import NavItem from "./Item";
 import { navItems } from "./const";
 

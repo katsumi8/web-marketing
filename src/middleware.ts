@@ -30,6 +30,7 @@ export function middleware(request: NextRequest) {
   if (
     pathname === "/robots.txt" ||
     pathname === "/sitemap.xml" ||
+    pathname.includes("assets") ||
     pathname.includes("/favicon.ico")
   ) {
     return NextResponse.next();
