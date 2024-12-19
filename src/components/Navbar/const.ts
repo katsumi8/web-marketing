@@ -4,3 +4,5 @@ export const navItems = [
   { href: "/services", text: "Services" },
   { href: "/contact", text: "Contact" },
 ];
+
+export const navItemsForLp = [{ href: "#contact", text: "Contact" }];

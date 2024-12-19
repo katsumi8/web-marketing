@@ -13,7 +13,16 @@ export const LanguageSwitcher = ({ currentLanguage = defaultLanguage }) => {
   ) => {
     const newLocale = event.target.value;
     Cookies.set(cookieName, newLocale);
-    window.location.href = "/";
+    // 現在のURLを取得
+    const currentPath = window.location.pathname;
+    // 現在の言語を取得（例: /en/xxx → en）
+    const currentLocale = currentPath.split("/")[1];
+    // 新しいURLを生成
+    const newPath =
+      currentLocale && currentPath.startsWith(`/${currentLocale}/`)
+        ? currentPath.replace(`/${currentLocale}/`, `/${newLocale}/`)
+        : `/${newLocale}${currentPath}`;
+    window.location.href = newPath;
   };
 
   return (

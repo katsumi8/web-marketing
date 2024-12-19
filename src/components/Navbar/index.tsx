@@ -3,11 +3,11 @@
 import LanguageSwitcher from "@/app/[lang]/_components/language-switcher";
 import Image from "next/image";
 import Link from "next/link";
-import { useSearchParams } from "next/navigation";
+import { usePathname, useSearchParams } from "next/navigation";
 import { useEffect, useState } from "react";
 import { AiOutlineMenu } from "react-icons/ai";
 import NavLogoImg from "../../../public/assets/navLogo.webp";
-import { navItems } from "./const";
+import { navItems, navItemsForLp } from "./const";
 import NavItem from "./Item";
 import MobileNavbar from "./MobileNavbar";
 
@@ -16,6 +16,8 @@ export default function Navbar({ lang }: { lang: string }) {
   const [shadow, setShadow] = useState<boolean>(false);
   const searchParams = useSearchParams();
   const entryPoint = searchParams.get("origin");
+  const pathName = usePathname();
+  const isPathIncludeLp = pathName.includes("lp");
 
   const handleNav = () => {
     setNav(!nav);
@@ -39,11 +41,12 @@ export default function Navbar({ lang }: { lang: string }) {
       window.removeEventListener("scroll", handleShadow);
     };
   }, []);
+  const homeLink = isPathIncludeLp ? "/lp/seo" : "/";
 
   return (
     <div className={shadow ? "w-full bg-white shadow-xl" : "w-full bg-white"}>
       <div className="flex h-full w-full items-center justify-between px-2 2xl:px-16">
-        <Link href={"/"}>
+        <Link href={homeLink}>
           <Image className="size-20" src={NavLogoImg} alt="/" />
         </Link>
 
@@ -53,14 +56,23 @@ export default function Navbar({ lang }: { lang: string }) {
               style={{ color: `#1f2937` }}
               className="hidden md:flex justify-between space-x-5 items-center"
             >
-              {navItems.map((item, index) => (
-                <NavItem
-                  key={index}
-                  href={item.href}
-                  text={item.text}
-                  isMobile={false}
-                />
-              ))}
+              {isPathIncludeLp
+                ? navItemsForLp.map((item, index) => (
+                    <NavItem
+                      key={index}
+                      href={item.href}
+                      text={item.text}
+                      isMobile={false}
+                    />
+                  ))
+                : navItems.map((item, index) => (
+                    <NavItem
+                      key={index}
+                      href={item.href}
+                      text={item.text}
+                      isMobile={false}
+                    />
+                  ))}
               <div className="ml-10 hover:border-b text-sm">
                 <LanguageSwitcher currentLanguage={lang} />
               </div>

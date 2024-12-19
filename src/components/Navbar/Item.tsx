@@ -6,6 +6,7 @@ type NavItemProps = {
   isMobile: boolean;
   onClick?: () => void;
 };
+
 export default function NavItem({
   href,
   text,
