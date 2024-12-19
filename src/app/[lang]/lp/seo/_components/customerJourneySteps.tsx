@@ -6,36 +6,36 @@ export default function CustomerJourneySteps() {
       title: "ヒアリング",
       description:
         "お問い合わせ後、オンラインやお電話にて詳しいヒアリングを実施します。サイトの現状や目指すゴールをすり合わせ、プロジェクトの方向性を明確化していきます。",
-      imagePath: "/images/icon-globe.png",
-      altText: "アイコン",
+      imagePath: "/assets/hearingMeeting.webp",
+      altText: "ヒアリング",
     },
     {
       title: "お見積もり・ご提案",
       description:
         "ヒアリング内容をもとに最適な施策プランとお見積もりを提示いたします。納得いただけましたら、その旨をメールやチャットなどでお知らせください。",
-      imagePath: "/images/icon-globe.png",
-      altText: "アイコン",
+      imagePath: "/assets/estimations.webp",
+      altText: "見積もり",
     },
     {
       title: "ご契約・お支払い",
       description:
         "契約内容とお見積もりに合意いただけましたら、正式にご契約となります。",
-      imagePath: "/images/icon-globe.png",
-      altText: "アイコン",
+      imagePath: "/assets/contract.webp",
+      altText: "契約",
     },
     {
       title: "施策のスタート",
       description:
         "アカウントの設定完了後、具体的な作業に着手します。サイト改修やSEO対策、コンテンツ制作など、お客様の優先度に沿って対応いたします。",
-      imagePath: "/images/icon-globe.png",
-      altText: "アイコン",
+      imagePath: "/assets/work.webp",
+      altText: "作業",
     },
     {
       title: "納品 & フィードバック",
       description:
         "完成した内容を納品し、必要に応じて修正対応を行います。納品後も定期的にフォローアップを実施し、継続的にサイト運用の最適化や改善提案を行うことも可能です。",
-      imagePath: "/images/icon-globe.png",
-      altText: "アイコン",
+      imagePath: "/assets/feedback.webp",
+      altText: "納品とフィードバック",
     },
   ];
 
@@ -48,8 +48,8 @@ export default function CustomerJourneySteps() {
         {steps.map((step, index) => (
           <div
             key={index}
-            className="relative flex flex-col sm:flex-row space-y-4 sm:space-y-0 sm:justify-between
-                     p-4 w-[80%] bg-[#aedbf5] rounded-lg md::h-36 shadow-md"
+            className="relative flex flex-col sm:flex-row space-y-4 sm:space-y-0 sm:justify-between sm:items-center
+            p-4 w-[80%] bg-[#aedbf5] rounded-lg md:h-36 shadow-md"
           >
             {/* 左上の番号 */}
             <div
@@ -66,11 +66,11 @@ export default function CustomerJourneySteps() {
               <p className="sm:pr-4">{step.description}</p>
             </div>
 
-            <div className="flex justify-center items-center">
+            <div className="w-full sm:w-32 h-32 rounded-xl relative flex-shrink-0 bg-gray-100 flex justify-center">
               <Image
+                className="object-cover rounded-xl"
                 src={step.imagePath}
-                width={50}
-                height={50}
+                fill={true}
                 alt={step.altText}
               />
             </div>

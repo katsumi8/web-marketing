@@ -1,3 +1,4 @@
+import Image from "next/image";
 export default function History() {
   const history = [
     {
@@ -25,7 +26,7 @@ export default function History() {
   return (
     <section className="py-16 w-full">
       <h2 className="text-3xl font-bold text-center mb-8">沿革</h2>
-      <div className="flex px-4 space-x-4">
+      <div className="flex px-4 xl:px-32 space-x-4">
         <div className="max-w-2xl mx-auto relative">
           {/* 縦のライン */}
           <div className="absolute top-2 left-1 bottom-0 w-2 bg-gray-300"></div>
@@ -39,8 +40,14 @@ export default function History() {
             </div>
           ))}
         </div>
-        <div className="flex-grow justify-center hidden sm:flex">
-          <div className="w-full bg-gray-300 h-[80%] text-center">Image</div>
+        <div className="flex-grow justify-center hidden lg:flex lg:h-[50%]">
+          <Image
+            className="rounded-lg object-cover"
+            src="/assets/myPhoto.webp"
+            alt="石原克海の写真"
+            width={400}
+            height={400}
+          />
         </div>
       </div>
     </section>

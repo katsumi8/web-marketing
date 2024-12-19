@@ -1,5 +1,5 @@
 import Image from "next/image";
-import MyselfImg from "../../../../../public/assets/myPhoto.jpeg";
+import MyselfImg from "../../../../../public/assets/myPhoto.webp";
 import Myself from "./Myself";
 
 export default function MyJourney() {

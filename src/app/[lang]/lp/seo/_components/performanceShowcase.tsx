@@ -14,7 +14,7 @@ export default function PerformanceShowcase() {
               ページ改善後、トップ10内にランクイン
             </h3>
 
-            <div className="flex items-center md:flex-row flex-col py-4">
+            <div className="flex items-center xl:flex-row flex-col py-4">
               <Image
                 className="size-64 bg-transparent"
                 src="/assets/ranking_up.svg"
@@ -35,7 +35,7 @@ export default function PerformanceShowcase() {
             <h3 className="text-2xl font-semibold mb-4 text-center">
               週平均PV約6倍増
             </h3>
-            <div className="flex items-center md:flex-row flex-col py-4">
+            <div className="flex items-center xl:flex-row flex-col py-4">
               <Graph />
               <p className="p-4 sm:p-10">
                 3ヶ月でデザインとテクニカルSEOを刷新しただけで、これだけ改善しました。
