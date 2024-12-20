@@ -43,7 +43,9 @@ export default async function KeyFeaturesWithCTA({ lang }: { lang: string }) {
 
   return (
     <section className="py-16 w-full flex-col justify-center items-center">
-      <h2 className="text-3xl font-bold text-center mb-8">弊社の特徴</h2>
+      <h2 className="text-3xl font-bold text-center mb-8">
+        {ourFeatures.title}
+      </h2>
       <div className="container mx-auto flex justify-center py-20">
         <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-8 justify-items-center">
           {ourFeatures.features.map((feature, index) => (

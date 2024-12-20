@@ -182,5 +182,28 @@
         "icon": "link"
       }
     ]
+  },
+  "performanceShowcase": {
+    "sectionTitle": "Beeindruckende Ergebnisse, die für sich sprechen",
+    "cards": [
+      {
+        "title": "Nach Seitenoptimierung in die Top 10 aufgestiegen",
+        "description": "Durch Optimierung interner Links und eine klare Seitenstruktur konnten wir die Platzierung für spezifische Keywords deutlich verbessern.",
+        "iconAlt": "SEO-Ranking-Verbesserung"
+      },
+      {
+        "title": "6-facher Anstieg der durchschnittlichen wöchentlichen PV",
+        "description": "Innerhalb von drei Monaten haben wir durch Design-Updates und technische SEO-Optimierungen bemerkenswerte Ergebnisse erzielt.",
+        "chart": {
+          "label": "Seitenaufrufe (PV)",
+          "growthText": "6-fach"
+        }
+      }
+    ]
+  },
+  "price": {
+    "sectionTitle": "Unsere Preispläne",
+    "description": "Die monatlichen Kosten liegen in der Regel zwischen 1.200€ und 2.000€. Der genaue Betrag hängt jedoch von Ihrem spezifischen Projektumfang und den gewünschten Leistungen ab. Kontaktieren Sie uns für ein individuelles Angebot.",
+    "backgroundImageAlt": "Digitaler Hintergrund"
   }
 }
