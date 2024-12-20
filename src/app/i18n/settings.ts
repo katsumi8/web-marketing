@@ -4,6 +4,7 @@ export const defaultLanguage = "ja";
 export const availableLanguageOptions = [
   { code: defaultLanguage, label: "JP", flag: "🇯🇵" },
   { code: "en", label: "EN", flag: "🇺🇸" },
+  { code: "de", label: "DE", flag: "🇩🇪" },
   // 他の言語を追加する場合はここに追加
 ];
 export const availableLanguages = availableLanguageOptions.map(

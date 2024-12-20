@@ -1,4 +1,5 @@
-import i18next from "i18next";
+import { getTranslation } from "@/app/i18n/server";
+import type { Metadata, ResolvingMetadata } from "next";
 import type { PageProps } from "../../page";
 import ContactFormForLp from "./_components/contactFormLp";
 import CustomerJourneySteps from "./_components/customerJourneySteps";
@@ -12,21 +13,28 @@ import Offerings from "./_components/offerings";
 import PerformanceShowcase from "./_components/performanceShowcase";
 import Price from "./_components/price";
 
-export async function generateStaticProps({ params }: PageProps) {
-  const { lang } = params;
-  await i18next.init({
-    lng: lang,
-    ns: ["lp"],
-    backend: {
-      loadPath: `/locales/${lang}/lp.json`,
-    },
-  });
+export const generateMetadata = async (
+  { params }: PageProps,
+  parent: ResolvingMetadata,
+): Promise<Metadata> => {
+  const lang = params.lang;
+
+  const { t } = await getTranslation(lang);
+  const metadata = t("seoLandingPage", { ns: "meta", returnObjects: true });
+  // optionally access and extend (rather than replace) parent metadata
+  const previousImages = (await parent).openGraph?.images || [];
+
   return {
-    props: {
-      lang,
+    title: metadata.title,
+    description: metadata.description,
+    keywords: metadata.keywords,
+    openGraph: {
+      title: metadata.title,
+      description: metadata.description,
+      images: [...previousImages],
     },
   };
-}
+};
 
 export default async function LandingPageSEO({ params }: PageProps) {
   return (
