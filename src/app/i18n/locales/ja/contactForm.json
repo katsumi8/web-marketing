@@ -9,9 +9,6 @@
   "phone_label": "電話番号",
   "email_label": "E-Mail",
   "message_label": "お問い合わせ内容",
-  "privacy_policy": {
-    "label": "プライバシーポリシー",
-    "agreement": "に同意します。"
-  },
+  "privacy_policy": "<a>プライバシーポリシー</a> に同意します。",
   "submit_button": "送信"
 }

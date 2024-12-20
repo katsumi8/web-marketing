@@ -1,7 +1,6 @@
 "use client";
 import Loading from "@/app/[lang]/loading";
 import { useTranslation } from "@/app/i18n/client";
-import Link from "next/link";
 import { useEffect } from "react";
 import { Trans } from "react-i18next/TransWithoutContext";
 import { useOrderForm } from "./hooks";
@@ -53,10 +52,6 @@ function ContactForm({ lang }: { lang: string }) {
   const phoneLabel = t("phone_label", { ns: "contactForm" });
   const emailLabel = t("email_label", { ns: "contactForm" });
   const messageLabel = t("message_label", { ns: "contactForm" });
-  const privacyPolicy = t("privacy_policy", {
-    ns: "contactForm",
-    returnObjects: true,
-  });
   const submitButton = t("submit_button", { ns: "contactForm" });
 
   return (
@@ -69,6 +64,7 @@ function ContactForm({ lang }: { lang: string }) {
             <Trans
               i18nKey="form_submit_successful.confirmation"
               ns="contactForm"
+              t={t}
               values={{ email: watch("email") }}
             />
           </p>
@@ -154,33 +150,22 @@ function ContactForm({ lang }: { lang: string }) {
                 className="mt-1"
               />
               <label htmlFor="privacyPolicy" className="ml-2 text-sm">
-                {lang === "ja" ? (
-                  <>
-                    <Link
-                      href="/privacy-policy"
-                      rel="noopener noreferrer"
-                      target="_blank"
-                      className="text-blue-500 underline"
-                    >
-                      {privacyPolicy.label}
-                    </Link>
-                    {privacyPolicy.agreement}
-                    <span className="text-red-500">*</span>
-                  </>
-                ) : (
-                  <>
-                    {privacyPolicy.agreement}{" "}
-                    <Link
-                      href="/privacy-policy"
-                      rel="noopener noreferrer"
-                      target="_blank"
-                      className="text-blue-500 underline"
-                    >
-                      {privacyPolicy.label}
-                    </Link>
-                    <span className="text-red-500">*</span>
-                  </>
-                )}
+                <Trans
+                  i18nKey="privacy_policy"
+                  ns="contactForm"
+                  components={{
+                    a: (
+                      <a
+                        href="/datenschutzerklarung"
+                        rel="noopener noreferrer"
+                        target="_blank"
+                        className="text-blue-500 underline"
+                      />
+                    ),
+                  }}
+                  t={t}
+                />
+                <span className="text-red-500">*</span>
               </label>
             </div>
             {!!errors["privacyPolicy"]?.message && (

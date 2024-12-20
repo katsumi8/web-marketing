@@ -9,9 +9,6 @@
   "phone_label": "Phone Number",
   "email_label": "E-Mail",
   "message_label": "Message",
-  "privacy_policy": {
-    "label": "Privacy Policy",
-    "agreement": "I agree to the"
-  },
+  "privacy_policy": "I agree to the <a>Privacy Policy</a>.",
   "submit_button": "Submit"
 }

@@ -1,0 +1,14 @@
+{
+  "form_submit_successful": {
+    "header": "Vielen Dank, wir haben Ihre Nachricht erhalten!",
+    "body": "Wir werden uns in Kürze mit Ihnen in Verbindung setzen.",
+    "confirmation": "Die von Ihnen angegebene E-Mail-Adresse lautet {{email}}.",
+    "error": "Falls die E-Mail-Adresse falsch ist, aktualisieren Sie bitte die Seite und geben Sie die korrekte E-Mail-Adresse ein, um die Nachricht erneut zu senden."
+  },
+  "name_label": "Firmenname/Name",
+  "phone_label": "Telefonnummer",
+  "email_label": "E-Mail",
+  "message_label": "Ihre Nachricht",
+  "privacy_policy": "Ich stimme der <a>Datenschutzerklärung</a>  zu.",
+  "submit_button": "Senden"
+}

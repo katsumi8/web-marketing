@@ -8,7 +8,7 @@ export default async function Hero({ lang }: { lang: string }) {
   const heroContent = t("hero", { ns: "lp", returnObjects: true });
 
   return (
-    <section className="bg-[#aedbf5] grid grid-col-1 md:grid-cols-2 w-full min-h-[70vh] items-center z-0 relative">
+    <section className="bg-[#aedbf5] grid grid-col-1 md:grid-cols-2 w-full min-h-[70vh] items-center z-0 relative md:py-8 md:px-4">
       <div
         className="block md:hidden absolute top-0 right-0 bg-no-repeat bg-cover bg-center z-10 w-full h-full opacity-30"
         style={{

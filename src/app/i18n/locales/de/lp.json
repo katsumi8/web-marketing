@@ -1,0 +1,186 @@
+{
+  "hero": {
+    "limitedOffer": "Nur für kurze Zeit: Erstes Monat gratis mit Jahresvertrag!",
+    "mainTitle": {
+      "line1": "„Keine Zeit? Zu kompliziert?“ Für alle, die sich überfordert fühlen:",
+      "highlighted": "Ihre Sorgen in unsere Hände<br/>mit professionellem SEO-Consulting",
+      "line2": "Erreichen Sie Ihre Ziele mit minimalem Aufwand."
+    },
+    "description": "Ich bin ein ehemaliger Berater eines globalen Unternehmens und erfahrener Full-Stack-Entwickler. Lassen Sie mich Ihre Webpräsenz optimieren und Ihr Online-Marketing auf ein neues Niveau heben.",
+    "imageAltForHero": "SEO-Beratung"
+  },
+  "ctaButton": {
+    "limitedTime": "Nur für kurze Zeit: Erstes Monat gratis!",
+    "buttonText": "Jetzt kostenlose Beratung sichern"
+  },
+  "contactFormForLp": {
+    "sectionTitle": "Kontaktieren Sie uns für eine Beratung"
+  },
+  "customerJourneySteps": {
+    "title": "So läuft unser Prozess ab",
+    "steps": [
+      {
+        "title": "Erstgespräch",
+        "description": "Nach Ihrer Anfrage führen wir ein detailliertes Gespräch online oder telefonisch, um den Status Ihrer Website und Ihre Ziele zu besprechen.",
+        "imagePath": "/assets/hearingMeeting.webp",
+        "altText": "Erstgespräch"
+      },
+      {
+        "title": "Angebot & Vorschläge",
+        "description": "Basierend auf dem Gespräch erstellen wir eine maßgeschneiderte Strategie und ein Angebot. Wenn Sie einverstanden sind, geht es los!",
+        "imagePath": "/assets/estimations.webp",
+        "altText": "Angebotserstellung"
+      },
+      {
+        "title": "Vertrag & Zahlung",
+        "description": "Sobald Sie das Angebot bestätigt haben, schließen wir den Vertrag und beginnen mit der Umsetzung.",
+        "imagePath": "/assets/contract.webp",
+        "altText": "Vertragsabschluss"
+      },
+      {
+        "title": "Umsetzung",
+        "description": "Nach Einrichtung aller Zugänge beginnen wir mit der Optimierung Ihrer Website: Design, SEO und Content-Produktion – alles nach Ihren Prioritäten.",
+        "imagePath": "/assets/work.webp",
+        "altText": "Arbeit"
+      },
+      {
+        "title": "Lieferung & Feedback",
+        "description": "Wir liefern die Ergebnisse und passen sie bei Bedarf an. Nach der Übergabe unterstützen wir Sie gerne weiterhin bei der Optimierung Ihrer Website.",
+        "imagePath": "/assets/feedback.webp",
+        "altText": "Lieferung und Feedback"
+      }
+    ]
+  },
+  "customerPainPoints": {
+    "title": "Kennen Sie diese Herausforderungen?",
+    "points": [
+      {
+        "text": "Ihre bestehende Website bringt keine neuen Kunden.",
+        "imagePath": "/assets/maleWithConcern.webp",
+        "altText": "Mann mit Sorgen über die Kundenakquise"
+      },
+      {
+        "text": "Sie wissen nicht, wo Sie anfangen sollen.",
+        "imagePath": "/assets/maleWithConcern2.webp",
+        "altText": "Mann, der nicht weiß, wo er anfangen soll"
+      },
+      {
+        "text": "Ihnen fehlen die internen Ressourcen.",
+        "imagePath": "/assets/femaleWithConcern.webp",
+        "altText": "Frau mit Ressourcenproblemen"
+      }
+    ],
+    "solution": "Keine Sorge – ich übernehme das für Sie!"
+  },
+  "faq": {
+    "title": "Häufig gestellte Fragen",
+    "items": [
+      {
+        "question": "Q. Muss ich etwas vorbereiten, bevor ich Sie kontaktiere?",
+        "answer": "Nein, Sie müssen nichts vorbereiten. Wenn Sie jedoch eine grobe Idee oder spezifische Herausforderungen haben, teilen Sie uns diese gerne mit."
+      },
+      {
+        "question": "Q. Ist die Angebotserstellung kostenlos?",
+        "answer": "Ja, das Angebot ist kostenlos. Wir erstellen es basierend auf Ihren Anforderungen und Ihrem Budgetrahmen."
+      },
+      {
+        "question": "Q. Wie lange dauert ein Projekt?",
+        "answer": "Das hängt vom Umfang ab. In der Regel benötigen wir 1–2 Monate, wobei die genaue Dauer von Ihren Anforderungen abhängt."
+      },
+      {
+        "question": "Q. Bieten Sie auch Anzeigenmanagement an?",
+        "answer": "Ja, wir bieten zusätzlich zum SEO auch Management für Werbeanzeigen und Keyword-Strategien an. Sprechen Sie uns einfach darauf an."
+      },
+      {
+        "question": "Q. Gibt es Support nach der Vertragsabwicklung?",
+        "answer": "Ja, je nach Plan bieten wir Nachbetreuung an, z. B. regelmäßige Berichte und Optimierungen nach Bedarf."
+      }
+    ]
+  },
+  "floatingButton": {
+    "text": "Kostenlose Beratung jetzt starten"
+  },
+  "history": {
+    "title": "Unsere Geschichte",
+    "items": [
+      {
+        "year": "2017",
+        "content": "Beginn der Karriere bei einer internationalen Beratungsfirma, Unterstützung von Unternehmen bei der digitalen Transformation."
+      },
+      {
+        "year": "2020",
+        "content": "Leitung von Service-Entwicklung in einem IT-Unternehmen und Unterstützung bei Marktforschung und neuen Geschäftsmodellen."
+      },
+      {
+        "year": "2022",
+        "content": "Erfahrung als Full-Stack-Entwickler gesammelt – von Website-Strukturen bis hin zu Server-Seiten-Implementierungen."
+      },
+      {
+        "year": "2023",
+        "content": "Start der SEO-Beratung als selbstständiger Unternehmer, Kombination von Beratungs-, Technologie- und Marketingkenntnissen."
+      }
+    ],
+    "imageAlt": "Ein Foto von Katsumi Ishihara"
+  },
+  "keyFeatures": {
+    "title": "Warum uns wählen?",
+    "features": [
+      {
+        "title": "Schnelligkeit und Präzision",
+        "description": "Wir verbinden die Flexibilität eines Freelancers mit der Analytik eines Ex-Beraters, um Ihnen effektive Maßnahmen zu bieten.",
+        "icon": "speed",
+        "imagePath": "/assets/your-illustration.png",
+        "altText": "Schnelligkeit und Präzision"
+      },
+      {
+        "title": "Nachweisbare Ergebnisse",
+        "description": "Mit umfassendem technischem Wissen und bewährten Strategien haben wir Websites um bis zu 6x erfolgreicher gemacht.",
+        "icon": "achievement",
+        "imagePath": "/assets/your-illustration.png",
+        "altText": "Nachweisbare Erfolge"
+      },
+      {
+        "title": "Ihre Lösung für kleine Unternehmen",
+        "description": "Egal bei welchem Budget: Wir finden eine passende Strategie, um Ihr Unternehmen wachsen zu lassen.",
+        "icon": "building",
+        "imagePath": "/assets/your-illustration.png",
+        "altText": "Lösungen für kleine Unternehmen"
+      }
+    ]
+  },
+  "offerings": {
+    "title": "Unsere Dienstleistungen",
+    "items": [
+      {
+        "title": "Strategieentwicklung",
+        "description": "Wir erstellen Strategien, die auf Ihre Branche und Ziele zugeschnitten sind, und sichern langfristigen Erfolg.",
+        "icon": "strategy"
+      },
+      {
+        "title": "Webseiten-Architektur",
+        "description": "Planung von Keywords und Aufbau einer Website, die sowohl Benutzer als auch Suchmaschinen anspricht.",
+        "icon": "structure"
+      },
+      {
+        "title": "Werbekampagnen",
+        "description": "Wir verwalten Anzeigen, um schnellere Ergebnisse zu erzielen und Ihre Zielgruppen effektiver anzusprechen.",
+        "icon": "announce"
+      },
+      {
+        "title": "Content-Erstellung",
+        "description": "Wir erstellen SEO-optimierte Inhalte, die Ihr Unternehmen in den Suchergebnissen hervorheben.",
+        "icon": "text"
+      },
+      {
+        "title": "Datenanalyse",
+        "description": "Wir analysieren Nutzerverhalten und schlagen konkrete Verbesserungen vor, um Ihre Konversionsraten zu steigern.",
+        "icon": "analytics"
+      },
+      {
+        "title": "Linkbuilding-Strategien",
+        "description": "Wir helfen Ihnen, hochwertige Backlinks aufzubauen und Ihre Domain-Autorität zu stärken.",
+        "icon": "link"
+      }
+    ]
+  }
+}
