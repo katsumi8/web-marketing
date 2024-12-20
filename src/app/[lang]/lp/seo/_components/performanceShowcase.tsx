@@ -73,7 +73,7 @@ function Graph({ label, growthText }: { label: string; growthText: string }) {
         <div className="absolute left-8 bottom-0 w-16 h-10 bg-gray-300"></div>
         <div className="absolute right-8 bottom-0 w-16 h-40 bg-indigo-400"></div>
         {/* 矢印 */}
-        <p className="absolute text-3xl left-16 top-36 text-red-500 font-bold">
+        <p className="absolute text-3xl left-16 top-16 text-red-900 font-bold z-20">
           {growthText}
         </p>
         <div
