@@ -3,7 +3,7 @@ import Loading from "@/app/[lang]/loading";
 import { useTranslation } from "@/app/i18n/client";
 import Link from "next/link";
 import { useEffect } from "react";
-import { Trans } from "react-i18next";
+import { Trans } from "react-i18next/TransWithoutContext";
 import { useOrderForm } from "./hooks";
 
 function ContactForm({ lang }: { lang: string }) {

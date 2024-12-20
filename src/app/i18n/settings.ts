@@ -17,6 +17,7 @@ export const namespaces = [
   "contactPage",
   "contactForm",
   "meta",
+  "lp",
 ];
 
 export function getOptions(lng = defaultLanguage): InitOptions {

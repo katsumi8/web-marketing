@@ -1,0 +1,209 @@
+{
+  "hero": {
+    "limitedOffer": "Limited Time Offer: First Month Free with an Annual Contract!",
+    "mainTitle": {
+      "line1": "For those who say, 'I don't have time! I can't do it myself,'",
+      "highlighted": "Comprehensive <br/> SEO Consulting",
+      "line2": "has started."
+    },
+    "description": "As a former global consulting firm employee and full-stack engineer, I will support your company's web marketing efforts.",
+    "imageAltForHero": "SEO Consulting"
+  },
+  "ctaButton": {
+    "limitedTime": "Limited Time: First Month Free!",
+    "buttonText": "Get a Free Consultation Now"
+  },
+  "contactFormForLp": {
+    "sectionTitle": "Contact Us for Consultation"
+  },
+  "customerJourneySteps": {
+    "title": "The Process After Contacting Us",
+    "steps": [
+      {
+        "title": "Hearing",
+        "description": "After contacting us, we will conduct a detailed hearing online or by phone. We will align the current state of your site with your goals and clarify the direction of the project.",
+        "imagePath": "/assets/hearingMeeting.webp",
+        "altText": "Hearing"
+      },
+      {
+        "title": "Quotation & Proposal",
+        "description": "Based on the hearing, we will present an optimal plan and quotation. If you agree, please inform us via email or chat.",
+        "imagePath": "/assets/estimations.webp",
+        "altText": "Quotation"
+      },
+      {
+        "title": "Contract & Payment",
+        "description": "Once you agree to the contract and quotation, the contract will be finalized.",
+        "imagePath": "/assets/contract.webp",
+        "altText": "Contract"
+      },
+      {
+        "title": "Start of Work",
+        "description": "Once account setup is complete, we will begin specific tasks such as site modification, SEO optimization, and content creation, based on your priorities.",
+        "imagePath": "/assets/work.webp",
+        "altText": "Work"
+      },
+      {
+        "title": "Delivery & Feedback",
+        "description": "We will deliver the completed work and make necessary adjustments. After delivery, we can also conduct regular follow-ups and propose continuous site optimization.",
+        "imagePath": "/assets/feedback.webp",
+        "altText": "Delivery and Feedback"
+      }
+    ]
+  },
+  "customerPainPoints": {
+    "title": "Are You Facing These Challenges?",
+    "points": [
+      {
+        "text": "Your existing website doesn’t seem to drive traffic.",
+        "imagePath": "/assets/maleWithConcern.webp",
+        "altText": "Man struggling with traffic issues"
+      },
+      {
+        "text": "You don’t know where to start.",
+        "imagePath": "/assets/maleWithConcern2.webp",
+        "altText": "Man unsure of where to begin"
+      },
+      {
+        "text": "Your internal resources are insufficient.",
+        "imagePath": "/assets/femaleWithConcern.webp",
+        "altText": "Woman with insufficient resources"
+      }
+    ],
+    "solution": "We will solve all your problems!"
+  },
+  "faq": {
+    "title": "Frequently Asked Questions",
+    "items": [
+      {
+        "question": "Q. Do I need to prepare anything before consulting?",
+        "answer": "No, there’s nothing you need to prepare. If you have rough requests or challenges, please let us know. If you’re still unsure, feel free to reach out."
+      },
+      {
+        "question": "Q. Is the quotation free?",
+        "answer": "Yes, the quotation is free. Based on your requirements and budget, we will create a proposal."
+      },
+      {
+        "question": "Q. How long does the production period take?",
+        "answer": "It depends on the scale and content, but it usually takes about 1–2 months. The schedule may vary depending on requests and other projects."
+      },
+      {
+        "question": "Q. Can you handle advertising operations?",
+        "answer": "Yes, we can manage listing ads and keyword selection alongside SEO. Please inform us during the consultation."
+      },
+      {
+        "question": "Q. Is there support after the contract?",
+        "answer": "Depending on the plan or options, we offer follow-up support and periodic reporting to ensure smooth site operation."
+      }
+    ]
+  },
+  "floatingButton": {
+    "text": "Get a Free Consultation Now"
+  },
+  "history": {
+    "title": "History",
+    "items": [
+      {
+        "year": "2017",
+        "content": "Joined a global consulting firm and supported various companies in DX projects."
+      },
+      {
+        "year": "2020",
+        "content": "Handled service planning at an IT company and contributed to launching new businesses through market research and data analysis."
+      },
+      {
+        "year": "2022",
+        "content": "Worked as a full-stack engineer on web service development and operations, gaining comprehensive technical expertise."
+      },
+      {
+        "year": "2023",
+        "content": "Became an independent consultant and started SEO consulting, providing end-to-end support from web marketing to sales growth."
+      }
+    ],
+    "imageAlt": "Photo of Katsumi Ishihara"
+  },
+  "keyFeatures": {
+    "title": "Our Features",
+    "features": [
+      {
+        "title": "Combining Speed and Accuracy",
+        "description": "Achieve flexibility and rapid response unique to freelancers. Leverage analytical skills from a global consulting background to propose effective measures quickly.",
+        "icon": "speed",
+        "imagePath": "/assets/your-illustration.png",
+        "altText": "Speed and Accuracy"
+      },
+      {
+        "title": "Proven Results Backed by Technology",
+        "description": "With deep technical knowledge as a full-stack engineer, we can handle complex websites. Proven results, such as increasing PV by sixfold, demonstrate effectiveness.",
+        "icon": "achievement",
+        "imagePath": "/assets/your-illustration.png",
+        "altText": "Proven Results"
+      },
+      {
+        "title": "Support for SMEs",
+        "description": "We cater to small budgets. With a first-month free offer and flexible proposals, we help your business grow.",
+        "icon": "building",
+        "imagePath": "/assets/your-illustration.png",
+        "altText": "Support for SMEs"
+      }
+    ]
+  },
+  "offerings": {
+    "title": "Our Services",
+    "items": [
+      {
+        "title": "Strategy Planning",
+        "description": "We formulate the best strategy to achieve your goals. Based on competitor research and industry-specific approaches, we create actionable plans to ensure SEO success.",
+        "icon": "strategy"
+      },
+      {
+        "title": "Site Design",
+        "description": "We design your site based on comprehensive factors such as traffic, profitability, and keyword selection.",
+        "icon": "structure"
+      },
+      {
+        "title": "Advertising Operations",
+        "description": "We supplement SEO with listing ads. Through precise keyword selection and ad management, we aim for both short-term success and a sustainable growth strategy.",
+        "icon": "announce"
+      },
+      {
+        "title": "Content Creation",
+        "description": "We create articles while researching keyword competition. High-quality content is crucial for results, and we emphasize comprehensiveness.",
+        "icon": "text"
+      },
+      {
+        "title": "Data Analysis",
+        "description": "By analyzing access data and user behavior, we propose effective improvements. Our data-driven approach ensures optimized conversion and customer acquisition.",
+        "icon": "analytics"
+      },
+      {
+        "title": "External Link Strategy",
+        "description": "We help you acquire high-quality external links. Collaborating with trusted sites enhances search engine evaluation.",
+        "icon": "link"
+      }
+    ]
+  },
+  "performanceShowcase": {
+    "sectionTitle": "Proven Results Keep Coming",
+    "cards": [
+      {
+        "title": "Ranked in the Top 10 After Page Optimization",
+        "description": "Improved internal links and optimized page structure raised rankings for specific keywords.",
+        "iconAlt": "SEO Search Rank Increase"
+      },
+      {
+        "title": "Weekly PV Increased by Sixfold",
+        "description": "Within three months, a revamp of design and technical SEO brought remarkable improvements.",
+        "chart": {
+          "label": "PV",
+          "growthText": "6x"
+        }
+      }
+    ]
+  },
+  "price": {
+    "sectionTitle": "About Pricing",
+    "description": "Monthly costs are expected to range from €1,200 to €2,000. The actual amount depends on the scope and volume of work. Please contact us for detailed information.",
+    "backgroundImageAlt": "Digital Background Image"
+  }
+}

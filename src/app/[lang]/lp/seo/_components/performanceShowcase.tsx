@@ -1,17 +1,23 @@
+import { getTranslation } from "@/app/i18n/server";
 import Image from "next/image";
 import CTAButton from "./ctaButton";
 
-export default function PerformanceShowcase() {
+export default async function PerformanceShowcase({ lang }: { lang: string }) {
+  const { t } = await getTranslation(lang);
+  const performanceShowcase = t("performanceShowcase", {
+    ns: "lp",
+    returnObjects: true,
+  });
   return (
     <section className="py-16">
       <div className="container mx-auto">
         <h2 className="text-3xl font-bold text-center mb-8">
-          続々と成果が出ています
+          {performanceShowcase.sectionTitle}
         </h2>
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8 p-6">
           <div className="bg-white p-6 rounded-lg shadow-md">
             <h3 className="text-2xl font-semibold mb-4 text-center">
-              ページ改善後、トップ10内にランクイン
+              {performanceShowcase.cards[0].title}
             </h3>
 
             <div className="flex items-center xl:flex-row flex-col py-4">
@@ -24,21 +30,26 @@ export default function PerformanceShowcase() {
                 }}
                 width={64}
                 height={64}
-                alt="SEOでの検索アップ"
+                alt={performanceShowcase.cards[0].iconAlt ?? ""}
               />
               <p className="p-4 sm:p-10">
-                内部リンクを改善し、適切なページ構成にしたところ特定のキーワーでの順位が上がりました。
+                {performanceShowcase.cards[0].description}
               </p>
             </div>
           </div>
           <div className="bg-white p-6 rounded-lg shadow-md">
             <h3 className="text-2xl font-semibold mb-4 text-center">
-              週平均PV約6倍増
+              {performanceShowcase.cards[1].title}
             </h3>
             <div className="flex items-center xl:flex-row flex-col py-4">
-              <Graph />
+              <Graph
+                label={performanceShowcase.cards[1].chart?.label as string}
+                growthText={
+                  performanceShowcase.cards[1].chart?.growthText as string
+                }
+              />
               <p className="p-4 sm:p-10">
-                3ヶ月でデザインとテクニカルSEOを刷新しただけで、これだけ改善しました。
+                {performanceShowcase.cards[1].description}
               </p>
             </div>
           </div>
@@ -46,16 +57,16 @@ export default function PerformanceShowcase() {
       </div>
 
       <div className="container mx-auto mt-16 items-center flex justify-center">
-        <CTAButton />
+        <CTAButton lang={lang} />
       </div>
     </section>
   );
 }
 
-function Graph() {
+function Graph({ label, growthText }: { label: string; growthText: string }) {
   return (
     <div className="flex items-center md:flex-row flex-col">
-      <p className="text-sm sm:w-10">PV数</p>
+      <p className="text-sm sm:w-10">{label}</p>
       <div className="relative w-64 h-64">
         <div className="absolute left-4 bottom-0 w-px h-full bg-gray-400"></div>
         <div className="absolute left-4 bottom-0 w-full h-px bg-gray-400 z-10"></div>
@@ -63,7 +74,7 @@ function Graph() {
         <div className="absolute right-8 bottom-0 w-16 h-40 bg-indigo-400"></div>
         {/* 矢印 */}
         <p className="absolute text-3xl left-16 top-36 text-red-500 font-bold">
-          6倍
+          {growthText}
         </p>
         <div
           className="absolute size-20 border-t-8 border-l-8 

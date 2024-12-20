@@ -1,3 +1,5 @@
+import i18next from "i18next";
+import type { PageProps } from "../../page";
 import ContactFormForLp from "./_components/contactFormLp";
 import CustomerJourneySteps from "./_components/customerJourneySteps";
 import CustomerPainPoints from "./_components/customerPainPoints";
@@ -10,31 +12,47 @@ import Offerings from "./_components/offerings";
 import PerformanceShowcase from "./_components/performanceShowcase";
 import Price from "./_components/price";
 
-export default function LandingPageSEO() {
+export async function generateStaticProps({ params }: PageProps) {
+  const { lang } = params;
+  await i18next.init({
+    lng: lang,
+    ns: ["lp"],
+    backend: {
+      loadPath: `/locales/${lang}/lp.json`,
+    },
+  });
+  return {
+    props: {
+      lang,
+    },
+  };
+}
+
+export default async function LandingPageSEO({ params }: PageProps) {
   return (
     <div className="flex min-h-[calc(100vh-5rem)] flex-col items-center justify-between bg-gray-100 text-black">
       {/* ヒーローセクション + CTA */}
-      <Hero />
+      <Hero lang={params.lang} />
       {/* 実績セクション + CTA */}
-      <PerformanceShowcase />
+      <PerformanceShowcase lang={params.lang} />
       {/* こんなお悩み抱えてませんか + そのお悩み、弊社がすべて解決しますセクション */}
-      <CustomerPainPoints />
+      <CustomerPainPoints lang={params.lang} />
       {/* 弊社特徴セクション + CTA */}
-      <KeyFeaturesWithCTA />
+      <KeyFeaturesWithCTA lang={params.lang} />
       {/* サービス内容セクション + CTA */}
-      <Offerings />
+      <Offerings lang={params.lang} />
       {/* お問い合わせ後の流れ */}
-      <CustomerJourneySteps />
+      <CustomerJourneySteps lang={params.lang} />
       {/* 料金プランセクション + CTA */}
-      <Price />
+      <Price lang={params.lang} />
       {/* FAQセクション */}
-      <FAQ />
+      <FAQ lang={params.lang} />
       {/* お問い合わせセクション */}
-      <ContactFormForLp />
+      <ContactFormForLp lang={params.lang} />
       {/* 沿革セクション */}
-      <History />
+      <History lang={params.lang} />
       {/* フローティングボタン */}
-      <FloatingButton />
+      <FloatingButton lang={params.lang} />
     </div>
   );
 }

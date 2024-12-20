@@ -1,31 +1,38 @@
+import { getTranslation } from "@/app/i18n/server";
 import Image from "next/image";
 
-export default function CustomerPainPoints() {
-  const painPoints = [
-    {
-      text: "既存のホームページが集客につながっていない気がする",
-      imagePath: "/assets/maleWithConcern.webp",
-      altText: "集客に困っている男性",
-    },
-    {
-      text: "何から始めれば良いかわからない",
-      imagePath: "/assets/maleWithConcern2.webp",
-      altText: "何から始めれば良いかわからない男性",
-    },
-    {
-      text: "社内のリソースが足りない…",
-      imagePath: "/assets/femaleWithConcern.webp",
-      altText: "リソースが足りない女性",
-    },
-  ];
+export default async function CustomerPainPoints({ lang }: { lang: string }) {
+  const { t } = await getTranslation(lang);
+  const painPoints = t("customerPainPoints", {
+    ns: "lp",
+    returnObjects: true,
+  });
+
+  // const painPoints = [
+  //   {
+  //     text: "既存のホームページが集客につながっていない気がする",
+  //     imagePath: "/assets/maleWithConcern.webp",
+  //     altText: "集客に困っている男性",
+  //   },
+  //   {
+  //     text: "何から始めれば良いかわからない",
+  //     imagePath: "/assets/maleWithConcern2.webp",
+  //     altText: "何から始めれば良いかわからない男性",
+  //   },
+  //   {
+  //     text: "社内のリソースが足りない…",
+  //     imagePath: "/assets/femaleWithConcern.webp",
+  //     altText: "リソースが足りない女性",
+  //   },
+  // ];
 
   return (
     <section className="bg-[#aedbf5] py-16 w-full">
       <h2 className="text-3xl font-bold text-center mb-8">
-        こんなお悩み抱えてませんか？
+        {painPoints.title}
       </h2>
       <div className="xl:max-w-[65%] mx-auto grid grid-cols-2 md:grid-cols-3 gap-6 justify-items-center p-6">
-        {painPoints.map((painPoint, index) => (
+        {painPoints.points.map((painPoint, index) => (
           <div
             key={index}
             className="bg-gray-100 relative rounded-lg p-6 sm:size-64 md:size-72 text-center 
@@ -55,7 +62,7 @@ export default function CustomerPainPoints() {
             before:content-[''] before:absolute before:bg-yellow-300
             before:-z-10 before:w-full before:h-[8px] before:bottom-0 before:left-0"
         >
-          そのお悩み、私がすべて解決します！
+          {painPoints.solution}
         </p>
       </div>
     </section>

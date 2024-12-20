@@ -1,7 +1,10 @@
 "use client";
+import { useTranslation } from "@/app/i18n/client";
 import { useEffect, useState } from "react";
 
-export default function FloatingButton() {
+export default function FloatingButton({ lang }: { lang: string }) {
+  const { t } = useTranslation(lang);
+
   const [isFloatingBtnVisible, setIsFloatingBtnVisible] = useState(false);
 
   useEffect(() => {
@@ -34,7 +37,7 @@ export default function FloatingButton() {
           hover:scale-100 hover:from-indigo-700 hover:to-purple-700 
           transition duration-300 ease-in-out flex flex-col items-center"
       >
-        今すぐ無料相談する
+        {t("floatingButton.text", { ns: "lp" })}
       </a>
     </div>
   );
