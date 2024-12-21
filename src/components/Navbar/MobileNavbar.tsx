@@ -1,7 +1,6 @@
 import Image from "next/image";
 import Link from "next/link";
 import { AiOutlineClose } from "react-icons/ai";
-import NavLogoImg from "../../../public/assets/navLogo.webp";
 import NavItem from "./Item";
 import { navItems } from "./const";
 
@@ -24,7 +23,13 @@ export default function MobileNavbar({
         <div>
           <div className="flex w-full items-center justify-between">
             <Link href={"/"}>
-              <Image className="size-20" src={NavLogoImg} alt="/" />
+              <Image
+                className="size-20"
+                width={100}
+                height={100}
+                src="/assets/companyLogo.webp"
+                alt="katsumi ishihara consulting logo"
+              />
             </Link>
             <div
               onClick={handleNav}

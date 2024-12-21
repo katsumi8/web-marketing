@@ -6,7 +6,6 @@ import Link from "next/link";
 import { usePathname, useSearchParams } from "next/navigation";
 import { useEffect, useState } from "react";
 import { AiOutlineMenu } from "react-icons/ai";
-import NavLogoImg from "../../../public/assets/navLogo.webp";
 import { navItems, navItemsForLp } from "./const";
 import NavItem from "./Item";
 import MobileNavbar from "./MobileNavbar";
@@ -47,7 +46,13 @@ export default function Navbar({ lang }: { lang: string }) {
     <div className={shadow ? "w-full bg-white shadow-xl" : "w-full bg-white"}>
       <div className="flex h-full w-full items-center justify-between px-2 2xl:px-16">
         <Link href={homeLink}>
-          <Image className="size-20" src={NavLogoImg} alt="/" />
+          <Image
+            className="size-20"
+            width={100}
+            height={100}
+            src="/assets/companyLogo.webp"
+            alt="katsumi ishihara consulting logo"
+          />
         </Link>
 
         {entryPoint !== "meta" && (
