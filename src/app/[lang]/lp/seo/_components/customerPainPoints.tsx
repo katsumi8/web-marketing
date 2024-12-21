@@ -8,24 +8,6 @@ export default async function CustomerPainPoints({ lang }: { lang: string }) {
     returnObjects: true,
   });
 
-  // const painPoints = [
-  //   {
-  //     text: "既存のホームページが集客につながっていない気がする",
-  //     imagePath: "/assets/maleWithConcern.webp",
-  //     altText: "集客に困っている男性",
-  //   },
-  //   {
-  //     text: "何から始めれば良いかわからない",
-  //     imagePath: "/assets/maleWithConcern2.webp",
-  //     altText: "何から始めれば良いかわからない男性",
-  //   },
-  //   {
-  //     text: "社内のリソースが足りない…",
-  //     imagePath: "/assets/femaleWithConcern.webp",
-  //     altText: "リソースが足りない女性",
-  //   },
-  // ];
-
   return (
     <section className="bg-[#aedbf5] py-16 w-full">
       <h2 className="text-3xl font-bold text-center mb-8">
@@ -56,9 +38,9 @@ export default async function CustomerPainPoints({ lang }: { lang: string }) {
           </div>
         ))}
       </div>
-      <div className="flex items-center justify-center w-full mt-12">
+      <div className="flex items-center justify-center w-full mt-12 px-2">
         <p
-          className="relative text-xl sm:text-2xl font-semibold mb-4 z-0
+          className="relative text-lg sm:text-2xl font-semibold mb-4 z-0
             before:content-[''] before:absolute before:bg-yellow-300
             before:-z-10 before:w-full before:h-[8px] before:bottom-0 before:left-0"
         >
