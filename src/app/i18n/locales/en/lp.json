@@ -1,11 +1,7 @@
 {
   "hero": {
     "limitedOffer": "Limited Time Offer: First Month Free with an Annual Contract!",
-    "mainTitle": {
-      "line1": "For those who say, 'I don't have time! I can't do it myself,'",
-      "highlighted": "Comprehensive <br/> SEO Consulting",
-      "line2": "has started."
-    },
+    "mainTitle": "No time? Too complicated?<br/><span>Let us handle your SEO challenges</span><br/>– we'll accelerate your growth.",
     "description": "As a former global consulting firm employee and full-stack engineer, I will support your company's web marketing efforts.",
     "imageAltForHero": "SEO Consulting"
   },

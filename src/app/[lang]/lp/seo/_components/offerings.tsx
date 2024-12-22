@@ -21,45 +21,6 @@ export default async function Offerings({ lang }: { lang: string }) {
   const { t } = await getTranslation(lang);
   const offerings = t("offerings", { ns: "lp", returnObjects: true });
 
-  // const ourFeatures = [
-  //   {
-  //     title: "戦略立案",
-  //     description:
-  //       "貴社の目標達成に向けた最適な戦略を立案します。競合調査や業種別のアプローチをもとに、SEOで成果を出すための具体的なアクションプランを作成します。",
-  //     icon: <PiStrategyBold className="size-14 text-[#2b3172]" />,
-  //   },
-  //   {
-  //     title: "サイト設計",
-  //     description:
-  //       "集客性・収益性・網羅性などを総合的に判断し、キーワード選定とサイト設計を行います。",
-  //     icon: <PiTreeStructureBold className="size-14 text-[#2b3172]" />,
-  //   },
-  //   {
-  //     title: "リスティング広告の運用",
-  //     description:
-  //       "SEOだけでは補いきれない部分をリスティング広告でカバーします。適切なキーワード選定と効果的な広告運用で、短期的な成果と長期的な集客基盤の構築を支援します。",
-  //     icon: <GrAnnounce className="size-14 text-[#2b3172]" />,
-  //   },
-  //   {
-  //     title: "記事の制作",
-  //     description:
-  //       "SEOキーワードの競合を調査しながら記事を制作します。弊社がSEOで重視しているのが網羅性。品質の高さはオウンドメディアの結果に直結します。",
-  //     icon: <PiBookOpenText className="size-14 text-[#2b3172]" />,
-  //   },
-  //   {
-  //     title: "データ分析",
-  //     description:
-  //       "アクセスデータやユーザー行動を徹底的に分析し、効果的な改善案を提案します。また、データに基づくコンバージョン最適化を行い、訪問者を顧客へと効率的に導くための施策を実施します。確実な成果を目指すためのデータドリブンなアプローチです。",
-  //     icon: <IoMdAnalytics className="size-14 text-[#2b3172]" />,
-  //   },
-  //   {
-  //     title: "外部リンク戦略",
-  //     description:
-  //       "高品質な外部リンクの獲得をサポートします。信頼性のあるサイトとの連携や、自然なリンク構築により検索エンジンの評価を高めます。",
-  //     icon: <FaLink className="size-14 text-[#2b3172]" />,
-  //   },
-  // ];
-
   return (
     <section className="bg-[#aedbf5] py-16 w-full">
       <h2 className="text-3xl font-bold text-center mb-8">{offerings.title}</h2>

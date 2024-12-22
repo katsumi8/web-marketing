@@ -19,25 +19,31 @@ export default async function Hero({ lang }: { lang: string }) {
       ></div>
       <div className="flex text-left md:text-center flex-col md:items-center space-y-4 py-4 p-4 md:p-0 z-20">
         <p
-          className="text-xl md:text-3xl font-bold text-white px-4 py-2 
+          className="text-lg md:text-2xl font-bold text-white px-4 py-2 
           from-indigo-600 via-indigo-400 to-indigo-300 bg-gradient-to-r"
         >
           {heroContent.limitedOffer}
         </p>
 
         <div className="flex flex-col items-center pr-8 md:px-4 py-6 space-y-4">
-          <h2 className="text-left text-lg md:text-2xl">
-            {heroContent.mainTitle.line1}
-            <br />
-            <span
-              className="text-xl md:text-4xl font-bold px-2 py-1 rounded-lg bg-indigo-600
-              md:bg-gradient-to-r from-indigo-600 via-indigo-500 to-indigo-400 bg-clip-text text-transparent"
-            >
-              <Trans i18nKey="hero.mainTitle.highlighted" ns="lp" t={t} />
-            </span>
-            {heroContent.mainTitle.line2}
+          <h2 className="text-left text-lg md:text-3xl">
+            <Trans
+              i18nKey="hero.mainTitle"
+              ns="lp"
+              t={t}
+              components={{
+                span: (
+                  <span
+                    key="highlighted"
+                    className="text-3xl md:text-4xl font-bold px-2 py-1 rounded-lg bg-indigo-600
+                    md:bg-gradient-to-r from-indigo-600 via-indigo-500 to-indigo-400 bg-clip-text text-transparent"
+                  />
+                ),
+              }}
+            />
           </h2>
-          <p className="text-gray-700 md:text-gray-600 sm:text-base text-sm">
+
+          <p className="text-left text-gray-700 md:text-gray-600 sm:text-base text-sm">
             {heroContent.description}
           </p>
         </div>

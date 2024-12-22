@@ -8,44 +8,6 @@ export default async function CustomerJourneySteps({ lang }: { lang: string }) {
     returnObjects: true,
   });
 
-  // const steps = [
-  //   {
-  //     title: "ヒアリング",
-  //     description:
-  //       "お問い合わせ後、オンラインやお電話にて詳しいヒアリングを実施します。サイトの現状や目指すゴールをすり合わせ、プロジェクトの方向性を明確化していきます。",
-  //     imagePath: "/assets/hearingMeeting.webp",
-  //     altText: "ヒアリング",
-  //   },
-  //   {
-  //     title: "お見積もり・ご提案",
-  //     description:
-  //       "ヒアリング内容をもとに最適な施策プランとお見積もりを提示いたします。納得いただけましたら、その旨をメールやチャットなどでお知らせください。",
-  //     imagePath: "/assets/estimations.webp",
-  //     altText: "見積もり",
-  //   },
-  //   {
-  //     title: "ご契約・お支払い",
-  //     description:
-  //       "契約内容とお見積もりに合意いただけましたら、正式にご契約となります。",
-  //     imagePath: "/assets/contract.webp",
-  //     altText: "契約",
-  //   },
-  //   {
-  //     title: "施策のスタート",
-  //     description:
-  //       "アカウントの設定完了後、具体的な作業に着手します。サイト改修やSEO対策、コンテンツ制作など、お客様の優先度に沿って対応いたします。",
-  //     imagePath: "/assets/work.webp",
-  //     altText: "作業",
-  //   },
-  //   {
-  //     title: "納品 & フィードバック",
-  //     description:
-  //       "完成した内容を納品し、必要に応じて修正対応を行います。納品後も定期的にフォローアップを実施し、継続的にサイト運用の最適化や改善提案を行うことも可能です。",
-  //     imagePath: "/assets/feedback.webp",
-  //     altText: "納品とフィードバック",
-  //   },
-  // ];
-
   return (
     <section className="py-16 w-full">
       <h2 className="text-3xl font-bold text-center mb-8">

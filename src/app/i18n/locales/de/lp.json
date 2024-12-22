@@ -1,16 +1,12 @@
 {
   "hero": {
-    "limitedOffer": "Nur für kurze Zeit: Erstes Monat gratis mit Jahresvertrag!",
-    "mainTitle": {
-      "line1": "„Keine Zeit? Zu kompliziert?“ Für alle, die sich überfordert fühlen:",
-      "highlighted": "Ihre Sorgen in unsere Hände<br/>mit professionellem SEO-Consulting",
-      "line2": "Erreichen Sie Ihre Ziele mit minimalem Aufwand."
-    },
+    "limitedOffer": "Nur für kurze Zeit: Erster Monat gratis bei Jahresvertrag!",
+    "mainTitle": "„Keine Zeit? Zu kompliziert?“<br/><span>Überlassen Sie uns Ihre SEO-Herausforderungen</span><br/>– wir bringen Ihr Business voran",
     "description": "Ich bin ein ehemaliger Berater eines globalen Unternehmens und erfahrener Full-Stack-Entwickler. Lassen Sie mich Ihre Webpräsenz optimieren und Ihr Online-Marketing auf ein neues Niveau heben.",
     "imageAltForHero": "SEO-Beratung"
   },
   "ctaButton": {
-    "limitedTime": "Nur für kurze Zeit: Erstes Monat gratis!",
+    "limitedTime": "Nur für kurze Zeit: Erster Monat gratis!",
     "buttonText": "Jetzt kostenlose Beratung sichern"
   },
   "contactFormForLp": {
