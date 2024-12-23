@@ -78,23 +78,40 @@ export default function Navbar({ lang }: { lang: string }) {
                       isMobile={false}
                     />
                   ))}
-              <div className="ml-10 hover:border-b text-sm">
-                <LanguageSwitcher currentLanguage={lang} />
-              </div>
+              {!isPathIncludeLp && (
+                <div className="ml-10 hover:border-b text-sm">
+                  <LanguageSwitcher currentLanguage={lang} />
+                </div>
+              )}
             </ul>
 
             <div className="md:hidden flex items-center space-x-4">
-              <div className="text-sm text-gray-500 md:hidden">
-                <LanguageSwitcher currentLanguage={lang} />
-              </div>
-              <div onClick={handleNav} className="text-gray-700 md:hidden">
-                <AiOutlineMenu size={25} />
-              </div>
+              {!isPathIncludeLp && (
+                <div className="text-sm text-gray-500 md:hidden">
+                  <LanguageSwitcher currentLanguage={lang} />
+                </div>
+              )}
+              {isPathIncludeLp ? (
+                navItemsForLp.map((item, index) => (
+                  <NavItem
+                    key={index}
+                    href={item.href}
+                    text={item.text}
+                    isMobile={false}
+                  />
+                ))
+              ) : (
+                <div onClick={handleNav} className="text-gray-700 md:hidden">
+                  <AiOutlineMenu size={25} />
+                </div>
+              )}
             </div>
           </div>
         )}
       </div>
-      {nav && <MobileNavbar setNav={setNav} handleNav={handleNav} />}
+      {nav && !isPathIncludeLp && (
+        <MobileNavbar setNav={setNav} handleNav={handleNav} />
+      )}
     </div>
   );
 }
