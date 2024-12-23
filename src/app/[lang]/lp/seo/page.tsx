@@ -21,8 +21,16 @@ export const generateMetadata = async (
 
   const { t } = await getTranslation(lang);
   const metadata = t("seoLandingPage", { ns: "meta", returnObjects: true });
-  // optionally access and extend (rather than replace) parent metadata
-  const previousImages = (await parent).openGraph?.images || [];
+
+  const imgPath =
+    lang === "jp" ? "/assets/jp_1200_628.jpg" : "/assets/de_1200_628.jpg";
+
+  const customOgImage = {
+    url: `https://www.katsumi-ishihara-consulting.com/${imgPath}`,
+    width: 1200,
+    height: 628,
+    alt: "SEO consulting",
+  };
 
   return {
     title: metadata.title,
@@ -31,7 +39,7 @@ export const generateMetadata = async (
     openGraph: {
       title: metadata.title,
       description: metadata.description,
-      images: [...previousImages],
+      images: [customOgImage],
     },
   };
 };
