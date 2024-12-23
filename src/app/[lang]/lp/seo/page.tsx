@@ -23,7 +23,7 @@ export const generateMetadata = async (
   const metadata = t("seoLandingPage", { ns: "meta", returnObjects: true });
 
   const imgPath =
-    lang === "jp" ? "/assets/jp_1200_628.jpg" : "/assets/de_1200_628.jpg";
+    lang === "ja" ? "/assets/jp_1200_628.jpg" : "/assets/de_1200_628.jpg";
 
   const customOgImage = {
     url: `https://www.katsumi-ishihara-consulting.com/${imgPath}`,
