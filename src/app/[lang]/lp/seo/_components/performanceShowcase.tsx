@@ -72,22 +72,18 @@ function Graph({ label, growthText }: { label: string; growthText: string }) {
         <div className="absolute left-4 bottom-0 w-full h-px bg-gray-400 z-10"></div>
         <div className="absolute left-8 bottom-0 w-16 h-10 bg-gray-300"></div>
         <div className="absolute right-8 bottom-0 w-16 h-40 bg-indigo-400"></div>
-        {/* 矢印 */}
+
         <p className="absolute text-3xl left-16 top-16 text-red-900 font-bold z-20">
           {growthText}
         </p>
-        <div
-          className="absolute size-20 border-t-8 border-l-8 
-          border-red-500 rounded-tl-full 
-          left-16 bottom-10 transform rotate-180"
-        ></div>
-        <div
-          className="absolute size-0 right-28 bottom-24 rotate-180
-          border-l-[20px] border-l-transparent
-          border-r-[20px] border-r-transparent
-          border-t-[40px] border-t-red-500
-          transform translate-x-4 -translate-y-4"
-        ></div>
+
+        <Image
+          className="size-36 absolute bottom-4 left-12"
+          src="/assets/increase_arrow.png"
+          width={64}
+          height={64}
+          alt={"increase arrow"}
+        />
       </div>
     </div>
   );
