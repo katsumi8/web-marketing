@@ -1,31 +1,31 @@
 {
-  "title": "Maximieren Sie Ihren Umsatz durch Ihre Website",
-  "description": "Wir bieten Ihnen die Maximierung Ihrer Kundenakquise durch SEO-optimierte Website-Erstellung und -Erneuerung, die Optimierung von Conversions durch Datenanalyse mit Tools wie Google Analytics und die Maximierung der Kundeninteraktion durch E-Mail-Marketing.",
-  "contactButtonText": "Kontakt aufnehmen",
-  "imageAlt": "Digitaler Hintergrund, der den Geschäftserfolg symbolisiert",
-  "concernsSection": {
-    "title": "Haben Sie diese Sorgen?",
-    "concerns": [
-      {
-        "heading": "Die Kundengewinnung funktioniert nicht...",
-        "description": "Die Besucherzahlen Ihrer Website entsprechen nicht den Erwartungen."
-      },
-      {
-        "heading": "Das Design ist veraltet und das Nutzererlebnis schlecht...",
-        "description": "Sie möchten Ihre Website in ein modernes, benutzerfreundliches Design umwandeln."
-      },
-      {
-        "heading": "Kaum Anfragen oder Käufe...",
-        "description": "Ihre Website generiert nicht die gewünschten Anfragen oder Verkäufe."
-      },
-      {
-        "heading": "Zu wenig Kontakt mit bestehenden Kunden...",
-        "description": "Obwohl die Anzahl Ihrer Bestandskunden wächst, fehlt die Kapazität, um Follow-ups durchzuführen."
-      }
-    ],
-    "cta": {
-      "bubbleText": "Kostenlose Beratung verfügbar!",
-      "buttonText": "Kontaktieren Sie uns jetzt!"
+    "title": "Maximieren Sie Ihren Umsatz durch Ihre Website",
+    "description": "Wir bieten Ihnen die Maximierung Ihrer Kundenakquise durch SEO-optimierte Website-Erstellung und -Erneuerung, die Optimierung von Conversions durch Datenanalyse mit Tools wie Google Analytics und die Maximierung der Kundeninteraktion durch E-Mail-Marketing.",
+    "contactButtonText": "Kontakt aufnehmen",
+    "imageAlt": "Digitaler Hintergrund, der den Geschäftserfolg symbolisiert",
+    "concernsSection": {
+        "title": "Haben Sie diese Sorgen?",
+        "concerns": [
+            {
+                "heading": "Die Kundengewinnung funktioniert nicht...",
+                "description": "Die Besucherzahlen Ihrer Website entsprechen nicht den Erwartungen."
+            },
+            {
+                "heading": "Das Design ist veraltet und das Nutzererlebnis schlecht...",
+                "description": "Sie möchten Ihre Website in ein modernes, benutzerfreundliches Design umwandeln."
+            },
+            {
+                "heading": "Kaum Anfragen oder Käufe...",
+                "description": "Ihre Website generiert nicht die gewünschten Anfragen oder Verkäufe."
+            },
+            {
+                "heading": "Zu wenig Kontakt mit bestehenden Kunden...",
+                "description": "Obwohl die Anzahl Ihrer Bestandskunden wächst, fehlt die Kapazität, um Follow-ups durchzuführen."
+            }
+        ],
+        "cta": {
+            "bubbleText": "Kostenlose Beratung verfügbar!",
+            "buttonText": "Kontaktieren Sie uns jetzt!"
+        }
     }
-  }
 }

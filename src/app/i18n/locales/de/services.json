@@ -1,92 +1,92 @@
 {
-  "services": {
-    "conversionAnalysis": {
-      "summary": {
-        "name": "Conversion-Analyse",
-        "remarks": "Wir analysieren die Conversion-Raten von Websites und Landingpages und schlagen Optimierungsmaßnahmen vor, die wir auch umsetzen."
-      },
-      "title": "Steigern Sie Ihre Conversions durch eine detaillierte Analyse!",
-      "description": "Haben Sie viele Besucher auf Ihrer Website, aber die Conversions bleiben hinter Ihren Erwartungen zurück? Viele Unternehmen stehen vor diesem Problem und finden keine konkreten Maßnahmen zur Steigerung ihrer Conversion-Raten.",
-      "desires": ["Umsatzsteigerung", "Erhöhung der Anfragen"],
-      "keyPoints": "Wichtige Punkte",
-      "points": [
-        "Identifizierung der Ursachen",
-        "Hypothesenbildung",
-        "Testdurchführung",
-        "Kontinuierliche Optimierung"
-      ],
-      "solution": "Durch die Berücksichtigung dieser Punkte können wir mit einer Conversion-Analyse die Bedürfnisse und das Verhalten Ihrer Nutzer besser verstehen und effektive Optimierungsmaßnahmen entwickeln. Dadurch lassen sich die Conversion-Raten steigern und Ihre Geschäftsergebnisse maximieren.",
-      "cta": {
-        "myMessage": "Erhöhen Sie Ihre Anfragen noch heute!",
-        "buttonText": "Kostenlose Beratung anfragen!",
-        "bubbleText": "Die Anfrage dauert nur eine Minute. Kontaktieren Sie uns noch heute ganz einfach!"
-      }
-    },
-    "webDevelopment": {
-      "summary": {
-        "name": "Webdesign und Relaunch",
-        "remarks": "Wir bieten umfassendes Webdesign, Wartung, Optimierung und SEO-Strategien an."
-      },
-      "title": "Webdesign und Website-Relaunch",
-      "description": "Ist Ihr aktuelles Website-Design veraltet und kann keine Nutzer mehr begeistern? Bleibt Ihre Website im Ranking der Suchmaschinen zurück und zieht kaum neue Kunden an? Viele stehen vor denselben Herausforderungen und wissen nicht, wie sie beginnen sollen, ihre Website zu verbessern.",
-      "desires": ["Mehr Traffic", "Modernes Design"],
-      "keyPoints": "Wichtige Punkte",
-      "points": [
-        "Kundenzentrierte Designplanung",
-        "Optimierung der Ladegeschwindigkeit",
-        "Verbesserung der Benutzerfreundlichkeit",
-        "Maximierung der Conversion-Rate"
-      ],
-      "solution": "Durch die Berücksichtigung dieser Punkte und die Umsetzung eines modernen Designs können Sie die Aufmerksamkeit Ihrer Nutzer gewinnen, den Traffic steigern und neue Kunden gewinnen.",
-      "cta": {
-        "myMessage": "Steigern Sie Ihren Traffic durch Ihre Website!",
-        "buttonText": "Kostenlose Beratung anfragen!",
-        "bubbleText": "Die Anfrage dauert nur eine Minute. Kontaktieren Sie uns noch heute ganz einfach!"
-      }
-    },
-    "webAppDevelopment": {
-      "summary": {
-        "name": "Web-App-Entwicklung",
-        "remarks": "Wir bieten Web-App-Entwicklung für diejenigen an, die ihre Geschäftsprozesse effizienter gestalten oder maßgeschneiderte Anwendungen erstellen möchten."
-      },
-      "title": "Web-App-Entwicklungsservice",
-      "description": "Fühlen Sie sich durch ineffiziente manuelle Prozesse eingeschränkt, weil Standardsoftware nicht Ihren Anforderungen entspricht? Empfinden Sie große Kosten bei der Beauftragung von Großanbietern? Mit unserer Web-App-Entwicklung können Sie Prozesse effizienter gestalten und digitale Lösungen maßgeschneidert umsetzen.",
-      "desires": ["Effizienzsteigerung", "Neue Geschäftsmöglichkeiten"],
-      "keyPoints": "Wichtige Punkte",
-      "points": [
-        "Anforderungsdefinition und Design",
-        "Einsatz modernster Technologien",
-        "Verbesserte Benutzerfreundlichkeit",
-        "Kontinuierliche Unterstützung"
-      ],
-      "solution": "Durch die Entwicklung individueller Web-Apps können Sie Ihre Geschäftsprozesse optimieren und neue Geschäftsmöglichkeiten erschließen.",
-      "cta": {
-        "myMessage": "Lassen Sie uns gemeinsam eine Web-App entwickeln, die Ihr Geschäft voranbringt!",
-        "buttonText": "Kostenlose Beratung anfragen!",
-        "bubbleText": "Die Anfrage dauert nur eine Minute. Kontaktieren Sie uns noch heute ganz einfach!"
-      }
-    },
-    "mailMarketing": {
-      "summary": {
-        "name": "E-Mail-Marketing",
-        "remarks": "Maximieren Sie Ihre Kundenbindung und Upselling-Möglichkeiten durch regelmäßige E-Mail-Kampagnen."
-      },
-      "title": "E-Mail-Marketing-Service",
-      "description": "Haben Sie Schwierigkeiten, effektiv mit Ihren Kunden zu kommunizieren? Fühlen Sie sich eingeschränkt bei der Lead-Generierung und der Verbesserung der Kundenbindung? Effektives E-Mail-Marketing kann diese Probleme lösen.",
-      "desires": ["Lead-Generierung", "Verbesserung der Kundenbindung"],
-      "keyPoints": "Wichtige Punkte",
-      "points": [
-        "Personalisierte Kampagnen",
-        "Automatisierte Workflows",
-        "Optimierung des Versandzeitpunkts",
-        "Inhaltsentwicklung basierend auf Hypothesen"
-      ],
-      "solution": "Durch die Optimierung Ihrer E-Mail-Marketing-Strategie können Sie die Beziehung zu Ihren Kunden vertiefen, den Umsatz steigern und neue Leads generieren.",
-      "cta": {
-        "myMessage": "Stärken Sie die Beziehung zu Ihren Kunden mit E-Mail-Marketing!",
-        "buttonText": "Kostenlose Beratung anfragen!",
-        "bubbleText": "Die Anfrage dauert nur eine Minute. Kontaktieren Sie uns noch heute ganz einfach!"
-      }
+    "services": {
+        "conversionAnalysis": {
+            "summary": {
+                "name": "Conversion-Analyse",
+                "remarks": "Wir analysieren die Conversion-Raten von Websites und Landingpages und schlagen Optimierungsmaßnahmen vor, die wir auch umsetzen."
+            },
+            "title": "Steigern Sie Ihre Conversions durch eine detaillierte Analyse!",
+            "description": "Haben Sie viele Besucher auf Ihrer Website, aber die Conversions bleiben hinter Ihren Erwartungen zurück? Viele Unternehmen stehen vor diesem Problem und finden keine konkreten Maßnahmen zur Steigerung ihrer Conversion-Raten.",
+            "desires": ["Umsatzsteigerung", "Erhöhung der Anfragen"],
+            "keyPoints": "Wichtige Punkte",
+            "points": [
+                "Identifizierung der Ursachen",
+                "Hypothesenbildung",
+                "Testdurchführung",
+                "Kontinuierliche Optimierung"
+            ],
+            "solution": "Durch die Berücksichtigung dieser Punkte können wir mit einer Conversion-Analyse die Bedürfnisse und das Verhalten Ihrer Nutzer besser verstehen und effektive Optimierungsmaßnahmen entwickeln. Dadurch lassen sich die Conversion-Raten steigern und Ihre Geschäftsergebnisse maximieren.",
+            "cta": {
+                "myMessage": "Erhöhen Sie Ihre Anfragen noch heute!",
+                "buttonText": "Kostenlose Beratung anfragen!",
+                "bubbleText": "Die Anfrage dauert nur eine Minute. Kontaktieren Sie uns noch heute ganz einfach!"
+            }
+        },
+        "webDevelopment": {
+            "summary": {
+                "name": "Webdesign und Relaunch",
+                "remarks": "Wir bieten umfassendes Webdesign, Wartung, Optimierung und SEO-Strategien an."
+            },
+            "title": "Webdesign und Website-Relaunch",
+            "description": "Ist Ihr aktuelles Website-Design veraltet und kann keine Nutzer mehr begeistern? Bleibt Ihre Website im Ranking der Suchmaschinen zurück und zieht kaum neue Kunden an? Viele stehen vor denselben Herausforderungen und wissen nicht, wie sie beginnen sollen, ihre Website zu verbessern.",
+            "desires": ["Mehr Traffic", "Modernes Design"],
+            "keyPoints": "Wichtige Punkte",
+            "points": [
+                "Kundenzentrierte Designplanung",
+                "Optimierung der Ladegeschwindigkeit",
+                "Verbesserung der Benutzerfreundlichkeit",
+                "Maximierung der Conversion-Rate"
+            ],
+            "solution": "Durch die Berücksichtigung dieser Punkte und die Umsetzung eines modernen Designs können Sie die Aufmerksamkeit Ihrer Nutzer gewinnen, den Traffic steigern und neue Kunden gewinnen.",
+            "cta": {
+                "myMessage": "Steigern Sie Ihren Traffic durch Ihre Website!",
+                "buttonText": "Kostenlose Beratung anfragen!",
+                "bubbleText": "Die Anfrage dauert nur eine Minute. Kontaktieren Sie uns noch heute ganz einfach!"
+            }
+        },
+        "webAppDevelopment": {
+            "summary": {
+                "name": "Web-App-Entwicklung",
+                "remarks": "Wir bieten Web-App-Entwicklung für diejenigen an, die ihre Geschäftsprozesse effizienter gestalten oder maßgeschneiderte Anwendungen erstellen möchten."
+            },
+            "title": "Web-App-Entwicklungsservice",
+            "description": "Fühlen Sie sich durch ineffiziente manuelle Prozesse eingeschränkt, weil Standardsoftware nicht Ihren Anforderungen entspricht? Empfinden Sie große Kosten bei der Beauftragung von Großanbietern? Mit unserer Web-App-Entwicklung können Sie Prozesse effizienter gestalten und digitale Lösungen maßgeschneidert umsetzen.",
+            "desires": ["Effizienzsteigerung", "Neue Geschäftsmöglichkeiten"],
+            "keyPoints": "Wichtige Punkte",
+            "points": [
+                "Anforderungsdefinition und Design",
+                "Einsatz modernster Technologien",
+                "Verbesserte Benutzerfreundlichkeit",
+                "Kontinuierliche Unterstützung"
+            ],
+            "solution": "Durch die Entwicklung individueller Web-Apps können Sie Ihre Geschäftsprozesse optimieren und neue Geschäftsmöglichkeiten erschließen.",
+            "cta": {
+                "myMessage": "Lassen Sie uns gemeinsam eine Web-App entwickeln, die Ihr Geschäft voranbringt!",
+                "buttonText": "Kostenlose Beratung anfragen!",
+                "bubbleText": "Die Anfrage dauert nur eine Minute. Kontaktieren Sie uns noch heute ganz einfach!"
+            }
+        },
+        "mailMarketing": {
+            "summary": {
+                "name": "E-Mail-Marketing",
+                "remarks": "Maximieren Sie Ihre Kundenbindung und Upselling-Möglichkeiten durch regelmäßige E-Mail-Kampagnen."
+            },
+            "title": "E-Mail-Marketing-Service",
+            "description": "Haben Sie Schwierigkeiten, effektiv mit Ihren Kunden zu kommunizieren? Fühlen Sie sich eingeschränkt bei der Lead-Generierung und der Verbesserung der Kundenbindung? Effektives E-Mail-Marketing kann diese Probleme lösen.",
+            "desires": ["Lead-Generierung", "Verbesserung der Kundenbindung"],
+            "keyPoints": "Wichtige Punkte",
+            "points": [
+                "Personalisierte Kampagnen",
+                "Automatisierte Workflows",
+                "Optimierung des Versandzeitpunkts",
+                "Inhaltsentwicklung basierend auf Hypothesen"
+            ],
+            "solution": "Durch die Optimierung Ihrer E-Mail-Marketing-Strategie können Sie die Beziehung zu Ihren Kunden vertiefen, den Umsatz steigern und neue Leads generieren.",
+            "cta": {
+                "myMessage": "Stärken Sie die Beziehung zu Ihren Kunden mit E-Mail-Marketing!",
+                "buttonText": "Kostenlose Beratung anfragen!",
+                "bubbleText": "Die Anfrage dauert nur eine Minute. Kontaktieren Sie uns noch heute ganz einfach!"
+            }
+        }
     }
-  }
 }

@@ -1,92 +1,95 @@
 {
-  "services": {
-    "conversionAnalysis": {
-      "summary": {
-        "name": "Conversion Analysis",
-        "remarks": "We analyze and optimize the conversion rate of websites and landing pages, providing actionable insights and solutions."
-      },
-      "title": "Let's Conduct a Conversion Analysis to Increase Your Website's Traffic!",
-      "description": "Even though your website gets traffic, your conversion rate might not be increasing as expected, leading to stagnating sales and inquiries. Many companies face similar challenges and struggle to find effective strategies to boost their conversion rates.",
-      "desires": ["Increase Sales", "Increase Inquiry Numbers"],
-      "keyPoints": "Key Points",
-      "points": [
-        "Identify Problem Areas",
-        "Build Hypotheses",
-        "Conduct Testing",
-        "Continuous Improvement"
-      ],
-      "solution": "By addressing these points through conversion analysis, we can accurately understand user needs and behaviors, leading to effective solutions. This will help improve your conversion rate and maximize business results.",
-      "cta": {
-        "myMessage": "Let's boost your inquiries!",
-        "buttonText": "Contact us for a free consultation!",
-        "bubbleText": "The consultation will be completed in just 1 minute. Contact us now!"
-      }
-    },
-    "webDevelopment": {
-      "summary": {
-        "name": "Website Development & Redesign",
-        "remarks": "We offer comprehensive website development, operation, improvement, and SEO services."
-      },
-      "title": "Website Development & Redesign",
-      "description": "Your current website design may be outdated, failing to capture users' attention, and your SEO might not be strong enough to rank high in search engines, resulting in fewer new customers. Many businesses face similar issues and feel the need to improve their website but are unsure where to start.",
-      "desires": ["Increase Traffic", "Redesign the Website"],
-      "keyPoints": "Key Points",
-      "points": [
-        "Customer Perspective Design",
-        "Optimize Loading Speed",
-        "Improve Usability",
-        "Maximize Conversion Rate"
-      ],
-      "solution": "By addressing these points and redesigning your website, we can make it more appealing to users, increasing traffic and helping you acquire new customers.",
-      "cta": {
-        "myMessage": "Let's increase traffic through your website!",
-        "buttonText": "Contact us for a free consultation!",
-        "bubbleText": "The consultation will be completed in just 1 minute. Contact us now!"
-      }
-    },
-    "webAppDevelopment": {
-      "summary": {
-        "name": "Web Application Development",
-        "remarks": "We offer web application development services for those looking to streamline their operations or develop custom apps."
-      },
-      "title": "Web Application Development Services",
-      "description": "As digitalization and process efficiency become more important, many businesses find that off-the-shelf software doesn’t meet their specific needs, leading to inefficient manual processes. Additionally, outsourcing to large firms can be too costly. By starting with a small-scale web application development, you can streamline your operations.",
-      "desires": ["Streamline Operations", "Create New Business Opportunities"],
-      "keyPoints": "Key Points",
-      "points": [
-        "Requirement Definition & Design",
-        "Utilize Latest Technologies",
-        "Improve Usability",
-        "Ongoing Support"
-      ],
-      "solution": "By addressing these key points, we can develop a custom web application that helps streamline operations and creates new business opportunities.",
-      "cta": {
-        "myMessage": "Let's develop a web application to drive your business success!",
-        "buttonText": "Contact us for a free consultation!",
-        "bubbleText": "The consultation will be completed in just 1 minute. Contact us now!"
-      }
-    },
-    "mailMarketing": {
-      "summary": {
-        "name": "Email Marketing",
-        "remarks": "We maximize the follow-up and upselling opportunities by sending monthly email newsletters to your customer list."
-      },
-      "title": "Email Marketing Services",
-      "description": "Do you feel like your methods of reaching out to customers are limited, and you are not communicating as effectively as you could? Many businesses face challenges in nurturing leads and improving customer engagement. Effective use of email marketing can solve these problems.",
-      "keyPoints": "Key Points",
-      "desires": ["Lead Generation", "Improve Customer Engagement"],
-      "points": [
-        "Personalized Email Delivery",
-        "Automated Workflows",
-        "Optimal Timing for Delivery",
-        "Hypothesis-Driven Content Creation"
-      ],
-      "solution": "By leveraging these key points, we can optimize your email marketing strategy to deepen your customer relationships and drive higher sales and lead generation.",
-      "cta": {
-        "myMessage": "Let's strengthen your customer relationships with email marketing!",
-        "buttonText": "Contact us for a free consultation!",
-        "bubbleText": "The consultation will be completed in just 1 minute. Contact us now!"
-      }
+    "services": {
+        "conversionAnalysis": {
+            "summary": {
+                "name": "Conversion Analysis",
+                "remarks": "We analyze and optimize the conversion rate of websites and landing pages, providing actionable insights and solutions."
+            },
+            "title": "Let's Conduct a Conversion Analysis to Increase Your Website's Traffic!",
+            "description": "Even though your website gets traffic, your conversion rate might not be increasing as expected, leading to stagnating sales and inquiries. Many companies face similar challenges and struggle to find effective strategies to boost their conversion rates.",
+            "desires": ["Increase Sales", "Increase Inquiry Numbers"],
+            "keyPoints": "Key Points",
+            "points": [
+                "Identify Problem Areas",
+                "Build Hypotheses",
+                "Conduct Testing",
+                "Continuous Improvement"
+            ],
+            "solution": "By addressing these points through conversion analysis, we can accurately understand user needs and behaviors, leading to effective solutions. This will help improve your conversion rate and maximize business results.",
+            "cta": {
+                "myMessage": "Let's boost your inquiries!",
+                "buttonText": "Contact us for a free consultation!",
+                "bubbleText": "The consultation will be completed in just 1 minute. Contact us now!"
+            }
+        },
+        "webDevelopment": {
+            "summary": {
+                "name": "Website Development & Redesign",
+                "remarks": "We offer comprehensive website development, operation, improvement, and SEO services."
+            },
+            "title": "Website Development & Redesign",
+            "description": "Your current website design may be outdated, failing to capture users' attention, and your SEO might not be strong enough to rank high in search engines, resulting in fewer new customers. Many businesses face similar issues and feel the need to improve their website but are unsure where to start.",
+            "desires": ["Increase Traffic", "Redesign the Website"],
+            "keyPoints": "Key Points",
+            "points": [
+                "Customer Perspective Design",
+                "Optimize Loading Speed",
+                "Improve Usability",
+                "Maximize Conversion Rate"
+            ],
+            "solution": "By addressing these points and redesigning your website, we can make it more appealing to users, increasing traffic and helping you acquire new customers.",
+            "cta": {
+                "myMessage": "Let's increase traffic through your website!",
+                "buttonText": "Contact us for a free consultation!",
+                "bubbleText": "The consultation will be completed in just 1 minute. Contact us now!"
+            }
+        },
+        "webAppDevelopment": {
+            "summary": {
+                "name": "Web Application Development",
+                "remarks": "We offer web application development services for those looking to streamline their operations or develop custom apps."
+            },
+            "title": "Web Application Development Services",
+            "description": "As digitalization and process efficiency become more important, many businesses find that off-the-shelf software doesn’t meet their specific needs, leading to inefficient manual processes. Additionally, outsourcing to large firms can be too costly. By starting with a small-scale web application development, you can streamline your operations.",
+            "desires": [
+                "Streamline Operations",
+                "Create New Business Opportunities"
+            ],
+            "keyPoints": "Key Points",
+            "points": [
+                "Requirement Definition & Design",
+                "Utilize Latest Technologies",
+                "Improve Usability",
+                "Ongoing Support"
+            ],
+            "solution": "By addressing these key points, we can develop a custom web application that helps streamline operations and creates new business opportunities.",
+            "cta": {
+                "myMessage": "Let's develop a web application to drive your business success!",
+                "buttonText": "Contact us for a free consultation!",
+                "bubbleText": "The consultation will be completed in just 1 minute. Contact us now!"
+            }
+        },
+        "mailMarketing": {
+            "summary": {
+                "name": "Email Marketing",
+                "remarks": "We maximize the follow-up and upselling opportunities by sending monthly email newsletters to your customer list."
+            },
+            "title": "Email Marketing Services",
+            "description": "Do you feel like your methods of reaching out to customers are limited, and you are not communicating as effectively as you could? Many businesses face challenges in nurturing leads and improving customer engagement. Effective use of email marketing can solve these problems.",
+            "keyPoints": "Key Points",
+            "desires": ["Lead Generation", "Improve Customer Engagement"],
+            "points": [
+                "Personalized Email Delivery",
+                "Automated Workflows",
+                "Optimal Timing for Delivery",
+                "Hypothesis-Driven Content Creation"
+            ],
+            "solution": "By leveraging these key points, we can optimize your email marketing strategy to deepen your customer relationships and drive higher sales and lead generation.",
+            "cta": {
+                "myMessage": "Let's strengthen your customer relationships with email marketing!",
+                "buttonText": "Contact us for a free consultation!",
+                "bubbleText": "The consultation will be completed in just 1 minute. Contact us now!"
+            }
+        }
     }
-  }
 }

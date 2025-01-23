@@ -1,14 +1,14 @@
 {
-  "form_submit_successful": {
-    "header": "メールを受け取りました、ありがとうございます！",
-    "body": "近日中にご連絡いたします。",
-    "confirmation": "ご登録いただいたメールアドレスは {{email}} です。",
-    "error": "もしメールアドレスが間違っている場合は、ページを更新して正しいメールアドレスを入力して再送お願いします。"
-  },
-  "name_label": "会社名/個人名",
-  "phone_label": "電話番号",
-  "email_label": "E-Mail",
-  "message_label": "お問い合わせ内容",
-  "privacy_policy": "<a>プライバシーポリシー</a> に同意します。",
-  "submit_button": "送信"
+    "form_submit_successful": {
+        "header": "メールを受け取りました、ありがとうございます！",
+        "body": "近日中にご連絡いたします。",
+        "confirmation": "ご登録いただいたメールアドレスは {{email}} です。",
+        "error": "もしメールアドレスが間違っている場合は、ページを更新して正しいメールアドレスを入力して再送お願いします。"
+    },
+    "name_label": "会社名/個人名",
+    "phone_label": "電話番号",
+    "email_label": "E-Mail",
+    "message_label": "お問い合わせ内容",
+    "privacy_policy": "<a>プライバシーポリシー</a> に同意します。",
+    "submit_button": "送信"
 }

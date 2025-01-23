@@ -1,14 +1,14 @@
 {
-  "form_submit_successful": {
-    "header": "We have received your email, thank you!",
-    "body": "We will get back to you shortly.",
-    "confirmation": "The email address you registered is {{email}}.",
-    "error": "If the email address is incorrect, please refresh the page, enter the correct email address, and resend."
-  },
-  "name_label": "Company Name/Personal Name",
-  "phone_label": "Phone Number",
-  "email_label": "E-Mail",
-  "message_label": "Message",
-  "privacy_policy": "I agree to the <a>Privacy Policy</a>.",
-  "submit_button": "Submit"
+    "form_submit_successful": {
+        "header": "We have received your email, thank you!",
+        "body": "We will get back to you shortly.",
+        "confirmation": "The email address you registered is {{email}}.",
+        "error": "If the email address is incorrect, please refresh the page, enter the correct email address, and resend."
+    },
+    "name_label": "Company Name/Personal Name",
+    "phone_label": "Phone Number",
+    "email_label": "E-Mail",
+    "message_label": "Message",
+    "privacy_policy": "I agree to the <a>Privacy Policy</a>.",
+    "submit_button": "Submit"
 }

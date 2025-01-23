@@ -7,13 +7,13 @@ import services from "../locales/ja/services.json";
 import translation from "../locales/ja/translation.json";
 
 const resources = {
-  about,
-  contactForm,
-  contactPage,
-  meta,
-  services,
-  translation,
-  lp,
+    about,
+    contactForm,
+    contactPage,
+    meta,
+    services,
+    translation,
+    lp,
 } as const;
 
 export default resources;

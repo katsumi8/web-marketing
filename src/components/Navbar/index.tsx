@@ -11,107 +11,112 @@ import NavItem from "./Item";
 import MobileNavbar from "./MobileNavbar";
 
 export default function Navbar({ lang }: { lang: string }) {
-  const [nav, setNav] = useState<boolean>(false);
-  const [shadow, setShadow] = useState<boolean>(false);
-  const searchParams = useSearchParams();
-  const entryPoint = searchParams.get("origin");
-  const pathName = usePathname();
-  const isPathIncludeLp = pathName.includes("lp");
+    const [nav, setNav] = useState<boolean>(false);
+    const [shadow, setShadow] = useState<boolean>(false);
+    const searchParams = useSearchParams();
+    const entryPoint = searchParams.get("origin");
+    const pathName = usePathname();
+    const isPathIncludeLp = pathName.includes("lp");
 
-  const handleNav = () => {
-    setNav(!nav);
-  };
-
-  useEffect(() => {
-    const handleShadow = () => {
-      // Throttled shadow state update
-      if (window.scrollY >= 90) {
-        setShadow(true);
-      } else {
-        setShadow(false);
-      }
+    const handleNav = () => {
+        setNav(!nav);
     };
 
-    // Attach the scroll event listener
-    window.addEventListener("scroll", handleShadow);
+    useEffect(() => {
+        const handleShadow = () => {
+            // Throttled shadow state update
+            if (window.scrollY >= 90) {
+                setShadow(true);
+            } else {
+                setShadow(false);
+            }
+        };
 
-    // Clean up the event listener on unmount
-    return () => {
-      window.removeEventListener("scroll", handleShadow);
-    };
-  }, []);
-  const homeLink = isPathIncludeLp ? "/lp/seo" : "/";
+        // Attach the scroll event listener
+        window.addEventListener("scroll", handleShadow);
 
-  return (
-    <div className={shadow ? "w-full bg-white shadow-xl" : "w-full bg-white"}>
-      <div className="flex h-full w-full items-center justify-between px-2 2xl:px-16">
-        <Link href={homeLink}>
-          <Image
-            className="size-20"
-            width={100}
-            height={100}
-            src="/assets/companyLogo.webp"
-            alt="katsumi ishihara consulting logo"
-          />
-        </Link>
+        // Clean up the event listener on unmount
+        return () => {
+            window.removeEventListener("scroll", handleShadow);
+        };
+    }, []);
+    const homeLink = isPathIncludeLp ? "/lp/seo" : "/";
 
-        {entryPoint !== "meta" && (
-          <div className="px-4">
-            <ul
-              style={{ color: `#1f2937` }}
-              className="hidden md:flex justify-between space-x-5 items-center"
-            >
-              {isPathIncludeLp
-                ? navItemsForLp.map((item, index) => (
-                    <NavItem
-                      key={index}
-                      href={item.href}
-                      text={item.text}
-                      isMobile={false}
+    return (
+        <div
+            className={shadow ? "w-full bg-white shadow-xl" : "w-full bg-white"}
+        >
+            <div className="flex h-full w-full items-center justify-between px-2 2xl:px-16">
+                <Link href={homeLink}>
+                    <Image
+                        className="size-20"
+                        width={100}
+                        height={100}
+                        src="/assets/companyLogo.webp"
+                        alt="katsumi ishihara consulting logo"
                     />
-                  ))
-                : navItems.map((item, index) => (
-                    <NavItem
-                      key={index}
-                      href={item.href}
-                      text={item.text}
-                      isMobile={false}
-                    />
-                  ))}
-              {!isPathIncludeLp && (
-                <div className="ml-10 hover:border-b text-sm">
-                  <LanguageSwitcher currentLanguage={lang} />
-                </div>
-              )}
-            </ul>
+                </Link>
 
-            <div className="md:hidden flex items-center space-x-4">
-              {!isPathIncludeLp && (
-                <div className="text-sm text-gray-500 md:hidden">
-                  <LanguageSwitcher currentLanguage={lang} />
-                </div>
-              )}
-              {isPathIncludeLp ? (
-                navItemsForLp.map((item, index) => (
-                  <NavItem
-                    key={index}
-                    href={item.href}
-                    text={item.text}
-                    isMobile={false}
-                  />
-                ))
-              ) : (
-                <div onClick={handleNav} className="text-gray-700 md:hidden">
-                  <AiOutlineMenu size={25} />
-                </div>
-              )}
+                {entryPoint !== "meta" && (
+                    <div className="px-4">
+                        <ul
+                            style={{ color: `#1f2937` }}
+                            className="hidden items-center justify-between space-x-5 md:flex"
+                        >
+                            {isPathIncludeLp
+                                ? navItemsForLp.map((item, index) => (
+                                      <NavItem
+                                          key={index}
+                                          href={item.href}
+                                          text={item.text}
+                                          isMobile={false}
+                                      />
+                                  ))
+                                : navItems.map((item, index) => (
+                                      <NavItem
+                                          key={index}
+                                          href={item.href}
+                                          text={item.text}
+                                          isMobile={false}
+                                      />
+                                  ))}
+                            {!isPathIncludeLp && (
+                                <div className="ml-10 text-sm hover:border-b">
+                                    <LanguageSwitcher currentLanguage={lang} />
+                                </div>
+                            )}
+                        </ul>
+
+                        <div className="flex items-center space-x-4 md:hidden">
+                            {!isPathIncludeLp && (
+                                <div className="text-sm text-gray-500 md:hidden">
+                                    <LanguageSwitcher currentLanguage={lang} />
+                                </div>
+                            )}
+                            {isPathIncludeLp ? (
+                                navItemsForLp.map((item, index) => (
+                                    <NavItem
+                                        key={index}
+                                        href={item.href}
+                                        text={item.text}
+                                        isMobile={false}
+                                    />
+                                ))
+                            ) : (
+                                <div
+                                    onClick={handleNav}
+                                    className="text-gray-700 md:hidden"
+                                >
+                                    <AiOutlineMenu size={25} />
+                                </div>
+                            )}
+                        </div>
+                    </div>
+                )}
             </div>
-          </div>
-        )}
-      </div>
-      {nav && !isPathIncludeLp && (
-        <MobileNavbar setNav={setNav} handleNav={handleNav} />
-      )}
-    </div>
-  );
+            {nav && !isPathIncludeLp && (
+                <MobileNavbar setNav={setNav} handleNav={handleNav} />
+            )}
+        </div>
+    );
 }

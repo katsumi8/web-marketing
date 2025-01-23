@@ -1,67 +1,80 @@
 {
-  "home": {
-    "title": "Website Creation, Redesign, and SEO Optimization in Germany | Katsumi Ishihara Consulting",
-    "description": "For residents of the EU, including Germany, France, Italy, and Spain, we offer website creation, redesign, and SEO optimization services. We help solve website challenges and support your online customer acquisition.",
-    "keywords": ["website creation", "Germany", "SEO optimization", "redesign"]
-  },
-  "about": {
-    "title": "Background | Katsumi Ishihara Consulting",
-    "description": "Introducing our background. We specialize in website creation, redesign, and SEO optimization in Germany.",
-    "keywords": ["background", "Germany", "SEO optimization", "redesign"]
-  },
-  "contact": {
-    "title": "Contact Us | Katsumi Ishihara Consulting",
-    "description": "Contact us here. We offer free consultations to help resolve website issues and support your online customer acquisition.",
-    "keywords": ["contact", "consultation", "website", "online marketing"]
-  },
-  "services": {
-    "title": "Services Overview | Katsumi Ishihara Consulting",
-    "description": "An overview of the services we offer. From conversion analysis, web application development, to website creation and redesign, we provide services that support your business.",
-    "keywords": [
-      "services",
-      "conversion analysis",
-      "web app development",
-      "website creation"
-    ],
-    "conversionAnalysis": {
-      "title": "Conversion Analysis | Katsumi Ishihara Consulting",
-      "description": "We conduct conversion analysis to derive improvement strategies for increasing website traffic.",
-      "keywords": ["conversion analysis", "traffic increase", "sales boost"]
+    "home": {
+        "title": "Website Creation, Redesign, and SEO Optimization in Germany | Katsumi Ishihara Consulting",
+        "description": "For residents of the EU, including Germany, France, Italy, and Spain, we offer website creation, redesign, and SEO optimization services. We help solve website challenges and support your online customer acquisition.",
+        "keywords": [
+            "website creation",
+            "Germany",
+            "SEO optimization",
+            "redesign"
+        ]
     },
-    "mailMarketing": {
-      "title": "Email Marketing | Katsumi Ishihara Consulting",
-      "description": "By effectively utilizing email marketing, you can strengthen relationships with customers, increase sales, and capture more leads.",
-      "keywords": ["email marketing", "lead generation", "customer engagement"]
+    "about": {
+        "title": "Background | Katsumi Ishihara Consulting",
+        "description": "Introducing our background. We specialize in website creation, redesign, and SEO optimization in Germany.",
+        "keywords": ["background", "Germany", "SEO optimization", "redesign"]
     },
-    "webAppDevelopment": {
-      "title": "Web App Development | Katsumi Ishihara Consulting",
-      "description": "We provide web app development services for those looking to streamline operations or develop original apps.",
-      "keywords": [
-        "web app development",
-        "operational efficiency",
-        "original app"
-      ]
+    "contact": {
+        "title": "Contact Us | Katsumi Ishihara Consulting",
+        "description": "Contact us here. We offer free consultations to help resolve website issues and support your online customer acquisition.",
+        "keywords": ["contact", "consultation", "website", "online marketing"]
     },
-    "webDevelopment": {
-      "title": "Website Creation and Redesign | Katsumi Ishihara Consulting",
-      "description": "We help increase your traffic and acquire new customers through website creation and redesign.",
-      "keywords": [
-        "website creation",
-        "redesign",
-        "SEO optimization",
-        "traffic increase"
-      ]
+    "services": {
+        "title": "Services Overview | Katsumi Ishihara Consulting",
+        "description": "An overview of the services we offer. From conversion analysis, web application development, to website creation and redesign, we provide services that support your business.",
+        "keywords": [
+            "services",
+            "conversion analysis",
+            "web app development",
+            "website creation"
+        ],
+        "conversionAnalysis": {
+            "title": "Conversion Analysis | Katsumi Ishihara Consulting",
+            "description": "We conduct conversion analysis to derive improvement strategies for increasing website traffic.",
+            "keywords": [
+                "conversion analysis",
+                "traffic increase",
+                "sales boost"
+            ]
+        },
+        "mailMarketing": {
+            "title": "Email Marketing | Katsumi Ishihara Consulting",
+            "description": "By effectively utilizing email marketing, you can strengthen relationships with customers, increase sales, and capture more leads.",
+            "keywords": [
+                "email marketing",
+                "lead generation",
+                "customer engagement"
+            ]
+        },
+        "webAppDevelopment": {
+            "title": "Web App Development | Katsumi Ishihara Consulting",
+            "description": "We provide web app development services for those looking to streamline operations or develop original apps.",
+            "keywords": [
+                "web app development",
+                "operational efficiency",
+                "original app"
+            ]
+        },
+        "webDevelopment": {
+            "title": "Website Creation and Redesign | Katsumi Ishihara Consulting",
+            "description": "We help increase your traffic and acquire new customers through website creation and redesign.",
+            "keywords": [
+                "website creation",
+                "redesign",
+                "SEO optimization",
+                "traffic increase"
+            ]
+        }
+    },
+    "seoLandingPage": {
+        "title": "Accelerate Business Growth with SEO Consulting | Katsumi Ishihara Consulting",
+        "description": "Maximize your website's potential with our SEO consulting services. From internal link optimization to content creation and competitor analysis, we enhance search engine rankings and drive traffic. Enjoy the first month free with an annual contract.",
+        "keywords": [
+            "SEO consulting",
+            "search engine optimization",
+            "traffic improvement",
+            "content creation",
+            "ranking boost"
+        ]
     }
-  },
-  "seoLandingPage": {
-    "title": "Accelerate Business Growth with SEO Consulting | Katsumi Ishihara Consulting",
-    "description": "Maximize your website's potential with our SEO consulting services. From internal link optimization to content creation and competitor analysis, we enhance search engine rankings and drive traffic. Enjoy the first month free with an annual contract.",
-    "keywords": [
-      "SEO consulting",
-      "search engine optimization",
-      "traffic improvement",
-      "content creation",
-      "ranking boost"
-    ]
-  }
 }

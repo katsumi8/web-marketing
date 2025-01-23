@@ -1,62 +1,66 @@
 {
-  "home": {
-    "title": "Webdesign, Relaunch und SEO-Optimierung in Deutschland | Katsumi Ishihara Consulting",
-    "description": "Für alle, die in der EU (Deutschland, Frankreich, Italien, Spanien) leben: Wir bieten professionelles Webdesign, Website-Relaunch und SEO-Optimierung, um Ihre Online-Präsenz zu verbessern und mehr Kunden zu gewinnen.",
-    "keywords": ["Webdesign", "Deutschland", "SEO-Optimierung", "Relaunch"]
-  },
-  "about": {
-    "title": "Über uns | Katsumi Ishihara Consulting",
-    "description": "Erfahren Sie mehr über unsere Expertise in Webdesign, Relaunch und SEO-Optimierung in Deutschland.",
-    "keywords": ["Über uns", "Deutschland", "SEO-Optimierung", "Relaunch"]
-  },
-  "contact": {
-    "title": "Kontakt | Katsumi Ishihara Consulting",
-    "description": "Nehmen Sie Kontakt mit uns auf. Wir bieten kostenlose Beratung, um Ihre Website-Probleme zu lösen und Ihre Online-Präsenz zu verbessern.",
-    "keywords": ["Kontakt", "Beratung", "Website", "Online-Marketing"]
-  },
-  "services": {
-    "title": "Unsere Dienstleistungen | Katsumi Ishihara Consulting",
-    "description": "Entdecken Sie unsere Dienstleistungen wie Conversion-Analyse, Web-App-Entwicklung und Website-Relaunch, um Ihr Geschäft zu unterstützen.",
-    "keywords": [
-      "Dienstleistungen",
-      "Conversion-Analyse",
-      "Web-App-Entwicklung",
-      "Webdesign"
-    ],
-    "conversionAnalysis": {
-      "title": "Conversion-Analyse | Katsumi Ishihara Consulting",
-      "description": "Wir analysieren Ihre Conversion-Raten und entwickeln Optimierungsstrategien, um den Traffic auf Ihrer Website zu erhöhen.",
-      "keywords": ["Conversion-Analyse", "Traffic", "Umsatzsteigerung"]
+    "home": {
+        "title": "Webdesign, Relaunch und SEO-Optimierung in Deutschland | Katsumi Ishihara Consulting",
+        "description": "Für alle, die in der EU (Deutschland, Frankreich, Italien, Spanien) leben: Wir bieten professionelles Webdesign, Website-Relaunch und SEO-Optimierung, um Ihre Online-Präsenz zu verbessern und mehr Kunden zu gewinnen.",
+        "keywords": ["Webdesign", "Deutschland", "SEO-Optimierung", "Relaunch"]
     },
-    "mailMarketing": {
-      "title": "E-Mail-Marketing | Katsumi Ishihara Consulting",
-      "description": "Nutzen Sie effektives E-Mail-Marketing, um Kundenbeziehungen zu stärken, Verkäufe zu steigern und Leads zu generieren.",
-      "keywords": ["E-Mail-Marketing", "Lead-Generierung", "Kundenbindung"]
+    "about": {
+        "title": "Über uns | Katsumi Ishihara Consulting",
+        "description": "Erfahren Sie mehr über unsere Expertise in Webdesign, Relaunch und SEO-Optimierung in Deutschland.",
+        "keywords": ["Über uns", "Deutschland", "SEO-Optimierung", "Relaunch"]
     },
-    "webAppDevelopment": {
-      "title": "Web-App-Entwicklung | Katsumi Ishihara Consulting",
-      "description": "Wir bieten Web-App-Entwicklung, um Ihre Geschäftsprozesse zu optimieren oder maßgeschneiderte Anwendungen zu erstellen.",
-      "keywords": [
-        "Web-App-Entwicklung",
-        "Prozessoptimierung",
-        "Individuelle Apps"
-      ]
+    "contact": {
+        "title": "Kontakt | Katsumi Ishihara Consulting",
+        "description": "Nehmen Sie Kontakt mit uns auf. Wir bieten kostenlose Beratung, um Ihre Website-Probleme zu lösen und Ihre Online-Präsenz zu verbessern.",
+        "keywords": ["Kontakt", "Beratung", "Website", "Online-Marketing"]
     },
-    "webDevelopment": {
-      "title": "Webdesign und Relaunch | Katsumi Ishihara Consulting",
-      "description": "Wir unterstützen Sie bei der Erstellung oder dem Relaunch Ihrer Website, um mehr Traffic zu generieren und neue Kunden zu gewinnen.",
-      "keywords": ["Webdesign", "Relaunch", "SEO", "Traffic-Steigerung"]
+    "services": {
+        "title": "Unsere Dienstleistungen | Katsumi Ishihara Consulting",
+        "description": "Entdecken Sie unsere Dienstleistungen wie Conversion-Analyse, Web-App-Entwicklung und Website-Relaunch, um Ihr Geschäft zu unterstützen.",
+        "keywords": [
+            "Dienstleistungen",
+            "Conversion-Analyse",
+            "Web-App-Entwicklung",
+            "Webdesign"
+        ],
+        "conversionAnalysis": {
+            "title": "Conversion-Analyse | Katsumi Ishihara Consulting",
+            "description": "Wir analysieren Ihre Conversion-Raten und entwickeln Optimierungsstrategien, um den Traffic auf Ihrer Website zu erhöhen.",
+            "keywords": ["Conversion-Analyse", "Traffic", "Umsatzsteigerung"]
+        },
+        "mailMarketing": {
+            "title": "E-Mail-Marketing | Katsumi Ishihara Consulting",
+            "description": "Nutzen Sie effektives E-Mail-Marketing, um Kundenbeziehungen zu stärken, Verkäufe zu steigern und Leads zu generieren.",
+            "keywords": [
+                "E-Mail-Marketing",
+                "Lead-Generierung",
+                "Kundenbindung"
+            ]
+        },
+        "webAppDevelopment": {
+            "title": "Web-App-Entwicklung | Katsumi Ishihara Consulting",
+            "description": "Wir bieten Web-App-Entwicklung, um Ihre Geschäftsprozesse zu optimieren oder maßgeschneiderte Anwendungen zu erstellen.",
+            "keywords": [
+                "Web-App-Entwicklung",
+                "Prozessoptimierung",
+                "Individuelle Apps"
+            ]
+        },
+        "webDevelopment": {
+            "title": "Webdesign und Relaunch | Katsumi Ishihara Consulting",
+            "description": "Wir unterstützen Sie bei der Erstellung oder dem Relaunch Ihrer Website, um mehr Traffic zu generieren und neue Kunden zu gewinnen.",
+            "keywords": ["Webdesign", "Relaunch", "SEO", "Traffic-Steigerung"]
+        }
+    },
+    "seoLandingPage": {
+        "title": "SEO-Beratung für Ihr Geschäftswachstum | Katsumi Ishihara Consulting",
+        "description": "Mit unserer SEO-Beratung maximieren wir das Potenzial Ihrer Website. Verbesserungen bei internen Links, Content-Erstellung, Wettbewerbsanalysen und SEO-Optimierung sorgen für eine bessere Sichtbarkeit. Aktuell: 1. Monat gratis bei Jahresvertrag.",
+        "keywords": [
+            "SEO-Beratung",
+            "Suchmaschinenoptimierung",
+            "Kundengewinnung",
+            "Content-Erstellung",
+            "Ranking-Verbesserung"
+        ]
     }
-  },
-  "seoLandingPage": {
-    "title": "SEO-Beratung für Ihr Geschäftswachstum | Katsumi Ishihara Consulting",
-    "description": "Mit unserer SEO-Beratung maximieren wir das Potenzial Ihrer Website. Verbesserungen bei internen Links, Content-Erstellung, Wettbewerbsanalysen und SEO-Optimierung sorgen für eine bessere Sichtbarkeit. Aktuell: 1. Monat gratis bei Jahresvertrag.",
-    "keywords": [
-      "SEO-Beratung",
-      "Suchmaschinenoptimierung",
-      "Kundengewinnung",
-      "Content-Erstellung",
-      "Ranking-Verbesserung"
-    ]
-  }
 }
