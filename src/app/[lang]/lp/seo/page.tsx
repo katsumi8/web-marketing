@@ -1,5 +1,5 @@
 import { getTranslation } from "@/app/i18n/server";
-import type { Metadata, ResolvingMetadata } from "next";
+import type { Metadata } from "next";
 import type { PageProps } from "../../page";
 import ContactFormForLp from "./_components/contactFormLp";
 import CustomerJourneySteps from "./_components/customerJourneySteps";
@@ -13,10 +13,9 @@ import Offerings from "./_components/offerings";
 import PerformanceShowcase from "./_components/performanceShowcase";
 import Price from "./_components/price";
 
-export const generateMetadata = async (
-  { params }: PageProps,
-  parent: ResolvingMetadata,
-): Promise<Metadata> => {
+export const generateMetadata = async ({
+  params,
+}: PageProps): Promise<Metadata> => {
   const lang = params.lang;
 
   const { t } = await getTranslation(lang);

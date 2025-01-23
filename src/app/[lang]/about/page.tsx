@@ -28,7 +28,7 @@ export async function generateMetadata(
   };
 }
 
-export default function About({ params }: PageProps) {
+export default function About() {
   return (
     <div className="w-full bg-gray-100 min-h-screen flex flex-col items-center text-gray-100">
       <div className="w-full py-4 px-6 text-gray-400">
