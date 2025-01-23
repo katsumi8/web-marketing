@@ -8,7 +8,7 @@ export async function generateMetadata(
   { params }: PageProps,
   parent: ResolvingMetadata,
 ): Promise<Metadata> {
-  const lang = params.lang;
+  const { lang } = await params;
 
   const { t } = await getTranslation(lang);
   const metadata = t("about", { ns: "meta", returnObjects: true });
@@ -34,7 +34,7 @@ export default function About() {
       <div className="w-full py-4 px-6 text-gray-400">
         <Breadcrumbs segments={["about"]} />
       </div>
-      <MyJourney />;
+      <MyJourney />
     </div>
   );
 }

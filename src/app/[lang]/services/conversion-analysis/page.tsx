@@ -9,7 +9,7 @@ export async function generateMetadata(
   { params }: PageProps,
   parent: ResolvingMetadata,
 ): Promise<Metadata> {
-  const lang = params.lang;
+  const { lang } = await params;
 
   const { t } = await getTranslation(lang);
   const metadata = t("services.conversionAnalysis", {
@@ -35,7 +35,8 @@ export async function generateMetadata(
 export default async function ConversionAnalysis({ params }: PageProps) {
   const segments = ["services", "conversion-analysis"];
 
-  const { t } = await getTranslation(params.lang);
+  const { lang } = await params;
+  const { t } = await getTranslation(lang);
   const service = t("services.conversionAnalysis", {
     returnObjects: true,
     ns: "services",
@@ -50,7 +51,10 @@ export default async function ConversionAnalysis({ params }: PageProps) {
         {/* Top section with title and image */}
         <div className="absolute top-0 left-0 w-full h-1/2 bg-white z-0"></div>
 
-        <div className="flex flex-col bg-gradient-to-r from-red-600 via-red-400 to-red-100 z-50 md:flex-row w-full sm:max-w-[80%] items-center justify-between p-6 py-16 space-y-8 md:space-y-0">
+        <div
+          className="flex flex-col bg-gradient-to-r from-red-600 via-red-400 to-red-100 z-50 
+          md:flex-row w-full sm:max-w-[80%] items-center justify-between p-6 py-16 space-y-8 md:space-y-0"
+        >
           {/* Left side: Title, subtitle, buttons */}
           <div className="md:w-2/3 text-left space-y-4 flex-grow px-2">
             <h1 className="text-4xl font-bold text-gray-100">

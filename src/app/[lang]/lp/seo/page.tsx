@@ -16,7 +16,7 @@ import Price from "./_components/price";
 export const generateMetadata = async ({
   params,
 }: PageProps): Promise<Metadata> => {
-  const lang = params.lang;
+  const { lang } = await params;
 
   const { t } = await getTranslation(lang);
   const metadata = t("seoLandingPage", { ns: "meta", returnObjects: true });
@@ -44,30 +44,31 @@ export const generateMetadata = async ({
 };
 
 export default async function LandingPageSEO({ params }: PageProps) {
+  const { lang } = await params;
   return (
     <div className="flex min-h-[calc(100vh-5rem)] flex-col items-center justify-between bg-gray-100 text-black">
       {/* ヒーローセクション + CTA */}
-      <Hero lang={params.lang} />
+      <Hero lang={lang} />
       {/* 実績セクション + CTA */}
-      <PerformanceShowcase lang={params.lang} />
+      <PerformanceShowcase lang={lang} />
       {/* こんなお悩み抱えてませんか + そのお悩み、弊社がすべて解決しますセクション */}
-      <CustomerPainPoints lang={params.lang} />
+      <CustomerPainPoints lang={lang} />
       {/* 弊社特徴セクション + CTA */}
-      <KeyFeaturesWithCTA lang={params.lang} />
+      <KeyFeaturesWithCTA lang={lang} />
       {/* サービス内容セクション + CTA */}
-      <Offerings lang={params.lang} />
+      <Offerings lang={lang} />
       {/* お問い合わせ後の流れ */}
-      <CustomerJourneySteps lang={params.lang} />
+      <CustomerJourneySteps lang={lang} />
       {/* 料金プランセクション + CTA */}
-      <Price lang={params.lang} />
+      <Price lang={lang} />
       {/* FAQセクション */}
-      <FAQ lang={params.lang} />
+      <FAQ lang={lang} />
       {/* お問い合わせセクション */}
-      <ContactFormForLp lang={params.lang} />
+      <ContactFormForLp lang={lang} />
       {/* 沿革セクション */}
-      <History lang={params.lang} />
+      <History lang={lang} />
       {/* フローティングボタン */}
-      <FloatingButton lang={params.lang} />
+      <FloatingButton lang={lang} />
     </div>
   );
 }

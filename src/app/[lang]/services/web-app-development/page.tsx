@@ -9,7 +9,7 @@ export async function generateMetadata(
   { params }: PageProps,
   parent: ResolvingMetadata,
 ): Promise<Metadata> {
-  const lang = params.lang;
+  const { lang } = await params;
 
   const { t } = await getTranslation(lang);
   const metadata = t("services.webAppDevelopment", {
@@ -35,7 +35,8 @@ export async function generateMetadata(
 export default async function WebAppDevelopment({ params }: PageProps) {
   const segments = ["services", "web-app-development"];
 
-  const { t } = await getTranslation(params.lang);
+  const { lang } = await params;
+  const { t } = await getTranslation(lang);
   const service = t("services.webAppDevelopment", {
     returnObjects: true,
     ns: "services",

@@ -8,7 +8,7 @@ export async function generateMetadata(
   { params }: PageProps,
   parent: ResolvingMetadata,
 ): Promise<Metadata> {
-  const lang = params.lang;
+  const { lang } = await params;
 
   const { t } = await getTranslation(lang);
   const metadata = t("contact", { ns: "meta", returnObjects: true });
@@ -29,12 +29,13 @@ export async function generateMetadata(
 }
 
 export default async function Contact({ params }: PageProps) {
+  const { lang } = await params;
   return (
     <div className="w-full bg-gray-100 min-h-screen flex flex-col items-center text-gray-100">
       <div className="w-full py-4 px-6 text-gray-400">
         <Breadcrumbs segments={["contact"]} />
       </div>
-      <ContactAndProfile lang={params.lang} />;
+      <ContactAndProfile lang={lang} />;
     </div>
   );
 }

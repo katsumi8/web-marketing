@@ -3,14 +3,16 @@ import { getTranslation } from "../i18n/server";
 import HomeComponent from "./_components/homeComponent";
 
 export type PageProps = {
-  params: { lang: string };
+  params: Promise<{
+    lang: string;
+  }>;
 };
 
 export async function generateMetadata(
   { params }: PageProps,
   parent: ResolvingMetadata,
 ): Promise<Metadata> {
-  const lang = params.lang;
+  const { lang } = await params;
 
   const { t } = await getTranslation(lang);
   const homeMetadata = t("home", { ns: "meta", returnObjects: true });
@@ -31,7 +33,7 @@ export async function generateMetadata(
 }
 
 export default async function Home({ params }: PageProps) {
-  const { lang } = params;
+  const { lang } = await params;
   const { t } = await getTranslation(lang);
 
   return (

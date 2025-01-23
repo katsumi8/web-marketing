@@ -8,7 +8,7 @@ export const generateMetadata = async (
   { params }: PageProps,
   parent: ResolvingMetadata,
 ): Promise<Metadata> => {
-  const lang = params.lang;
+  const { lang } = await params;
 
   const { t } = await getTranslation(lang);
   const metadata = t("services", { ns: "meta", returnObjects: true });
@@ -28,12 +28,13 @@ export const generateMetadata = async (
 };
 
 export default async function Services({ params }: PageProps) {
+  const { lang } = await params;
   return (
     <div className="w-full bg-gray-100 min-h-screen flex flex-col items-center text-gray-100">
       <div className="w-full py-4 px-6 text-gray-400 bg-white">
         <Breadcrumbs segments={["services"]} />
       </div>
-      <ServiceList lang={params.lang} />
+      <ServiceList lang={lang} />
     </div>
   );
 }
