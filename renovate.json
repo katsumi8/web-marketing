@@ -2,7 +2,7 @@
   "$schema": "https://docs.renovatebot.com/renovate-schema.json",
   "extends": ["config:recommended"],
   "schedule": ["before 9am on Monday"],
-  "baseBranches": ["staging"],
+  "baseBranches": ["main"],
   "dependencyDashboard": true,
   "prConcurrentLimit": 5,
   "packageRules": [
