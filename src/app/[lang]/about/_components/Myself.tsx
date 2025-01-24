@@ -3,7 +3,6 @@ import { Trans, useTranslation } from "react-i18next";
 
 export default function Myself() {
     const { t } = useTranslation("about", { useSuspense: false });
-
     return (
         <section>
             <div className="m-auto max-w-[1240px]">
