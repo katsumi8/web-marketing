@@ -1,5 +1,5 @@
 "use client";
-
+import React from "react";
 import {
     availableLanguageOptions,
     cookieName,
@@ -7,7 +7,11 @@ import {
 } from "@/app/i18n/settings";
 import Cookies from "js-cookie";
 
-export const LanguageSwitcher = ({ currentLanguage = defaultLanguage }) => {
+export const LanguageSwitcher = ({
+    currentLanguage = defaultLanguage,
+}: {
+    currentLanguage: string;
+}) => {
     const handleLanguageChange = (
         event: React.ChangeEvent<HTMLSelectElement>
     ) => {

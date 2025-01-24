@@ -40,7 +40,7 @@ export function useTranslation(lang: string) {
 
 interface LanguageContextType {
     language: string;
-    setLanguage: (language: string) => void;
+    setLanguage: (_language: string) => void;
 }
 
 const LanguageContext = createContext<LanguageContextType | undefined>(

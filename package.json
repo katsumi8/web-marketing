@@ -14,7 +14,6 @@
         "@emailjs/browser": "^4.3.3",
         "@fortawesome/fontawesome-svg-core": "^6.6.0",
         "@hookform/resolvers": "^3.9.0",
-        "@next/eslint-plugin-next": "^15.1.6",
         "@next/third-parties": "^15.0.0",
         "emailjs": "^4.0.3",
         "i18next": "^24.0.0",
@@ -35,6 +34,7 @@
     },
     "devDependencies": {
         "@eslint/js": "^9.18.0",
+        "@next/eslint-plugin-next": "^15.1.6",
         "@tailwindcss/postcss": "^4.0.0",
         "@types/js-cookie": "^3.0.6",
         "@types/negotiator": "^0.6.3",
