@@ -1,5 +1,4 @@
 "use client";
-
 import LanguageSwitcher from "@/app/[lang]/_components/language-switcher";
 import Image from "next/image";
 import Link from "next/link";
