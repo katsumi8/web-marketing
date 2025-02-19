@@ -1,36 +1,70 @@
-import pluginReact from "eslint-plugin-react";
+import reactPlugin from "eslint-plugin-react";
+import hooksPlugin from "eslint-plugin-react-hooks";
+import js from "@eslint/js";
+import nextPlugin from "@next/eslint-plugin-next";
 import globals from "globals";
 import tseslint from "typescript-eslint";
-import { FlatCompat } from "@eslint/eslintrc";
-import { default as js, default as pluginJs } from "@eslint/js";
-
-const compat = new FlatCompat({
-    // import.meta.dirname is available after Node.js v20.11.0
-    baseDirectory: import.meta.dirname,
-    recommendedConfig: js.configs.recommended,
-});
+import eslintConfigPrettier from "eslint-config-prettier";
 
 /** @type {import('eslint').Linter.Config[]} */
-const eslintConfig = [
+const config = [
     { files: ["**/*.{js,mjs,cjs,ts,jsx,tsx}"] },
-    { languageOptions: { globals: globals.browser } },
-    pluginJs.configs.recommended,
+    {
+        ignores: [
+            "**/next-env.d.ts",
+            "**/build/",
+            "**/bin/",
+            "**/obj/",
+            "**/out/",
+            "**/.next/",
+        ],
+    },
+    {
+        languageOptions: {
+            globals: { ...globals.browser, React: true, JSX: true },
+        },
+    },
+    {
+        name: "eslint/recommended",
+        rules: js.configs.recommended.rules,
+    },
     ...tseslint.configs.recommended,
-    ...compat.config({
-        extends: ["eslint:recommended", "next"],
-    }),
-    pluginReact.configs.flat.recommended,
+    {
+        name: "react/jsx-runtime",
+        plugins: {
+            react: reactPlugin,
+        },
+        rules: reactPlugin.configs["jsx-runtime"].rules,
+        settings: {
+            react: {
+                version: "detect",
+            },
+        },
+    },
+    {
+        name: "react-hooks/recommended",
+        plugins: {
+            "react-hooks": hooksPlugin,
+        },
+        rules: hooksPlugin.configs.recommended.rules,
+    },
+    {
+        name: "next/core-web-vitals",
+        plugins: {
+            "@next/next": nextPlugin,
+        },
+        rules: {
+            ...nextPlugin.configs.recommended.rules,
+            ...nextPlugin.configs["core-web-vitals"].rules,
+        },
+    },
+    {
+        name: "prettier/config",
+        ...eslintConfigPrettier,
+    },
     {
         rules: {
-            "react/react-in-jsx-scope": "off",
-            "no-unused-vars": [
-                "error",
-                {
-                    argsIgnorePattern: "^_",
-                    varsIgnorePattern: "^_",
-                    caughtErrorsIgnorePattern: "^_",
-                },
-            ],
+            curly: "error",
             "@typescript-eslint/no-unused-vars": [
                 "error",
                 {
@@ -39,8 +73,10 @@ const eslintConfig = [
                     caughtErrorsIgnorePattern: "^_",
                 },
             ],
+            "@typescript-eslint/no-explicit-any": "off",
+            "@typescript-eslint/consistent-type-imports": "error",
         },
     },
 ];
 
-export default eslintConfig;
+export default config;
