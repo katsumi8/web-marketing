@@ -17,6 +17,8 @@ const config = [
             "**/obj/",
             "**/out/",
             "**/.next/",
+            "**/__generated__/",
+            "**/public/",
         ],
     },
     {
