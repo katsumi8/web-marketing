@@ -1,10 +1,9 @@
-import reactPlugin from "eslint-plugin-react";
-import hooksPlugin from "eslint-plugin-react-hooks";
 import js from "@eslint/js";
 import nextPlugin from "@next/eslint-plugin-next";
-import globals from "globals";
-import tseslint from "typescript-eslint";
 import eslintConfigPrettier from "eslint-config-prettier";
+import reactPlugin from "eslint-plugin-react";
+import hooksPlugin from "eslint-plugin-react-hooks";
+import tseslint from "typescript-eslint";
 
 /** @type {import('eslint').Linter.Config[]} */
 const config = [
@@ -20,11 +19,6 @@ const config = [
             "**/__generated__/",
             "**/public/",
         ],
-    },
-    {
-        languageOptions: {
-            globals: { ...globals.browser, React: true, JSX: true },
-        },
     },
     {
         name: "eslint/recommended",
